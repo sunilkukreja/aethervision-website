@@ -6,12 +6,24 @@
     <title>AetherVision LLC - Advanced Sensing & AI for National Security</title>
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- === GOOGLE FONT IMPORTS (Includes chosen script fonts) === -->
+    <!-- === GOOGLE FONT IMPORTS (Includes chosen script fonts + Sacramento) === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- Added 'Sacramento' to the font list -->
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&family=Sacramento&display=swap" rel="stylesheet">
     <!-- === END GOOGLE FONT IMPORTS === -->
     <meta name="description" content="AetherVision LLC: SDVOSB specializing in AI/ML, Neuromorphic Vision, and ISR solutions for the Intelligence Community and DoD.">
+    <!-- === START ADDED CSS FOR H1 FONT === -->
+    <style>
+        .hero h1 {
+            font-family: 'Sacramento', cursive; /* Apply Sacramento font */
+            /* You might need to adjust font-size or other properties here
+               if the new font looks too small/large compared to the previous one */
+             font-size: 4.5em; /* Example: Adjust size if needed */
+             margin-bottom: 0.1em; /* Example: Adjust spacing if needed */
+        }
+    </style>
+    <!-- === END ADDED CSS FOR H1 FONT === -->
 </head>
 <body>
 
@@ -24,16 +36,16 @@
                 <li><a href="index.html" class="active">Home</a></li> <!-- Active link -->
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="contracting.html">Contracting</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="contracting.html">Contracting</a></li> <!-- Contracting Link Added -->
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section - RESTORED STRUCTURE -->
+        <!-- Hero Section - H1 Font Changed -->
         <section class="hero">
-            <h1>AetherVision LLC</h1>
+            <h1>AetherVision LLC</h1> <!-- This will now use Sacramento font -->
             <h2>Unveiling Reality Through Advanced Sensing</h2>
             <!-- Added ellipsis below -->
             <p>... Beyond the Spectrum of Perception</p>

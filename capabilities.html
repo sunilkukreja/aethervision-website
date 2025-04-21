@@ -6,7 +6,45 @@
     <title>Capabilities - AetherVision LLC</title>
     <!-- Link to the SAME CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- === GOOGLE FONT IMPORTS (Includes chosen script fonts) === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- === END GOOGLE FONT IMPORTS === -->
     <meta name="description" content="Explore AetherVision LLC's core capabilities in AI/ML, ISR Platforms, Neuromorphic Vision, Data Analysis, Consulting, and our technology focus areas.">
+    <!-- === START CSS FOR TECHNOLOGY FOCUS AREAS (SHADOW ENABLED) === -->
+    <style>
+        /* Target the specific list */
+        #technology-focus-areas ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        #technology-focus-areas ul li {
+            padding-left: 1.5em; /* Space for custom bullet */
+            position: relative;
+            margin-bottom: 0.5em; /* Spacing */
+        }
+
+        /* Style the custom bullet */
+        #technology-focus-areas ul li::before {
+            content: '•';
+            color: #00CEC8 !important; /* Bullet color (remains from last instruction) */
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            width: 1em;
+        }
+
+        /* Style the specific strong tags within this list */
+        #technology-focus-areas ul li > strong {
+            color: #00CEC8 !important;      /* Text color (remains from last instruction) */
+            /* text-shadow: none !important; REMOVED to allow shadow */
+            font-weight: bold;
+        }
+    </style>
+    <!-- === END CSS FOR TECHNOLOGY FOCUS AREAS (SHADOW ENABLED) === -->
 </head>
 <body class="capabilities-page">
 
@@ -19,8 +57,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="capabilities.html" class="active">Capabilities</a></li> <!-- Active link -->
+                <li><a href="contracting.html">Contracting</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="contracting.html">Contracting</a></li> <!-- Added Link -->
             </ul>
         </nav>
     </header>
@@ -80,6 +118,7 @@
             </div>
         </section>
 
+        <!-- === SECTION WITH SHADOW RE-ENABLED === -->
         <section id="technology-focus-areas">
             <h2>Technology Focus Areas & Solutions</h2>
             <p>Building upon our core competencies, AetherVision is focused on developing and integrating innovative solutions to address critical national security needs:</p>
@@ -92,6 +131,7 @@
             </ul>
             <p><em>AetherVision is committed to pushing the boundaries of technology to provide decisive advantages for our clients.</em></p>
         </section>
+        <!-- === END SECTION WITH SHADOW RE-ENABLED === -->
 
          <!-- === MODIFIED DIFFERENTIATORS SECTION === -->
          <section id="differentiators">
@@ -115,7 +155,7 @@
          <!-- Page Navigation -->
          <div class="page-navigation">
              <a href="about.html" class="prev-page">← Previous: About Us</a>
-             <a href="contact.html" class="next-page">Next: Contact →</a>
+             <a href="contracting.html" class="next-page">Next: Contracting →</a>
          </div>
     </main>
 

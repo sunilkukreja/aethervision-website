@@ -6,7 +6,47 @@
     <title>About AetherVision LLC</title>
     <!-- Link to the SAME CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- === GOOGLE FONT IMPORTS (Includes chosen script fonts) === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- === END GOOGLE FONT IMPORTS === -->
     <meta name="description" content="Learn about AetherVision LLC, our mission, vision, values, and the expertise of our founder, Dr. Sunil Kukreja. An SDVOSB focused on national security technology.">
+    <!-- === START UPDATED CSS FOR SPECIFIC STYLING === -->
+    <style>
+        #mission-vision-values {
+            border-left: 5px solid #FA003F !important; /* UPDATED/Confirmed left border color */
+            padding-left: 15px;
+            margin-left: 10px;
+        }
+
+        #mission-vision-values p > strong,
+        #mission-vision-values ul li > strong {
+            color: #0BDA51 !important;       /* Text color (remains from previous instruction) */
+            text-shadow: none !important;    /* No text shadow */
+            font-weight: bold;
+        }
+
+         #mission-vision-values ul {
+            list-style: none;
+            padding-left: 0;
+         }
+         #mission-vision-values ul li {
+            padding-left: 1.5em;
+            position: relative;
+            margin-bottom: 0.5em;
+         }
+         #mission-vision-values ul li::before {
+            content: '•';
+            color: #0BDA51 !important; /* UPDATED bullet color */
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            width: 1em;
+         }
+    </style>
+    <!-- === END UPDATED CSS FOR SPECIFIC STYLING === -->
 </head>
 <body class="about-page">
 
@@ -19,8 +59,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Us</a></li> <!-- Active link -->
                 <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="contracting.html">Contracting</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="contracting.html">Contracting</a></li> <!-- Added Link -->
             </ul>
         </nav>
     </header>
@@ -38,6 +78,7 @@
         </section>
         <!-- === END MODIFIED COMPANY OVERVIEW SECTION === -->
 
+        <!-- === SECTION WITH UPDATED STYLES === -->
         <section id="mission-vision-values">
             <h2>Mission, Vision & Values</h2>
             <p><strong>Mission:</strong> To develop and deliver groundbreaking technologies that enhance national security, improve intelligence capabilities, and provide a decisive advantage in an ever-evolving threat landscape.</p>
@@ -53,6 +94,7 @@
                 <li><strong>Inclusion:</strong> Committing to a diverse workplace, prioritizing veterans and individuals with disabilities.</li>
             </ul>
         </section>
+        <!-- === END SECTION WITH UPDATED STYLES === -->
 
          <section id="founder-bio">
             <h2>Our Founder: Dr. Sunil Kukreja</h2>
