@@ -384,15 +384,46 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
 .contracting-page section#contracting-vehicles ul li::before { content: '>'; color: #66CDAA; position: absolute; left: 0; font-weight: bold; text-shadow: none;}
 .contracting-page section#contracting-vehicles ul li strong { color: #AFEEEE; }
 
-.contracting-page section#partnering-strategy { background-image: url('images/AetherVision-sublogo-18.png'); background-color: #111111; border-left-color: #C0C0C0; color: #ffffff; background-size: cover; padding: 30px; }
+/* === START: MODIFIED STYLES FOR TEAMING & COLLABORATION === */
+.contracting-page section#partnering-strategy {
+    background-image: url('images/AetherVision-sublogo-18.png'); background-color: #111111;
+    border-left-color: #C0C0C0; color: #ffffff; background-size: cover; padding: 30px;
+}
 .contracting-page section#partnering-strategy > * { position: relative; z-index: 3; }
 .contracting-page section#partnering-strategy h2 { color: rgb(130,200,229); text-shadow: none; }
-.contracting-page section#partnering-strategy p, .contracting-page section#partnering-strategy ul li, .contracting-page section#partnering-strategy ul li strong { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
+
+/* Keep the general text styling for p and li (but not strong) */
+.contracting-page section#partnering-strategy p,
+.contracting-page section#partnering-strategy ul li {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
 .contracting-page section#partnering-strategy p { margin-bottom: 1em; }
 .contracting-page section#partnering-strategy ul { list-style: none; padding-left: 0; }
-.contracting-page section#partnering-strategy ul li { margin-bottom: 10px; padding-left: 1.5em; position: relative; }
-.contracting-page section#partnering-strategy ul li::before { content: '⚡'; color: #DC143C; position: absolute; left: 0; text-shadow: none; }
-.contracting-page section#partnering-strategy ul li strong { color: #F0F0F0; }
+
+/* Keep li layout styling */
+.contracting-page section#partnering-strategy ul li {
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+/* === MODIFIED BULLET COLOR === */
+.contracting-page section#partnering-strategy ul li::before {
+    content: '⚡'; /* Keeping existing bullet character */
+    color: #66A7E1 !important; /* UPDATED bullet color */
+    position: absolute;
+    left: 0;
+    text-shadow: none !important; /* Ensure bullet has no shadow */
+}
+
+/* === MODIFIED STRONG TAG STYLE === */
+.contracting-page section#partnering-strategy ul li strong {
+    color: #66A7E1 !important;      /* UPDATED text color */
+    text-shadow: none !important; /* REMOVED text shadow */
+    font-weight: bold;          /* Keep it bold */
+}
+/* === END: MODIFIED STYLES FOR TEAMING & COLLABORATION === */
 
 .contracting-page section#contracting-contact { display: flex; min-height: 300px; overflow: hidden; margin-bottom: 40px; background-color: #384048; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; border-left-color: #D8BFD8; border-left-width: 5px; border-left-style: solid; }
 .contracting-page section#contracting-contact .contracting-contact-text-area h2 { color: rgb(224,176,255); text-shadow: none; margin-top: 0; margin-bottom: 15px; font-family: 'Montserrat', sans-serif; font-size: 1.8em; }
