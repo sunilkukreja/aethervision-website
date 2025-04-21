@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Contracting & Partnering - AetherVision LLC</title>
+    <!-- Link to the SAME CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="AetherVision LLC is a verified SDVOSB pursuing DoD/IC contracts via set-asides, sole-source, SBIR/STTR. Explore compliance, teaming, and contact info.">
+</head>
+<body class="contracting-page">
+
+    <header>
+        <!-- Logo assumes PNG format in 'images' folder -->
+        <img src="images/AetherVision-logo.png" alt="AetherVision LLC Logo" class="logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contracting.html" class="active">Contracting</a></li> <!-- Active link -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Government Contracting & Partnering</h1>
+
+        <section id="sdvosb-status">
+            <h2>SDVOSB Certified Partner</h2>
+            <p>AetherVision LLC is a verified Service-Disabled Veteran-Owned Small Business (SDVOSB), committed to serving the mission needs of the U.S. Government. This status allows government agencies to engage with us through set-aside contracts and sole-source opportunities, facilitating rapid access to our innovative technologies and specialized expertise.</p>
+            <p>We are registered in the System for Award Management (SAM.gov) and actively pursue opportunities across the DoD, Intelligence Community, and other federal agencies.</p>
+            <!-- Replace placeholders when available -->
+            <p><strong>CAGE Code:</strong> [Pending / Available Upon Request]</p>
+            <p><strong>Primary NAICS Codes:</strong> [List relevant codes, e.g., 541715, 541511, 334511, etc.]</p>
+             <p><strong>UEI:</strong> [Pending / Available Upon Request]</p> <!-- Added UEI -->
+        </section>
+
+        <section id="compliance-security">
+            <h2>Commitment to Compliance & Security</h2>
+            <p>We understand the critical importance of security and compliance in national security R&D. AetherVision LLC is committed to implementing robust cybersecurity practices aligned with relevant standards such as NIST guidelines and DFARS 252.204-7012 requirements. We are prepared to meet Cybersecurity Maturity Model Certification (CMMC) requirements as mandated by specific contracts.</p>
+            <p>Our operations maintain awareness of export control regulations (ITAR/EAR) relevant to defense technologies, ensuring proper handling of sensitive information and intellectual property throughout the development lifecycle.</p>
+        </section>
+
+        <section id="contracting-vehicles">
+            <h2>Contracting Vehicles & Focus</h2>
+             <p>AetherVision LLC leverages its SDVOSB status and technical strengths to pursue various contracting mechanisms:</p>
+             <ul>
+                 <li><strong>SBIR/STTR Programs:</strong> Actively seeking Phase I, Phase II, and Phase III opportunities across DoD components (DARPA, AFRL, ARL, etc.) and Intelligence Community agencies (IARPA, NRO, etc.) aligned with our core competencies.</li>
+                 <li><strong>Set-Aside Contracts:</strong> Targeting SDVOSB set-aside solicitations appropriate for our capabilities.</li>
+                 <li><strong>Sole-Source Opportunities:</strong> Leveraging unique qualifications for potential sole-source awards under the SDVOSB program.</li>
+                 <li><strong>Subcontracting & Teaming:</strong> Partnering with prime contractors and other small businesses on larger efforts.</li>
+                 <li><strong>Broad Agency Announcements (BAAs):</strong> Responding to relevant BAAs seeking innovative R&D solutions.</li>
+            </ul>
+        </section>
+
+        <section id="partnering-strategy">
+            <h2>Teaming & Collaboration</h2>
+            <p>AetherVision LLC actively seeks strategic partnerships to enhance capabilities and deliver comprehensive solutions. We welcome collaboration with:</p>
+            <ul>
+                <li><strong>Prime Contractors:</strong> Serving as a dedicated, agile, and innovative subcontractor on major programs, bringing specialized expertise in AI/ML, neuromorphic sensing, and advanced ISR.</li>
+                <li><strong>Other Small Businesses (including SDVOSBs, VOSBs, WOSBs):</strong> Teaming to pursue joint contract opportunities and leverage complementary skills.</li>
+                <li><strong>University Research Groups & FFRDCs:</strong> Collaborating on fundamental research, technology transition, and leveraging cutting-edge academic advancements.</li>
+            </ul>
+            <p>Our goal is to build synergistic relationships that accelerate the delivery of impactful technologies to the warfighter and intelligence analyst.</p>
+        </section>
+
+         <!-- === MODIFIED CONTRACTING CONTACT SECTION === -->
+         <section id="contracting-contact">
+             <div class="contracting-contact-text-area"> <!-- Wrapper for Text -->
+                 <h2>Contracting Inquiries</h2>
+                 <p>For specific inquiries related to government contracting vehicles, capabilities alignment, or partnership opportunities, please contact:</p>
+                  <p>
+                      <strong>Dr. Sunil Kukreja, Ph.D.</strong><br>
+                      Founder and CEO<br>
+                      <!-- Email: <a href="mailto:sunil@aethervision-rd.com">sunil@aethervision-rd.com</a><br> -->
+                      Phone: <a href="tel:+14157796858">(415) 779-6858</a>
+                  </p>
+             </div>
+             <div class="contracting-contact-image-area"> <!-- Empty Div for Image Background -->
+                <!-- This div remains empty, its background will be styled via CSS -->
+             </div>
+        </section>
+        <!-- === END MODIFIED CONTRACTING CONTACT SECTION === -->
+
+        <!-- Page Navigation -->
+        <div class="page-navigation">
+            <a href="contact.html" class="prev-page">← Previous: Contact</a>
+             <span class="nav-placeholder"></span> <!-- Placeholder for spacing -->
+        </div>
+    </main>
+
+    <footer>
+         <!-- Reuse footer from other pages -->
+        <p>© <span id="year-contracting"></span> AetherVision LLC. All Rights Reserved.</p>
+        <p><small>A Service-Disabled Veteran-Owned Small Business (SDVOSB)</small></p>
+    </footer>
+
+     <script>
+        // Ensure unique ID for year span if needed, or use a class
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('year-contracting');
+            if (yearSpan) {
+                 yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+     </script>
+
+</body>
+</html>

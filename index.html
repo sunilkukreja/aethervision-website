@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherVision LLC - Advanced Sensing & AI for National Security</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- === GOOGLE FONT IMPORTS (Includes chosen script fonts) === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- === END GOOGLE FONT IMPORTS === -->
+    <meta name="description" content="AetherVision LLC: SDVOSB specializing in AI/ML, Neuromorphic Vision, and ISR solutions for the Intelligence Community and DoD.">
+</head>
+<body>
+
+    <header>
+        <!-- Logo assumes PNG format in 'images' folder -->
+        <img src="images/AetherVision-logo.png" alt="AetherVision LLC Logo" class="logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li> <!-- Active link -->
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contracting.html">Contracting</a></li> <!-- Contracting Link Added -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section - RESTORED STRUCTURE -->
+        <section class="hero">
+            <h1>AetherVision LLC</h1>
+            <h2>Unveiling Reality Through Advanced Sensing</h2>
+            <!-- Added ellipsis below -->
+            <p>... Beyond the Spectrum of Perception</p>
+            <p class="hero-sdvosb-text">A Service-Disabled Veteran-Owned Small Business (SDVOSB) delivering disruptive AI/ML, Neuromorphic Vision, and ISR technologies for the U.S. Intelligence Community and Department of Defense.</p>
+        </section>
+        <!-- END HERO SECTION -->
+
+        <!-- Mission/Vision Section -->
+        <section id="mission-vision">
+             <h2>Our Mission & Vision</h2>
+             <p><strong>Mission:</strong> To develop and deliver groundbreaking technologies that enhance national security, improve intelligence capabilities, and provide a decisive advantage in an ever-evolving threat landscape.</p>
+             <p><strong>Vision:</strong> To be the premier provider of advanced AI/ML, ISR, and neuromorphic vision technologies to the IC and DoD, recognized for disruptive innovations and unwavering commitment to national security.</p>
+        </section>
+
+        <!-- Capabilities Summary Section -->
+        <section id="capabilities-summary">
+             <h2>Core Capabilities</h2>
+             <p>AetherVision specializes in the research, development, and application of cutting-edge technologies:</p>
+             <ul>
+                 <li><strong>Artificial Intelligence (AI) & Machine Learning (ML):</strong> Advanced algorithms for real-time analysis, threat detection, pattern recognition, predictive modeling, NLP, and computer vision, optimized for edge devices.</li>
+                 <li><strong>Intelligence, Surveillance & Reconnaissance (ISR) Platforms:</strong> Advanced UAV/UGV platforms integrating multi-sensor systems (EO/IR, radar, SIGINT), edge computing, autonomous navigation, and secure communications.</li>
+                 <li><strong>Neuromorphic Vision Systems:</strong> Next-generation event-driven cameras and sensors leveraging custom ROICs/FPAs for high-speed, high-dynamic-range, low-power visual perception in challenging environments.</li>
+                 <li><strong>Data Analysis & Exploitation:</strong> Novel methods for multi-INT fusion, predictive analytics, anomaly detection, and data visualization to extract actionable intelligence from complex data.</li>
+                 <li><strong>Consulting & Training:</strong> Expert services in AI/ML, ISR, data analysis, neuromorphic vision, system design, and strategic technology planning.</li>
+             </ul>
+             <p><a href="capabilities.html">Explore Our Capabilities in Detail →</a></p>
+        </section>
+
+        <!-- About Summary Section -->
+        <section id="about-summary">
+             <h2>About AetherVision</h2>
+             <p>Founded by Dr. Sunil Kukreja, a service-disabled veteran with extensive leadership experience across high-impact roles at Raytheon Technologies Research Center, NASA, the National University of Singapore, and within DARPA programs, AetherVision LLC is uniquely positioned to tackle complex national security challenges. As a 100% SDVOSB based in Connecticut and registered in Delaware, we leverage unique expertise, a proven track record in delivering transformative technologies, and an agile approach to deliver beyond-next-generation solutions.</p>
+             <p><a href="about.html">Learn More About Us & Our Founder →</a></p>
+        </section>
+
+        <!-- === MODIFIED CONTACT SUMMARY SECTION === -->
+        <section id="contact-summary">
+            <div class="contact-summary-text-area"> <!-- Wrapper for Text -->
+                 <h2>Contact Us</h2>
+                 <p>For inquiries regarding partnerships, contracting opportunities, or our capabilities, please contact:</p>
+                 <p class="contact-person-first">
+                     <strong>Dr. Sunil Kukreja, Ph.D.</strong><br>
+                     Founder and CEO<br>
+                 </p>
+                 <p class="contact-person"> <!-- Phone moved into this paragraph -->
+                     <strong>Sanjeev S. Kukreja</strong><br>
+                     CTO<br>
+                     Phone: <a href="tel:+14157796858">(415) 779-6858</a> <!-- Moved phone line here -->
+                 </p>
+                 <!-- Removed the separate <p> for the phone number -->
+                 <p><small>AetherVision LLC is a Delaware Limited Liability Company.</small></p>
+                  <p><a href="contact.html">Go to Contact Page →</a></p>
+            </div>
+             <div class="contact-summary-image-area"> <!-- Empty Div for Image Background -->
+                <!-- This div remains empty, its background will be styled via CSS -->
+             </div>
+        </section>
+        <!-- === END MODIFIED CONTACT SUMMARY SECTION === -->
+
+         <!-- Page Navigation -->
+         <div class="page-navigation">
+             <span class="nav-placeholder"></span> <!-- Placeholder for spacing -->
+             <a href="about.html" class="next-page">Next: About Us →</a>
+         </div>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> AetherVision LLC. All Rights Reserved.</p>
+        <p><small>A Service-Disabled Veteran-Owned Small Business (SDVOSB)</small></p>
+    </footer>
+
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                 yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+</body>
+</html>
