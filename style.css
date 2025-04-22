@@ -1,7 +1,7 @@
-/* Enhanced Styling for AetherVision - [...] + Tech Focus Area Color Updates */
+/* Enhanced Styling for AetherVision - [...] + Tangerine Font in Hero */
 
-/* Google Font Import (Includes chosen script fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&display=swap');
+/* Google Font Import (Includes chosen script fonts + Tangerine) */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&family=Sacramento&family=Tangerine:wght@400;700&display=swap');
 
 
 /* Basic Reset & Body Styling */
@@ -23,6 +23,7 @@ main { padding: 30px; max-width: 1140px; margin: 30px auto; }
 .hero {
     text-align: center; padding: 25px 30px 75px 30px; min-height: 300px; display: flex;
     flex-direction: column; justify-content: flex-start; align-items: center; background-color: #000000;
+    /* Using Sacramento font via inline style in index.html */
     background-image: linear-gradient(rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%), url('images/AetherVision-sublogo-1.png');
     background-repeat: no-repeat, no-repeat; background-position: center center, center center;
     background-size: cover, cover;
@@ -34,55 +35,72 @@ main { padding: 30px; max-width: 1140px; margin: 30px auto; }
     text-shadow: 0px 0px 3px #000000, 1px 1px 5px rgba(0, 0, 0, 0.6);
     margin-bottom: 0.5em;
 }
-/* Apply chosen Hero fonts */
+/* Apply chosen Hero fonts (H1 overridden by inline style) */
 .hero h1 {
     margin-top: 0; margin-bottom: 15px;
-    font-family: 'Pinyon Script', cursive;
-    font-size: 4.8em;
+    /* font-family: 'Pinyon Script', cursive; */ /* H1 font now controlled by inline style in index.html */
+    /* font-size: 4.8em; */ /* H1 font size now controlled by inline style in index.html */
     font-weight: 400;
 }
+/* *** UPDATED FONT FOR H2 *** */
 .hero h2 {
     margin-bottom: 0;
-    font-family: 'Alex Brush', cursive;
-    font-size: 2.4em;
-    font-weight: 400;
+    font-family: 'Tangerine', cursive; /* CHANGED FONT */
+    font-size: 3.0em; /* Slightly increased size for Tangerine */
+    font-weight: 700; /* Tangerine often looks better bold */
     font-style: normal;
 }
+/* *** UPDATED FONT FOR TAGLINE (first P) *** */
 .hero p:first-of-type {
      margin-top: 0; margin-bottom: 25px;
-     font-family: 'Alex Brush', cursive;
-     font-size: 2.0em;
-     font-weight: 400;
+     font-family: 'Tangerine', cursive; /* CHANGED FONT */
+     font-size: 2.6em; /* Slightly increased size for Tangerine */
+     font-weight: 700; /* Tangerine often looks better bold */
      font-style: normal;
 }
 /* Original SDVOSB Text Style */
 .hero p.hero-sdvosb-text {
     font-size: 1.1em; max-width: 800px; margin-left: auto; margin-right: auto; margin-top: 65px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Kept standard font */
     text-shadow: 0px 0px 3px #000000, 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 /* General Section Styling */
 section {
-    margin-bottom: 40px; padding: 30px; background-color: #ffffff; border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 5px solid #191970;
-    color: #212a35; position: relative; z-index: 1; overflow: hidden;
-    background-repeat: no-repeat; background-position: center center; background-size: cover;
+    margin-bottom: 40px; /* Default bottom margin */
+    padding: 30px; /* Default padding */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-left: 5px solid #191970; /* Default border */
+    color: #212a35;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
-/* Ensure sections modified for flex layout reset their padding */
+/* Reset padding for sections using flexbox for text/image split */
 section#career-note,
 section#contracting-contact,
 section#commitment,
-section#contact-summary,
-.capabilities-page section#differentiators {
-    padding: 0;
+section#contact-summary
+{
+    padding: 0; /* Reset padding for these specific sections */
 }
 /* EXCEPTION: Keep padding on About page #company-overview parent */
 .about-page section#company-overview {
     padding: 30px;
 }
+/* Remove default padding & border for image banner section */
+.capabilities-page section#differentiators-image-banner {
+    padding: 0;
+    border-left: none;
+}
 
-/* === General H2 Styling (Default, No Shadow) === */
+
+/* === General H1, H2 Styling (Default, No Shadow) === */
 section h1, section h2 {
     color: #191970; margin-top: 0; border-bottom: none; padding-bottom: 0; margin-bottom: 25px;
     font-family: 'Montserrat', sans-serif; font-size: 1.8em;
@@ -115,27 +133,17 @@ section#capabilities-summary > * { position: relative; z-index: 3; }
 section#capabilities-summary h2 { color: rgb(99,149,238); text-shadow: none; }
 
 /* === MODIFIED CODE FOR #capabilities-summary List Styling === */
-/* Block 1: Styles for Paragraphs, List Items (main text), and Links */
-/* Applies white color and shadow to the general text */
 section#capabilities-summary p,
-section#capabilities-summary ul li, /* REMOVED 'strong' from this line */
+section#capabilities-summary ul li,
 section#capabilities-summary a {
-    color: #ffffff; /* Keep text white */
-    /* Keep the shadow for the main text */
+    color: #ffffff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
 }
-
-/* Block 2: NEW Specific Styles for the Bold Labels (strong tags) within List Items */
-/* Sets the label color (matching the H2) and removes the shadow */
 section#capabilities-summary ul li strong {
-    /* --- SET THE DESIRED COLOR HERE --- */
-    color: rgb(99, 149, 238); /* Using the section's H2 color for consistency */
-    /* --- END COLOR --- */
-
-    text-shadow: none; /* Explicitly remove the text shadow */
-    font-weight: bold; /* Ensure it remains bold */
+    color: rgb(99, 149, 238);
+    text-shadow: none;
+    font-weight: bold;
 }
-/* === END OF MODIFIED CODE === */
 section#capabilities-summary p a {
     color: rgb(99,149,238);
     text-decoration: none; font-weight: bold;
@@ -143,7 +151,6 @@ section#capabilities-summary p a {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
 }
 section#capabilities-summary a:hover { color: #ffffff; text-decoration: underline; }
-/*section#capabilities-summary ul li strong { font-weight: bold; }*/
 
 section#about-summary { background-image: url('images/AetherVision-sublogo-8.png'); background-color: #4A5459; border-left-color: #58DFD1; color: #ffffff; background-size: cover; padding: 30px; }
 section#about-summary > * { position: relative; z-index: 3; }
@@ -192,20 +199,50 @@ section#contact-summary .contact-summary-image-area { flex-basis: 60%; backgroun
     color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
     margin-bottom: 1em;
 }
+/* Style for mission/vision section on about page */
 .about-page section#mission-vision-values {
     background-image: url('images/AetherVision-sublogo-6.png'); background-color: #474B52;
-    border-left-color: #DA7E79; color: #f0f0f5; background-size: cover; padding: 30px;
+    border-left-color: #FA003F !important; /* Adjusted to match inline style */
+    color: #f0f0f5; background-size: cover;
+    padding: 30px;
+    padding-left: 15px; /* Adjusted to match inline style */
+    margin-left: 10px; /* Adjusted to match inline style */
 }
 .about-page section#mission-vision-values > * { position: relative; z-index: 3; }
 .about-page section#mission-vision-values h2 {
     color: rgba(255, 0, 0, 0.8); text-shadow: none;
 }
+/* Styles for text elements within the section from inline style */
 .about-page section#mission-vision-values p { color: #f0f0f5; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); }
-.about-page section#mission-vision-values p strong { color: #FFDAB9; font-weight: bold; text-shadow: none; }
-.about-page section#mission-vision-values ul { list-style: none; padding-left: 0; }
-.about-page section#mission-vision-values ul li { color: #d8d8e0; margin-bottom: 10px; padding-left: 1.5em; position: relative; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);}
-.about-page section#mission-vision-values ul li::before { content: '»'; color: #FFA07A; position: absolute; left: 0; font-weight: bold; text-shadow: none;}
-.about-page section#mission-vision-values ul li strong { color: #FFDAB9; }
+.about-page section#mission-vision-values p > strong,
+.about-page section#mission-vision-values ul li > strong {
+    color: #0BDA51 !important;       /* Text color from inline style */
+    text-shadow: none !important;    /* No text shadow from inline style */
+    font-weight: bold;
+}
+.about-page section#mission-vision-values ul {
+    list-style: none;
+    padding-left: 0;
+}
+.about-page section#mission-vision-values ul li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 0.5em;
+    color: #d8d8e0; /* Keep original list item color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Keep original shadow */
+}
+.about-page section#mission-vision-values ul li::before {
+    content: '•';
+    color: #0BDA51 !important; /* Bullet color from inline style */
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 1em;
+    text-shadow: none !important; /* Ensure bullet has no shadow */
+}
+/* End specific styles for about page mission/vision section */
+
 
 section#founder-bio {
     background-image: url('images/AetherVision-sublogo-4.png'); background-color: #004d00;
@@ -281,9 +318,10 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
 .capabilities-page section#core-competencies ul li { padding-left: 0; position: static; margin-bottom: 10px; }
 .capabilities-page section#core-competencies ul li::before { content: none; }
 
-/* === MODIFIED Tech Focus Area Colors === */
+/* === Styles for Technology Focus Areas (handling inline styles from HTML) === */
 .capabilities-page section#technology-focus-areas {
-    background-image: url('images/AetherVision-sublogo-11.png'); background-color: #101722;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/AetherVision-sublogo-11.png'); /* Added overlay */
+    background-color: #101722;
     border-left-color: #6D9EEB; /* UPDATED border color */
     color: #ffffff; background-size: cover;
     background-position: center center; /* Corrected position */
@@ -293,39 +331,105 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
 /* MODIFIED CODE BLOCK - TO CHANGE THE BLOCK TITLE FONT COLOR */
 .capabilities-page section#technology-focus-areas h2 {
     color: #6395EE; /* NEW COLOR: - This is the line to change title font color */
-    text-shadow: none; /* Remains unchanged - No shadow on title */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Added shadow */
 }
-.capabilities-page section#technology-focus-areas p,
-.capabilities-page section#technology-focus-areas ul li { /* Target list items for base color */
+/* Base text styling */
+.capabilities-page section#technology-focus-areas p {
     color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
 }
-.capabilities-page section#technology-focus-areas ul { list-style: none; padding-left: 0; }
-.capabilities-page section#technology-focus-areas ul li { margin-bottom: 10px; padding-left: 1.5em; position: relative; }
-.capabilities-page section#technology-focus-areas ul li::before { content: '●'; color: #F5E36B; position: absolute; left: 0; font-weight: bold; font-size: 1.1em; line-height: 1; text-shadow: none;}
-.capabilities-page section#technology-focus-areas ul li strong {
-    color: #DAA520; /* UPDATED bold item color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Keep shadow if needed */
+/* Styling for the list based on inline styles in HTML */
+.capabilities-page #technology-focus-areas ul {
+    list-style: none;
+    padding-left: 0;
 }
+.capabilities-page #technology-focus-areas ul li {
+    padding-left: 1.5em; /* Space for custom bullet */
+    position: relative;
+    margin-bottom: 0.5em; /* Spacing */
+    color: #ffffff; /* Set base text color to white */
+    /* Apply the desired text shadow to the list item text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.capabilities-page #technology-focus-areas ul li::before {
+    content: '•';
+    color: #8FBDEA !important; /* Bullet color from inline style */
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 1em;
+    text-shadow: none !important; /* Ensure no shadow */
+}
+.capabilities-page #technology-focus-areas ul li > strong {
+    color: #8FBDEA !important;      /* Text color from inline style */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6) !important; /* Shadow from inline style */
+    font-weight: bold;              /* Keep bold */
+}
+/* End specific styles for tech focus list */
 .capabilities-page section#technology-focus-areas p:last-of-type { font-style: italic; color: #cccccc; text-align: center; margin-top: 30px; }
 
-.capabilities-page section#differentiators {
-    border-left-color: #F5E36B; display: flex; min-height: 300px;
-    overflow: hidden; margin-bottom: 40px; background-color: #222225;
-    border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    position: relative; border-left-width: 5px; border-left-style: solid;
+
+/* === REVISED CSS FOR DIFFERENTIATORS (Image Banner + Content Block - Title Over Image) === */
+
+/* --- Part 1: The Image Banner Section (#differentiators-image-banner) --- */
+.capabilities-page section#differentiators-image-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/AetherVision-sublogo-12.png'); /* Added Overlay */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 200px; /* Adjust height as needed */
+    margin-bottom: 0; /* Remove bottom margin */
+    padding: 30px; /* Add padding for title placement */
+    border-radius: 8px 8px 0 0; /* Round top corners */
+    border: none; /* Remove all borders */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Keep shadow if desired */
+    position: relative; /* Needed for positioning title */
+    overflow: hidden;
+    display: flex; /* Added to help center title if needed, or use padding */
+    align-items: flex-start; /* Align title towards the top */
 }
-.capabilities-page section#differentiators .differentiators-text-area h2 {
-    color: rgb(255, 200, 10); text-shadow: none;
-    margin-top: 0; margin-bottom: 15px;
-    font-family: 'Montserrat', sans-serif; font-size: 1.8em;
+
+/* Styling for H2 Title INSIDE the image banner section */
+.capabilities-page section#differentiators-image-banner h2 {
+    color: rgb(255, 200, 10); /* Original H2 color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Shadow for readability */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    position: relative; /* Position relative to the banner */
+    z-index: 2; /* Ensure it's above background */
+    width: 100%; /* Allow it to take full width */
+    text-align: left; /* Align text left */
 }
-.capabilities-page section#differentiators .differentiators-text-area ul {
-    list-style: none; padding-left: 0; margin-bottom: 0;
+
+/* --- Part 2: The Content Section (#differentiators-content) --- */
+.capabilities-page section#differentiators-content {
+    margin-top: 0; /* Remove top margin to connect */
+    margin-bottom: 40px; /* Restore default bottom margin */
+    padding: 30px; /* Standard padding */
+    background-color: #000000; /* Pure black background */
+    border-radius: 0 0 8px 8px; /* Round bottom corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Keep shadow if desired */
+    border: none; /* Remove borders */
+    color: #ffffff; /* White text */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
-/* --- MODIFY  TO MATCH CHANGE TEXT-SHADOW --- */
-.capabilities-page section#differentiators .differentiators-text-area ul li {
+
+/* Styling for UL within the content section */
+.capabilities-page section#differentiators-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Styling for LI within the content section */
+.capabilities-page section#differentiators-content ul li {
     color: #ffffff;
-    /* Apply the desired text shadow to the list item text */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
     margin-bottom: 10px;
     padding-left: 1.5em;
@@ -333,33 +437,31 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
     line-height: 1.7;
     font-family: 'Open Sans', sans-serif;
 }
-.capabilities-page section#differentiators .differentiators-text-area ul li::before {
-    content: '✓'; color: #F5E36B; position: absolute; left: 0;
-    font-weight: bold; text-shadow: none;
+
+/* Styling for bullets (::before) within the content section */
+.capabilities-page section#differentiators-content ul li::before {
+    content: '✓';
+    color: #F5E36B;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    text-shadow: none;
 }
-/* --- MODIFY  TO MATCH THE SECTION'S HEADING COLOR --- */
-.capabilities-page section#differentiators .differentiators-text-area ul li strong {
-    color: rgb(255, 200, 10);  /* Change to desired label color (matches H2) */
-    text-shadow: none;         /* Ensure no shadow is applied */
-    font-weight: bold;         /* Keep bold */
+
+/* Styling for strong text within the content section */
+.capabilities-page section#differentiators-content ul li strong {
+    color: rgb(255, 200, 10);
+    text-shadow: none;
+    font-weight: bold;
 }
-.capabilities-page section#differentiators .differentiators-text-area {
-    flex-basis: 40%; background-color: rgba(0, 0, 0, 0.9); padding: 30px;
-    box-sizing: border-box; display: flex; flex-direction: column;
-    justify-content: center; border-top-left-radius: 8px; border-bottom-left-radius: 8px;
-}
-.capabilities-page section#differentiators .differentiators-image-area {
-    flex-basis: 60%; background-image: url('images/AetherVision-sublogo-12.png');
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    border-top-right-radius: 8px; border-bottom-right-radius: 8px;
-}
-@media (max-width: 860px) {
-    .capabilities-page section#differentiators { flex-direction: column; }
-    .capabilities-page section#differentiators .differentiators-text-area,
-    .capabilities-page section#differentiators .differentiators-image-area { flex-basis: auto; width: 100%; }
-    .capabilities-page section#differentiators .differentiators-image-area { min-height: 250px; border-radius: 0; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
-    .capabilities-page section#differentiators .differentiators-text-area { border-radius: 0; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-left-radius: 0; }
-}
+
+/* Clean up old rules if they exist */
+/* .capabilities-page section#differentiators { ... } */
+/* .capabilities-page section#differentiators .differentiators-text-area { ... } */
+/* .capabilities-page section#differentiators .differentiators-image-area { ... } */
+/* .capabilities-page section#differentiators-list { ... } */
+/* etc. */
+/* === END REVISED CSS FOR DIFFERENTIATORS SECTION === */
 
 
 /* === STYLES SPECIFIC TO CONTACT PAGE === */
@@ -389,8 +491,6 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
 .contracting-page section#sdvosb-status { background-image: url('images/AetherVision-sublogo-15.png'); background-color: #3a3f4a; border-left-color: #a899c1; color: #ffffff; background-size: cover; padding: 30px; }
 .contracting-page section#sdvosb-status > * { position: relative; z-index: 3; }
 .contracting-page section#sdvosb-status h2 { color: rgb(224,175,255); text-shadow: none; }
-/*.contracting-page section#sdvosb-status p, .contracting-page section#sdvosb-status p strong { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }*/
-/*.contracting-page section#sdvosb-status p { margin-bottom: 1em; }*/
 /* Style the main paragraph text within the sdvosb-status section */
 .contracting-page section#sdvosb-status p {
     color: #ffffff; /* White color for the main text */
@@ -399,12 +499,16 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
     /* Keep other paragraph styles like margin */
     margin-bottom: 1em;
 }
-/*.contracting-page section#sdvosb-status p strong { font-weight: bold; }*/
 /* Specifically style the strong tags (labels) within those paragraphs */
 .contracting-page section#sdvosb-status p strong {
     color: rgb(224, 175, 255); /* Set the desired color for labels */
     font-weight: bold;         /* Ensure they remain bold */
     text-shadow: none;         /* Explicitly remove any text shadow */
+}
+/* Added style for SDVOSB identifiers for potential specific styling */
+.contracting-page .sdvosb-identifier {
+    font-family: 'Courier New', Courier, monospace; /* Example: Monospace font */
+    font-size: 1.05em;
 }
 
 .contracting-page section#compliance-security {
@@ -424,12 +528,21 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
 .contracting-page section#contracting-vehicles { background-image: url('images/AetherVision-sublogo-17.png'); background-color: #1a2a3a; border-left-color: #66CDAA; color: #ffffff; background-size: cover; padding: 30px; }
 .contracting-page section#contracting-vehicles > * { position: relative; z-index: 3; }
 .contracting-page section#contracting-vehicles h2 { color: rgb(128,239,128); text-shadow: none; }
-/*.contracting-page section#contracting-vehicles p, .contracting-page section#contracting-vehicles ul li, .contracting-page section#contracting-vehicles ul li strong { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }*/
-.contracting-page section#contracting-vehicles p { margin-bottom: 1em; }
+.contracting-page section#contracting-vehicles p {
+     color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+     margin-bottom: 1em;
+}
 .contracting-page section#contracting-vehicles ul { list-style: none; padding-left: 0; }
-.contracting-page section#contracting-vehicles ul li { margin-bottom: 10px; padding-left: 1.5em; position: relative; }
+.contracting-page section#contracting-vehicles ul li {
+     color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+     margin-bottom: 10px; padding-left: 1.5em; position: relative;
+}
 .contracting-page section#contracting-vehicles ul li::before { content: '▪ '; color: #66CDAA; position: absolute; left: 0; font-weight: bold; text-shadow: none;}
-.contracting-page section#contracting-vehicles ul li strong { color: #AFEEEE; }
+.contracting-page section#contracting-vehicles ul li strong {
+    color: #AFEEEE; /* Keeping original color */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Apply shadow if needed */
+}
 
 /* === START: MODIFIED STYLES FOR TEAMING & COLLABORATION === */
 .contracting-page section#partnering-strategy {
