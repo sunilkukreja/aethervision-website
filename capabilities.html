@@ -20,16 +20,20 @@
             padding-left: 0;
         }
 
-        #technology-focus-areas ul li {
-            padding-left: 1.5em; /* Space for custom bullet */
-            position: relative;
-            margin-bottom: 0.5em; /* Spacing */
-        }
+    /* --- FIRST MODIFICATION (LIST ITEM TEXT - ADD SHADOW): --- */
+    #technology-focus-areas ul li {
+        padding-left: 1.5em; /* Space for custom bullet */
+        position: relative;
+        margin-bottom: 0.5em; /* Spacing */
+        color: #ffffff; /* Set base text color to white */
+        /* Apply the desired text shadow to the list item text */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
 
         /* Style the custom bullet */
         #technology-focus-areas ul li::before {
             content: '•';
-            color: #00CEC8 !important; /* Bullet color (remains from last instruction) */
+            color: #8FBDEA !important; /* Bullet color (remains from last instruction) */
             font-weight: bold;
             display: inline-block;
             position: absolute;
@@ -37,12 +41,14 @@
             width: 1em;
         }
 
-        /* Style the specific strong tags within this list */
-        #technology-focus-areas ul li > strong {
-            color: #00CEC8 !important;      /* Text color (remains from last instruction) */
-            /* text-shadow: none !important; REMOVED to allow shadow */
-            font-weight: bold;
-        }
+    /* --- MODIFY THIS TO: CHANGE THE COLOR TO YOUR DESIRED VALUE --- */
+    /* Style the specific strong tags within this list */
+    #technology-focus-areas ul li > strong {
+        color: #8FBDEA !important;      /* Text color (remains from last instruction) */
+        /* ADDED the text-shadow property */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6) !important;
+        font-weight: bold;              /* Keep bold */
+    }
     </style>
     <!-- === END CSS FOR TECHNOLOGY FOCUS AREAS (SHADOW ENABLED) === -->
 </head>

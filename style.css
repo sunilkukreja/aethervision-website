@@ -113,7 +113,29 @@ section#capabilities-summary {
 }
 section#capabilities-summary > * { position: relative; z-index: 3; }
 section#capabilities-summary h2 { color: rgb(99,149,238); text-shadow: none; }
-section#capabilities-summary p, section#capabilities-summary ul li, section#capabilities-summary ul li strong, section#capabilities-summary a { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
+
+/* === MODIFIED CODE FOR #capabilities-summary List Styling === */
+/* Block 1: Styles for Paragraphs, List Items (main text), and Links */
+/* Applies white color and shadow to the general text */
+section#capabilities-summary p,
+section#capabilities-summary ul li, /* REMOVED 'strong' from this line */
+section#capabilities-summary a {
+    color: #ffffff; /* Keep text white */
+    /* Keep the shadow for the main text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Block 2: NEW Specific Styles for the Bold Labels (strong tags) within List Items */
+/* Sets the label color (matching the H2) and removes the shadow */
+section#capabilities-summary ul li strong {
+    /* --- SET THE DESIRED COLOR HERE --- */
+    color: rgb(99, 149, 238); /* Using the section's H2 color for consistency */
+    /* --- END COLOR --- */
+
+    text-shadow: none; /* Explicitly remove the text shadow */
+    font-weight: bold; /* Ensure it remains bold */
+}
+/* === END OF MODIFIED CODE === */
 section#capabilities-summary p a {
     color: rgb(99,149,238);
     text-decoration: none; font-weight: bold;
@@ -121,7 +143,7 @@ section#capabilities-summary p a {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
 }
 section#capabilities-summary a:hover { color: #ffffff; text-decoration: underline; }
-section#capabilities-summary ul li strong { font-weight: bold; }
+/*section#capabilities-summary ul li strong { font-weight: bold; }*/
 
 section#about-summary { background-image: url('images/AetherVision-sublogo-8.png'); background-color: #4A5459; border-left-color: #58DFD1; color: #ffffff; background-size: cover; padding: 30px; }
 section#about-summary > * { position: relative; z-index: 3; }
@@ -268,9 +290,10 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
     padding: 30px;
 }
 .capabilities-page section#technology-focus-areas > * { position: relative; z-index: 3; }
+/* MODIFIED CODE BLOCK - TO CHANGE THE BLOCK TITLE FONT COLOR */
 .capabilities-page section#technology-focus-areas h2 {
-    color: #42B5E6; /* UPDATED title color */
-    text-shadow: none;
+    color: #6395EE; /* NEW COLOR: - This is the line to change title font color */
+    text-shadow: none; /* Remains unchanged - No shadow on title */
 }
 .capabilities-page section#technology-focus-areas p,
 .capabilities-page section#technology-focus-areas ul li { /* Target list items for base color */
@@ -299,16 +322,26 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
 .capabilities-page section#differentiators .differentiators-text-area ul {
     list-style: none; padding-left: 0; margin-bottom: 0;
 }
+/* --- MODIFY  TO MATCH CHANGE TEXT-SHADOW --- */
 .capabilities-page section#differentiators .differentiators-text-area ul li {
-    color: #ffffff; text-shadow: none; margin-bottom: 10px; padding-left: 1.5em;
-    position: relative; line-height: 1.7; font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    /* Apply the desired text shadow to the list item text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+    position: relative;
+    line-height: 1.7;
+    font-family: 'Open Sans', sans-serif;
 }
 .capabilities-page section#differentiators .differentiators-text-area ul li::before {
     content: '✓'; color: #F5E36B; position: absolute; left: 0;
     font-weight: bold; text-shadow: none;
 }
+/* --- MODIFY  TO MATCH THE SECTION'S HEADING COLOR --- */
 .capabilities-page section#differentiators .differentiators-text-area ul li strong {
-    color: #FFFFE0; text-shadow: none; font-weight: bold;
+    color: rgb(255, 200, 10);  /* Change to desired label color (matches H2) */
+    text-shadow: none;         /* Ensure no shadow is applied */
+    font-weight: bold;         /* Keep bold */
 }
 .capabilities-page section#differentiators .differentiators-text-area {
     flex-basis: 40%; background-color: rgba(0, 0, 0, 0.9); padding: 30px;
@@ -356,9 +389,23 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
 .contracting-page section#sdvosb-status { background-image: url('images/AetherVision-sublogo-15.png'); background-color: #3a3f4a; border-left-color: #a899c1; color: #ffffff; background-size: cover; padding: 30px; }
 .contracting-page section#sdvosb-status > * { position: relative; z-index: 3; }
 .contracting-page section#sdvosb-status h2 { color: rgb(224,175,255); text-shadow: none; }
-.contracting-page section#sdvosb-status p, .contracting-page section#sdvosb-status p strong { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
-.contracting-page section#sdvosb-status p { margin-bottom: 1em; }
-.contracting-page section#sdvosb-status p strong { font-weight: bold; }
+/*.contracting-page section#sdvosb-status p, .contracting-page section#sdvosb-status p strong { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }*/
+/*.contracting-page section#sdvosb-status p { margin-bottom: 1em; }*/
+/* Style the main paragraph text within the sdvosb-status section */
+.contracting-page section#sdvosb-status p {
+    color: #ffffff; /* White color for the main text */
+    /* Apply the desired text shadow to the paragraph text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+    /* Keep other paragraph styles like margin */
+    margin-bottom: 1em;
+}
+/*.contracting-page section#sdvosb-status p strong { font-weight: bold; }*/
+/* Specifically style the strong tags (labels) within those paragraphs */
+.contracting-page section#sdvosb-status p strong {
+    color: rgb(224, 175, 255); /* Set the desired color for labels */
+    font-weight: bold;         /* Ensure they remain bold */
+    text-shadow: none;         /* Explicitly remove any text shadow */
+}
 
 .contracting-page section#compliance-security {
     background-image: url('images/AetherVision-sublogo-16.png'); background-color: #202528;
@@ -377,11 +424,11 @@ section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
 .contracting-page section#contracting-vehicles { background-image: url('images/AetherVision-sublogo-17.png'); background-color: #1a2a3a; border-left-color: #66CDAA; color: #ffffff; background-size: cover; padding: 30px; }
 .contracting-page section#contracting-vehicles > * { position: relative; z-index: 3; }
 .contracting-page section#contracting-vehicles h2 { color: rgb(128,239,128); text-shadow: none; }
-.contracting-page section#contracting-vehicles p, .contracting-page section#contracting-vehicles ul li, .contracting-page section#contracting-vehicles ul li strong { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
+/*.contracting-page section#contracting-vehicles p, .contracting-page section#contracting-vehicles ul li, .contracting-page section#contracting-vehicles ul li strong { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }*/
 .contracting-page section#contracting-vehicles p { margin-bottom: 1em; }
 .contracting-page section#contracting-vehicles ul { list-style: none; padding-left: 0; }
 .contracting-page section#contracting-vehicles ul li { margin-bottom: 10px; padding-left: 1.5em; position: relative; }
-.contracting-page section#contracting-vehicles ul li::before { content: '>'; color: #66CDAA; position: absolute; left: 0; font-weight: bold; text-shadow: none;}
+.contracting-page section#contracting-vehicles ul li::before { content: '▪ '; color: #66CDAA; position: absolute; left: 0; font-weight: bold; text-shadow: none;}
 .contracting-page section#contracting-vehicles ul li strong { color: #AFEEEE; }
 
 /* === START: MODIFIED STYLES FOR TEAMING & COLLABORATION === */
