@@ -4,28 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- **** SEO & Metadata Enhancement **** -->
-    <title>Contact AetherVision LLC | SDVOSB | Partnership & Inquiries</title>
-    <meta name="description" content="Contact AetherVision LLC (SDVOSB) to discuss partnerships, contracting (DoD/IC), consulting, or our advanced AI/ML, ISR, and Neuromorphic Vision capabilities. Reach Dr. Sunil Kukreja, Founder & CEO.">
-    <meta name="keywords" content="Contact AetherVision, AetherVision LLC, Dr. Sunil Kukreja, SDVOSB Contact, Government Contracting, Partnership Inquiry, AI Contact, ISR Contact, Neuromorphic Vision Contact, National Security Technology, Avon CT, Delaware LLC, Careers">
+    <title>Contact AetherVision LLC | SDVOSB | Inquire About Partnerships, Contracting & Capabilities</title>
+    <meta name="description" content="Contact AetherVision LLC (Verified SDVOSB) to discuss government partnerships (DoD/IC), contracting opportunities (set-asides, sole-source), expert consulting, or our advanced AI/ML, ISR, and Neuromorphic Vision capabilities. Reach founder Dr. Sunil Kukreja directly.">
+    <meta name="keywords" content="Contact AetherVision, AetherVision LLC, Dr. Sunil Kukreja Contact, SDVOSB Contact, Government Contracting Inquiry, Partnership Inquiry, AI Contact, ISR Contact, Neuromorphic Vision Contact, DoD Contractor Contact, IC Contractor Contact, National Security Technology, Avon CT, Delaware LLC, Careers, Veteran Hiring, SAM Registered">
     <!-- **** End SEO & Metadata Enhancement **** -->
 
     <!-- Link to the SAME CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- === GOOGLE FONT IMPORTS (Consistency Check) === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&family=Sacramento&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <!-- === END GOOGLE FONT IMPORTS === -->
+
+    <!-- Schema.org JSON-LD - Enhanced Contact Details -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage", // Correct type for this page
+      "name": "Contact AetherVision LLC - SDVOSB Partner",
+      "description": "Contact information for AetherVision LLC, a verified Service-Disabled Veteran-Owned Small Business (SDVOSB). Inquire about partnerships, government contracting (DoD/IC), consulting, and our advanced AI/ML, ISR, and Neuromorphic Vision technology.",
+      "url": "https://www.aethervision-rd.com/contact.html", // Use PRODUCTION URL
+       "isPartOf": {
+        "@type": "WebSite",
+        "name": "AetherVision LLC",
+        "url": "https://www.aethervision-rd.com" // Use PRODUCTION URL
+      },
+      "mainEntity": {
+         "@type": "Organization",
+         "name": "AetherVision LLC",
+         "legalName": "AetherVision LLC",
+         "url": "https://www.aethervision-rd.com", // Use PRODUCTION URL
+         "logo": "https://www.aethervision-rd.com/images/AetherVision-logo.png", // Use PRODUCTION URL
+         "founder": {
+            "@type": "Person",
+            "name": "Dr. Sunil Kukreja",
+            "jobTitle": "Founder and CEO"
+         },
+          "contactPoint": [ // Array for multiple contact points/methods
+           {
+            "@type": "ContactPoint",
+            "telephone": "+1-415-779-6858",
+            "contactType": "Sales / Partnership Inquiry / General Inquiry", // More specific types
+            "contactOption": "TollFree", // Specify if applicable, otherwise remove or use HearingImpairedSupported if true
+            "areaServed": "US",
+            "availableLanguage": ["English"]
+           },{
+             "@type": "ContactPoint",
+             "email": "info@aethervision-rd.com", // Placeholder - **USE ACTUAL EMAIL ADDRESS**
+             "contactType": "General Inquiry / Careers", // Specify purpose
+             "availableLanguage": ["English"]
+           }
+           // Add specific contact points if needed, e.g., for Contracting Officer inquiries
+          ],
+          "address": { // Operating Address
+            "@type": "PostalAddress",
+            "addressLocality": "Avon",
+            "addressRegion": "CT",
+            "postalCode": "06001",
+            "addressCountry": "US",
+            "description": "Primary Operating Location" // Clearer description
+          },
+          "location": { // Registered Agent Address
+             "@type": "Place",
+             "address": {
+               "@type": "PostalAddress",
+               "streetAddress": "8 The Green, Suite B",
+               "addressLocality": "Dover",
+               "addressRegion": "DE",
+               "postalCode": "19901",
+               "addressCountry": "US",
+               "description": "Registered Agent Office (Delaware LLC)" // Clearer description
+             }
+          },
+          "sameAs": [ // Add social media/other relevant profiles
+             "https://linkedin.com/in/sunil-kukreja-92a17b141/" // Founder LinkedIn
+             // Add Company LinkedIn page URL here when available
+          ],
+          "governmentBenefitsInfo": [ // Array for multiple benefits
+            {
+               "@type": "GovernmentBenefitsInfo",
+               "name": "SDVOSB",
+               "description": "Verified Service-Disabled Veteran-Owned Small Business (SAM.gov Registered)", // Added SAM status
+               "governmentBenefitType": {
+                  "@type": "GovernmentServiceType",
+                  "name": "ServiceDisabledVeteranOwned"
+               }
+            },
+           {
+             "@type": "GovernmentBenefitsInfo",
+             "name": "Veteran Owned",
+             "description": "Veteran-Owned Business",
+             "governmentBenefitType": {
+                "@type": "GovernmentServiceType",
+                "name": "VeteranOwned"
+             }
+           }
+          ]
+      }
+    }
+    </script>
     <!-- Meta description updated above -->
 </head>
 <body class="contact-page">
 
     <header>
-        <!-- Logo assumes PNG format in 'images' folder -->
-        <img src="images/AetherVision-logo.png" alt="AetherVision LLC Logo - SDVOSB" class="logo">
+        <img src="images/AetherVision-logo.png" alt="AetherVision LLC Logo - SDVOSB & Veteran-Owned" class="logo">
 
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-icon"></span>
+        </button>
+
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="past-performance.html">Past Performance</a></li>
                 <li><a href="contracting.html">Contracting</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li> <!-- Active link -->
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li> <!-- Active link -->
             </ul>
         </nav>
     </header>
@@ -34,71 +131,92 @@
         <h1>Contact AetherVision LLC</h1>
 
         <!-- **** Enhanced Contact Info Section **** -->
-        <section id="contact-info">
-            <h2>Get in Touch</h2>
-            <p>AetherVision welcomes inquiries regarding potential partnerships, government contracting opportunities (including SDVOSB set-asides and sole-source possibilities), expert consulting services, or requests for further information about our advanced technology portfolio in AI/ML, ISR, and Neuromorphic Vision.</p>
-            <p>For all inquiries, please reach out directly to our leadership:</p>
-            <p>
-                <strong>Dr. Sunil Kukreja, Ph.D.</strong><br>
-                Founder and CEO<br>
-                AetherVision LLC<br>
-                <!-- Email: <a href="mailto:sunil@aethervision-rd.com">sunil@aethervision-rd.com</a><br> -->
-                <!-- Keeping email commented out as per original file -->
-                Phone: <a href="tel:+14157796858">(415) 779-6858</a>
-            </p>
-            <p>
-                <strong>Operating Location:</strong><br>
-                Avon, CT 06001
-            </p>
-             <p>
-                <strong>Registered Office (Delaware):</strong><br>
-                c/o Northwest Registered Agent Service Inc.<br>
-                8 The Green, Suite B<br>
-                Dover, DE 19901
-             </p>
-             <p>
-                 AetherVision LLC is a verified <strong>Service-Disabled Veteran-Owned Small Business (SDVOSB)</strong> registered in SAM.gov.
-             </p>
+        <section id="contact-info" aria-labelledby="contact-info-heading">
+            <h2 id="contact-info-heading">Get in Touch</h2>
+            <p>AetherVision welcomes inquiries regarding potential government or industry partnerships, specific contracting opportunities (including SDVOSB set-asides and sole-source possibilities leveraging our unique capabilities), expert consulting services, or requests for further technical information about our advanced technology portfolio in AI/ML, ISR, Neuromorphic Vision, and Edge Computing.</p>
+            <p><strong>For direct discussion regarding strategic partnerships, technical capabilities, or contracting matters, please contact our leadership:</strong></p>
+            <div class="contact-details">
+                <p>
+                    <strong>Dr. Sunil Kukreja, Ph.D.</strong><br>
+                    Founder and CEO<br>
+                    AetherVision LLC<br>
+                    Email: <a href="mailto:info@aethervision-rd.com">info@aethervision-rd.com</a><br>
+                    Phone: <a href="tel:+14157796858">(415) 779-6858</a>
+                </p>
+                <p>
+                    <strong>Primary Operating Location:</strong><br>
+                    Avon, CT 06001 USA
+                </p>
+                 <p>
+                    <strong>Registered Office (Delaware LLC):</strong><br>
+                    c/o Northwest Registered Agent Service Inc.<br>
+                    8 The Green, Suite B<br>
+                    Dover, DE 19901 USA
+                 </p>
+                 <p>
+                     AetherVision LLC is a verified <strong>Service-Disabled Veteran-Owned Small Business (SDVOSB)</strong> registered in the U.S. System for Award Management (SAM.gov). <br>
+                     <!-- CAGE Code: [Your CAGE Code] | UEI: [Your UEI] -->
+                 </p>
+            </div>
         </section>
         <!-- **** END Enhanced Contact Info Section **** -->
 
-        <!-- === MODIFIED CAREERS SECTION === -->
-        <!-- Content updated for clarity and tone -->
-        <section id="career-note">
-            <div class="career-text-area">  <!-- Wrapper for Text -->
-                <h2>Careers at AetherVision</h2>
-                <p>AetherVision LLC is dedicated to building an exceptional team of innovators committed to national security. As a Service-Disabled Veteran-Owned Small Business, we are deeply committed to creating a diverse and inclusive workplace and strongly encourage veterans and individuals with disabilities to consider joining our mission.</p>
-                <p>While specific positions may not always be posted, we anticipate future needs for talented individuals with expertise in AI/ML, neuromorphic engineering, robotics, sensor systems, software development (including embedded and cloud), hardware engineering (FPGA/SoC/ASIC), and systems engineering.</p>
-                <p>If you possess relevant skills and a passion for solving complex challenges, we invite you to express your interest by contacting us via the information provided above. Please check back periodically for specific job postings as our project portfolio grows.</p>
-            </div>
-            <div class="career-image-area">  <!-- Empty Div for Image Background -->
-                <!-- This div remains empty, its background will be styled via CSS -->
-            </div>
+        <!-- **** SPLIT CAREERS SECTION **** -->
+        <!-- Part 1: Image Banner -->
+        <section id="career-note-image-banner" aria-labelledby="careers-heading">
+             <h2 id="careers-heading">Careers at AetherVision</h2>
+             <!-- Background image via CSS -->
         </section>
-        <!-- === END MODIFIED CAREERS SECTION === -->
+        <!-- Part 2: Content Block -->
+        <section id="career-note-content" aria-labelledby="careers-heading">
+            <p>AetherVision LLC is committed to building an exceptional, mission-driven team of innovators dedicated to advancing national security through technology. As a Service-Disabled Veteran-Owned Small Business, we have a foundational commitment to creating a diverse and inclusive workplace and strongly encourage fellow veterans and individuals with disabilities to explore opportunities with us.</p>
+            <p>We anticipate future requirements for talented individuals possessing deep expertise in areas such as: Artificial Intelligence & Machine Learning, Neuromorphic Engineering, Robotics & Autonomous Systems, Advanced Sensor Systems, Software Engineering (Cloud, Embedded, Full-Stack), Hardware Engineering (FPGA/SoC/ASIC Design & Verification), and Systems Engineering (MBSE).</p>
+            <p>While specific positions may not always be actively posted, we invite individuals with relevant skills, a passion for solving complex technical challenges, and a desire to contribute to critical national security missions to express their interest. Please submit your resume or inquiry to <a href="mailto:info@aethervision-rd.com">info@aethervision-rd.com</a> (using subject line: "Career Inquiry"). We encourage you to check back periodically for specific job postings as our project portfolio expands.</p>
+            <!-- Consider adding a link to a dedicated Careers page if one exists in the future -->
+        </section>
+        <!-- **** END SPLIT CAREERS SECTION **** -->
 
-        <!-- Page Navigation - CORRECTED LINKS -->
+        <!-- Updated Page Navigation -->
         <div class="page-navigation">
-            <a href="contracting.html" class="prev-page">← Previous: Contracting</a> <!-- Should link back to Contracting -->
-            <span class="nav-placeholder"></span> <!-- Placeholder for spacing - No Next Link -->
+            <a href="contracting.html" class="prev-page">← Previous: Contracting</a>
+            <span class="nav-placeholder"></span> <!-- Placeholder for spacing - No Next Link on last page -->
         </div>
     </main>
 
     <footer>
-        <!-- Footer remains the same -->
-        <p>© <span id="year-contact"></span> AetherVision LLC. All Rights Reserved.</p>
-        <!-- Enhanced Footer SDVOSB Mention -->
+        <div class="certification-logos-footer">
+            <img src="images/sdvosb-verified-logo.png" alt="Official Verified Service-Disabled Veteran-Owned Small Business Logo">
+            <img src="images/veteran-owned.png" alt="Official Veteran-Owned Business Logo">
+        </div>
+        <p>© <span id="year-contact">2025</span> AetherVision LLC. All Rights Reserved.</p>
         <p><small>A Verified Service-Disabled Veteran-Owned Small Business (SDVOSB)</small></p>
     </footer>
 
+     <!-- Hamburger Menu & Year Script -->
      <script>
-        // Ensure this script runs even if placed before the element
-        document.addEventListener('DOMContentLoaded', function() {
-            const yearSpan = document.getElementById('year-contact');
-            if (yearSpan) {
+         document.addEventListener('DOMContentLoaded', function() {
+             const menuToggle = document.querySelector('.menu-toggle');
+             const mainNav = document.querySelector('#main-nav');
+             const yearSpan = document.getElementById('year-contact');
+
+             if (menuToggle && mainNav) {
+                 menuToggle.addEventListener('click', function() {
+                     const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                     menuToggle.setAttribute('aria-expanded', !isExpanded);
+                     menuToggle.classList.toggle('active');
+                     mainNav.classList.toggle('active');
+                 });
+             } else {
+                 if (!menuToggle) console.error('Menu toggle button (.menu-toggle) not found!');
+                 if (!mainNav) console.error('Main navigation element (#main-nav) not found!');
+             }
+
+             if (yearSpan) {
                  yearSpan.textContent = new Date().getFullYear();
-            }
-        });
+             } else {
+                  console.warn('Footer year span (#year-contact) not found!');
+             }
+         });
      </script>
 
 </body>

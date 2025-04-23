@@ -4,71 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- **** SEO & Metadata Enhancement **** -->
-    <title>AetherVision Capabilities | AI/ML, Neuromorphic Vision, ISR, SDVOSB</title>
-    <meta name="description" content="Explore AetherVision LLC's core capabilities: AI/ML for Multi-INT analysis, ISR platform enhancement, advanced Neuromorphic Vision (DARPA FENCE success), Data Exploitation, and Expert Consulting. Delivering solutions for DoD & IC challenges.">
-    <meta name="keywords" content="AetherVision Capabilities, AI, ML, ISR, Neuromorphic Vision, Event-Based Sensing, Data Analysis, Multi-INT Fusion, Edge Computing, Autonomous Systems, DARPA FENCE, SDVOSB, Sensor Fusion, ROIC, FPA, Consulting, National Security, DoD, IC, Threat Detection, Pattern Recognition">
+    <title>AetherVision Capabilities | SDVOSB | AI/ML, Neuromorphic Vision, ISR, Edge Compute</title> <!-- Focused Keywords -->
+    <meta name="description" content="Explore AetherVision LLC's (SDVOSB) core capabilities: AI/ML for Multi-INT analysis, ISR platform enhancement, advanced Neuromorphic Vision (DARPA FENCE success), Edge Computing, Data Exploitation, and Expert Consulting. Delivering mission-critical solutions for DoD & IC challenges."> <!-- Added Edge Compute, Mission-Critical -->
+    <meta name="keywords" content="AetherVision Capabilities, SDVOSB Capabilities, AI, ML, ISR, Neuromorphic Vision, Event-Based Sensing, Edge Computing, Data Analysis, Multi-INT Fusion, Autonomous Systems, DARPA FENCE, TRL-6, Service-Disabled Veteran-Owned Small Business, Sensor Fusion, ROIC, FPA, Consulting, National Security, DoD, IC, Threat Detection, Pattern Recognition, Secure Cloud, AWS GovCloud, Azure Government, Agile Development, Low-SWaP"> <!-- Added TRL-6, SDVOSB, Locations, Low-SWaP -->
     <!-- **** End SEO & Metadata Enhancement **** -->
 
     <!-- Link to the SAME CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- === GOOGLE FONT IMPORTS (Includes chosen script fonts) === -->
+    <!-- === GOOGLE FONT IMPORTS (Consistency Check) === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&family=Sacramento&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <!-- === END GOOGLE FONT IMPORTS === -->
 
-    <!-- === START CSS FOR TECHNOLOGY FOCUS AREAS (SHADOW ENABLED) === -->
-    <!-- Existing style block is retained as it controls specific visual elements -->
-    <style>
-        /* Target the specific list */
-        #technology-focus-areas ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-    /* --- FIRST MODIFICATION (LIST ITEM TEXT - ADD SHADOW): --- */
-    #technology-focus-areas ul li {
-        padding-left: 1.5em; /* Space for custom bullet */
-        position: relative;
-        margin-bottom: 0.5em; /* Spacing */
-        color: #ffffff; /* Set base text color to white */
-        /* Apply the desired text shadow to the list item text */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
-}
-
-        /* Style the custom bullet */
-        #technology-focus-areas ul li::before {
-            content: '•';
-            color: #8FBDEA !important; /* Bullet color (remains from last instruction) */
-            font-weight: bold;
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            width: 1em;
-        }
-
-    /* --- MODIFY THIS TO: CHANGE THE COLOR TO YOUR DESIRED VALUE --- */
-    /* Style the specific strong tags within this list */
-    #technology-focus-areas ul li > strong {
-        color: #8FBDEA !important;      /* Text color (remains from last instruction) */
-        /* ADDED the text-shadow property */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6) !important;
-        font-weight: bold;              /* Keep bold */
+    <!-- Schema.org JSON-LD - Enhanced Service Descriptions -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AetherVision LLC Capabilities | AI/ML, Neuromorphic, ISR",
+      "description": "Detailed overview of AetherVision LLC's core technical capabilities including Artificial Intelligence (AI), Machine Learning (ML), Neuromorphic Vision, Intelligence, Surveillance, and Reconnaissance (ISR) solutions, Data Exploitation, and Expert Consulting for national security applications.",
+      "url": "https://www.aethervision-rd.com/capabilities.html", // Use PRODUCTION URL
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AetherVision LLC",
+        "url": "https://www.aethervision-rd.com" // Use PRODUCTION URL
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "AetherVision LLC",
+        "url": "https://www.aethervision-rd.com", // Use PRODUCTION URL
+         "governmentBenefitsInfo": [ // Array is correct
+            {
+               "@type": "GovernmentBenefitsInfo",
+               "name": "SDVOSB",
+               "description": "Verified Service-Disabled Veteran-Owned Small Business",
+               "governmentBenefitType": {
+                  "@type": "GovernmentServiceType",
+                  "name": "ServiceDisabledVeteranOwned"
+               }
+            },
+           {
+             "@type": "GovernmentBenefitsInfo",
+             "name": "Veteran Owned",
+             "description": "Veteran-Owned Business",
+             "governmentBenefitType": {
+                "@type": "GovernmentServiceType",
+                "name": "VeteranOwned"
+             }
+           }
+          ],
+        "makesOffer": [ // Detailed service offerings
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Artificial Intelligence (AI) and Machine Learning (ML) Development & Integration",
+              "description": "Design, development, and deployment of sophisticated AI/ML algorithms (Deep Learning, CNNs, RNNs, Reinforcement Learning, Computer Vision, NLP) for real-time multi-INT data analysis, automated threat detection, complex pattern recognition, predictive modeling, and enhanced situational awareness. Expertise includes optimization for secure cloud (AWS GovCloud, Azure Government) and resource-constrained edge devices (SoCs, FPGAs, GPUs). Proven experience architecting secure, scalable MLOps platforms and leading Agile transformations (Scrum/Kanban) for rapid capability deployment.",
+              "serviceType": ["Technology Consulting", "Software Development", "System Integration"],
+              "areaServed": "US",
+              "provider": {"@type": "Organization", "name": "AetherVision LLC"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Intelligence, Surveillance, and Reconnaissance (ISR) System Solutions",
+              "description": "End-to-end design, integration, and enhancement of advanced ISR sensor payloads and processing systems for diverse platforms (UAVs, UGVs, USVs, CubeSats, distributed networks). Expertise includes multi-modal sensor fusion (EO/IR, RF/SIGINT, Radar, Acoustic, Seismic), robust edge computing architectures for low-latency processing in contested environments, autonomous navigation algorithm development (including GPS-denied scenarios), multi-platform coordination/swarming, and secure, low-probability-of-intercept/detection (LPI/LPD) communication links.",
+              "serviceType": ["System Integration", "Engineering Service", "Research and Development"],
+              "areaServed": "US",
+              "provider": {"@type": "Organization", "name": "AetherVision LLC"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Neuromorphic Vision & Advanced Bio-Inspired Sensing",
+              "description": "Pioneering event-driven visual perception and advanced sensing modalities inspired by biological systems. Expertise encompasses custom Readout Integrated Circuit (ROIC) and Focal Plane Array (FPA) design, development of low-SWaP neuromorphic sensors optimized for high-speed, high-dynamic-range (HDR), and low-light applications (UV-THz concepts). Proven success conceptualizing, pitching, and leading the $5.5M DARPA FENCE program, delivering a TRL-6 neuromorphic camera prototype that exceeded all performance milestones. Research extends to neuromorphic tactile sensing.",
+              "serviceType": ["Research and Development", "Engineering Service", "Product Development"],
+              "areaServed": "US",
+              "provider": {"@type": "Organization", "name": "AetherVision LLC"}
+            }
+          },
+           {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-INT Data Analysis, Exploitation & Fusion",
+              "description": "Development and application of novel methods for fusing and exploiting data from diverse intelligence sources (SIGINT, GEOINT, MASINT, HUMINT, OSINT, Cyber). Expertise includes advanced predictive analytics, anomaly detection algorithms, behavior modeling, and automated intelligence workflow creation to extract actionable intelligence from complex, high-velocity, large-volume datasets. Proficiency in establishing gold-standard secure data governance frameworks compliant with IC and DoD standards.",
+              "serviceType": ["Data Analytics", "Software Development", "Technology Consulting"],
+              "areaServed": "US",
+              "provider": {"@type": "Organization", "name": "AetherVision LLC"}
+            }
+          },
+           {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Expert Consulting, Training & Strategic Technology Planning",
+              "description": "Providing specialized technical consulting in AI/ML applications, ISR system architecture (including MBSE), neuromorphic sensing integration, multi-INT fusion strategies, technology readiness assessments (TRAs), and strategic roadmap development aligned with specific agency missions (DoD, IC). Includes customized training programs and support navigating government R&D processes (SBIR/STTR, BAAs, OTs).",
+              "serviceType": "Technology Consulting",
+              "areaServed": "US",
+              "provider": {"@type": "Organization", "name": "AetherVision LLC"}
+            }
+          }
+        ]
+      }
     }
-    </style>
-    <!-- === END CSS FOR TECHNOLOGY FOCUS AREAS (SHADOW ENABLED) === -->
+    </script>
+    <!-- Styles moved to style.css -->
+
 </head>
 <body class="capabilities-page">
 
     <header>
-        <!-- Logo assumes PNG format in 'images' folder -->
-        <img src="images/AetherVision-logo.png" alt="AetherVision LLC Logo - SDVOSB" class="logo">
+        <img src="images/AetherVision-logo.png" alt="AetherVision LLC Logo - SDVOSB & Veteran-Owned" class="logo">
 
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-icon"></span>
+        </button>
+
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="capabilities.html" class="active">Capabilities</a></li> <!-- Active link -->
+                <li><a href="capabilities.html" class="active" aria-current="page">Capabilities</a></li> <!-- Active link -->
+                <li><a href="past-performance.html">Past Performance</a></li>
                 <li><a href="contracting.html">Contracting</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -79,126 +142,146 @@
         <h1>Our Capabilities: Engineering Mission Advantage</h1>
 
         <!-- **** Enhanced Core Competencies Section **** -->
-        <section id="core-competencies">
-            <h2>Core Competencies</h2>
-            <p>AetherVision LLC transforms advanced scientific concepts into practical, mission-enhancing solutions. We possess deep expertise and proven experience in developing and applying disruptive technologies tailored for the unique demands of the Intelligence Community (IC) and Department of Defense (DoD).</p>
+        <section id="core-competencies" aria-labelledby="core-competencies-heading">
+            <h2 id="core-competencies-heading">Core Competencies</h2>
+            <p>AetherVision LLC transforms cutting-edge scientific concepts into practical, mission-critical solutions. We possess deep technical expertise and demonstrated leadership experience in developing and applying disruptive technologies specifically tailored for the unique, demanding requirements of the U.S. Intelligence Community (IC) and Department of Defense (DoD).</p>
 
-            <div>
-                <h3>Artificial Intelligence (AI) and Machine Learning (ML)</h3>
+            <div aria-labelledby="ai-ml-heading">
+                <h3 id="ai-ml-heading">Artificial Intelligence (AI) and Machine Learning (ML)</h3>
                 <ul>
-                    <li>Developing and deploying sophisticated AI/ML algorithms for real-time multi-INT data analysis, automated threat detection, complex pattern recognition, predictive modeling, and enhanced situational awareness.</li>
-                    <li>Expertise in optimizing AI/ML models (including deep learning, computer vision, NLP) for deployment on resource-constrained edge devices (SoCs, FPGAs) and embedded systems crucial for tactical ISR and autonomous platforms.</li>
-                    <li>Proven experience in building secure, scalable AI/ML platforms (cloud and edge) for processing sensitive mission data (e.g., experience architecting on AWS GovCloud, Azure Government).</li>
-                    <li>Application areas include automated target recognition (ATR), behavioral analysis, anomaly detection, sensor fusion, and decision support systems.</li>
+                    <li>Developing and deploying sophisticated AI/ML algorithms (Deep Learning, Computer Vision, NLP, Reinforcement Learning) for real-time multi-INT data analysis, automated threat detection/classification, complex pattern recognition, predictive modeling, and enhanced situational awareness across multiple domains.</li>
+                    <li>Expertise in optimizing AI/ML models for deployment on resource-constrained <strong>edge devices</strong> (SoCs, FPGAs, specialized accelerators) and embedded systems, crucial for tactical ISR, autonomous platform control, and operations in communication-denied environments.</li>
+                    <li>Proven leadership architecting and deploying <strong>secure, scalable AI/ML platforms</strong> within government cloud environments (AWS GovCloud, Azure Government) and hybrid edge-cloud architectures. Experience achieving significant (e.g., <strong>40%+</strong>) mission effectiveness improvements through AI integration in prior roles.</li>
+                    <li>Application areas include Automated Target Recognition (ATR), behavior analysis from multi-modal data, anomaly detection in complex signals/imagery, multi-sensor fusion for enhanced tracking, predictive maintenance for critical assets (achieving e.g., <strong>20%</strong> downtime reduction in prior projects), and adaptive decision support systems.</li>
+                    <li>Experience leading large-scale <strong>Agile transformations</strong> (Scrum/Kanban) for AI/ML software development within secure environments, demonstrably accelerating delivery cycles (e.g., <strong>35-50%</strong> reduction) and improving team velocity.</li>
                 </ul>
             </div>
 
-            <div>
-                <h3>Intelligence, Surveillance, and Reconnaissance (ISR) Solutions</h3>
+            <div aria-labelledby="isr-heading">
+                <h3 id="isr-heading">Intelligence, Surveillance, and Reconnaissance (ISR) Solutions</h3>
                 <ul>
-                    <li>Designing, integrating, and enhancing advanced ISR sensor payloads and processing systems for diverse platforms (including UAVs, UGVs, and distributed networks).</li>
-                    <li>Expertise in integrating and fusing data from multi-modal sensor suites (EO/IR, radar, SIGINT, acoustic, seismic) for comprehensive, real-time situational awareness.</li>
-                    <li>Implementing robust on-platform edge computing solutions for rapid, localized data processing, reducing latency and bandwidth requirements in contested environments.</li>
-                    <li>Developing sophisticated autonomous navigation, path planning, and multi-platform coordination algorithms enabling operation in complex, GPS-denied, or communication-limited scenarios.</li>
-                    <li>Engineering secure, resilient communication capabilities (including concepts for LPI/LPD optical communications) for reliable data transmission in contested domains.</li>
+                    <li>Designing, integrating, testing, and enhancing advanced ISR sensor payloads and processing systems for diverse platforms (airborne UAVs, terrestrial UGVs, maritime USVs, space-based assets, unattended ground sensors).</li>
+                    <li>Expertise in integrating and fusing data from multi-modal sensor suites (EO/IR, Hyperspectral, RF/SIGINT, Radar/SAR, Acoustic, Seismic) to generate comprehensive, real-time situational understanding and actionable intelligence.</li>
+                    <li>Implementing robust <strong>on-platform edge computing</strong> solutions for rapid, localized data processing, analytics, and decision-making, minimizing latency (e.g., <strong>25%</strong> reduction observed in prior work) and reducing reliance on vulnerable communication links in contested environments. Includes development of secure edge architectures compliant with ITAR and stringent cybersecurity protocols.</li>
+                    <li>Developing sophisticated autonomous navigation, path planning, and multi-platform coordination/swarming algorithms enabling persistent operation in complex, dynamic, and <strong>GPS-denied or communication-limited</strong> scenarios.</li>
+                    <li>Engineering secure, resilient communication capabilities, including concepts for Low Probability of Intercept/Detection (LPI/LPD) links (e.g., optical/FSO), ensuring reliable data transmission in contested electromagnetic domains.</li>
                 </ul>
             </div>
 
-            <div>
-                <h3>Neuromorphic Vision & Advanced Sensing</h3>
+            <div aria-labelledby="neuromorphic-heading">
+                <h3 id="neuromorphic-heading">Neuromorphic Vision & Advanced Bio-Inspired Sensing</h3>
                 <ul>
-                    <li>Leveraging deep expertise in neuromorphic (event-driven) visual perception, inspired by biological systems, for next-generation sensing capabilities.</li>
-                    <li>**Proven DARPA Success:** Successfully led and executed the DARPA FENCE program, delivering a TRL-6 neuromorphic camera prototype that exceeded performance milestones, demonstrating enhanced sensitivity and reduced cognitive load.</li>
-                    <li>Expertise in designing custom Readout Integrated Circuits (ROICs) and Focal Plane Arrays (FPAs) for specialized, high-performance neuromorphic and multi-spectral imaging applications (UV-THz concepts).</li>
-                    <li>Developing event-based vision systems offering significant advantages: ultra-high temporal resolution, wide dynamic range, low power consumption (low-SWaP), and superior performance in detecting/tracking fast, low-observable targets in cluttered or low-light conditions.</li>
-                    <li>Research extends to neuromorphic tactile sensing and other bio-inspired sensor modalities for enhanced robotic perception and interaction.</li>
+                    <li>Leveraging deep expertise in neuromorphic (event-driven) visual perception, inspired by biological systems, to create next-generation sensing capabilities offering unparalleled temporal resolution, high dynamic range (HDR), and extremely low power consumption (Low-SWaP).</li>
+                    <li><strong>Proven DARPA FENCE Program Leadership & Success:</strong> Dr. Kukreja conceptualized, pitched, and successfully led the <strong>$5.5M DARPA FENCE program</strong> (during prior role at Raytheon), culminating in the delivery of a <strong>TRL-6</strong> neuromorphic camera prototype. This system exceeded all performance milestones (average <strong>20%</strong> margin), demonstrated significantly enhanced sensitivity (<strong>60%</strong> improvement), reduced false alarms (<strong>35%</strong> reduction), cut power consumption (<strong>25%</strong> decrease), and lowered operator cognitive load (<strong>30%</strong> reduction).</li>
+                    <li>Expertise in designing custom Readout Integrated Circuits (ROICs) and Focal Plane Arrays (FPAs) for specialized, high-performance neuromorphic and multi-spectral imaging applications, exploring concepts from UV to THz bands.</li>
+                    <li>Developing event-based vision systems optimized for detecting, tracking, and classifying fast, low-observable, or fleeting targets in cluttered or low-light conditions, overcoming fundamental limitations of traditional frame-based sensors.</li>
+                    <li>Research and development experience extends to neuromorphic tactile sensing ('e-skin' concepts achieving <strong>100x</strong> density, <strong>90%</strong> power reduction in prior NUS work) and other bio-inspired sensor modalities for enhanced robotic perception and human-machine interaction.</li>
                 </ul>
             </div>
 
-            <div>
-                <h3>Data Analysis, Exploitation & Fusion</h3>
+            <div aria-labelledby="data-analysis-heading">
+                <h3 id="data-analysis-heading">Data Analysis, Exploitation & Fusion</h3>
                 <ul>
-                    <li>Creating novel data analysis methodologies and software tools to extract timely, actionable intelligence from large-scale, complex, multi-source data streams (Multi-INT: SIGINT, GEOINT, MASINT, HUMINT, OSINT).</li>
-                    <li>Expertise in developing and applying advanced predictive analytics, anomaly detection algorithms, and pattern recognition techniques to identify subtle indicators and emerging threats.</li>
-                    <li>Designing and implementing automated intelligence analysis workflows to accelerate the intelligence cycle and enhance analyst decision-making.</li>
-                    <li>Proficiency in secure data management and establishing robust data governance frameworks for sensitive mission data, ensuring integrity, accuracy, and compliance (experience exceeding NASA standards).</li>
+                    <li>Creating novel data analysis methodologies and software tools to extract timely, actionable intelligence from large-scale, complex, heterogeneous multi-source data streams (<strong>Multi-INT:</strong> SIGINT, GEOINT, MASINT, HUMINT, OSINT, Cyber).</li>
+                    <li>Expertise in developing and applying advanced predictive analytics, anomaly detection algorithms (statistical, ML-based), and pattern recognition techniques to identify subtle indicators, correlations, and emerging threats often missed by traditional methods.</li>
+                    <li>Designing and implementing automated and semi-automated intelligence analysis workflows to significantly accelerate the intelligence cycle (tasking, collection, processing, exploitation, dissemination) and enhance analyst decision-making under pressure.</li>
+                    <li>Proficiency in establishing secure data management strategies and robust <strong>data governance frameworks</strong> for sensitive mission data, ensuring integrity, accuracy, provenance, and compliance with DoD/IC standards (building on experience exceeding NASA standards, achieving <strong>100%</strong> audit compliance and <strong>zero breaches</strong> in prior leadership roles).</li>
                 </ul>
             </div>
 
-             <div>
-                <h3>Expert Consulting, Training & Strategic Planning</h3>
+             <div aria-labelledby="consulting-heading">
+                <h3 id="consulting-heading">Expert Consulting, Training & Strategic Planning</h3>
                 <ul>
-                    <li>Providing expert technical consulting services in AI/ML applications, ISR system design, data analysis strategies, neuromorphic vision integration, and multi-INT fusion techniques.</li>
-                    <li>Offering independent technology assessments, system architecture design, integration support, and strategic technology roadmapping aligned with specific agency missions and program goals.</li>
-                    <li>Developing and delivering customized training programs on advanced technology concepts and applications for government and industry partners.</li>
-                    <li>Leveraging extensive experience in navigating the government R&D ecosystem (including SBIR/STTR) to provide strategic guidance.</li>
+                    <li>Providing expert technical consulting services in AI/ML applications (cloud-to-edge deployment), ISR system design/integration, data analysis strategies, neuromorphic vision implementation, multi-INT fusion architectures, and system-of-systems engineering.</li>
+                    <li>Offering independent technology assessments (TRAs), system architecture reviews (leveraging MBSE principles), integration support, test & evaluation planning, and strategic technology roadmapping aligned with specific agency missions, capability gaps, and program goals.</li>
+                    <li>Developing and delivering customized training programs on advanced technology concepts (AI/ML fundamentals, Neuromorphic sensing principles) and relevant methodologies (Agile for R&D, Risk Management for technical programs) for government and industry technical staff and leadership.</li>
+                    <li>Leveraging extensive first-hand experience navigating the government R&D ecosystem (SBIR/STTR lifecycle, BAAs, OTs) and collaborating effectively with Program Managers, Contracting Officers, and Technical Points of Contact (TPOCs) to provide strategic guidance and proposal support.</li>
                 </ul>
             </div>
         </section>
         <!-- **** END Enhanced Core Competencies Section **** -->
 
         <!-- **** Enhanced Technology Focus Areas Section **** -->
-        <section id="technology-focus-areas">
-            <h2>Technology Focus Areas & Solutions</h2>
-            <p>Building upon our core competencies, AetherVision concentrates on developing and integrating innovative solutions to address critical national security capability gaps:</p>
+        <section id="technology-focus-areas" aria-labelledby="tech-focus-heading">
+            <h2 id="tech-focus-heading">Technology Focus Areas & Solution Concepts</h2>
+            <p>Building upon our core competencies, AetherVision concentrates on developing and integrating innovative solutions designed to address critical national security capability gaps and provide asymmetric advantages:</p>
             <ul>
-                <li><strong>Next-Generation Sensing & Perception Solutions:</strong> Engineering advanced sensor systems exploiting neuromorphic principles, multi-modal fusion (EO/IR, RF, acoustic, seismic, etc.), and novel materials (e.g., plasmonics concepts) for superior detection, tracking, and identification (DT&I) in challenging environments (low-light, high-clutter, high-speed, GPS-denied). Applications include persistent surveillance, enhanced ISR, platform survivability, and force protection.</li>
-                <li><strong>AI-Powered Multi-INT Exploitation & Decision Support:</strong> Creating sophisticated AI/ML algorithms optimized for real-time analysis of diverse intelligence data streams (Multi-INT). Focus includes automated pattern recognition, anomaly detection, predictive threat modeling, and intuitive decision support tools deployable from secure cloud environments (e.g., GovCloud) to tactical edge devices for information advantage.</li>
-                <li><strong>Enhanced Autonomous Systems Capabilities:</strong> Integrating advanced perception (including neuromorphic vision), AI-driven control algorithms, secure communications, and resilient navigation techniques into unmanned platforms (UAVs, UGVs, Swarms) to improve mission effectiveness, operational reach, adaptability in complex terrains, and survivability in contested or denied environments.</li>
-                <li><strong>Advanced Defensive Technology Concepts:</strong> Researching and conceptualizing novel materials (e.g., graphene metamaterials, BNNTs), advanced sensor concepts, and AI-driven countermeasures to protect critical assets against emerging threats, including Directed Energy Weapons (DEW) and sophisticated electronic warfare (EW) tactics.</li>
-                <li><strong>Custom Hardware Acceleration & Low-SWaP Solutions:</strong> Designing and leveraging specialized hardware, including custom ROICs, FPAs, Field-Programmable Gate Arrays (FPGAs), and System-on-a-Chip (SoC) solutions, to accelerate AI/ML algorithms and sensor processing for demanding low-Size, Weight, and Power (low-SWaP) applications on embedded systems and edge platforms.</li>
+                <li><strong>Next-Generation Sensing & Perception Solutions:</strong> Engineering advanced sensor systems leveraging neuromorphic principles, multi-modal fusion (EO/IR, RF, acoustic, seismic, etc.), and novel materials concepts for superior detection, tracking, identification (DT&I), and classification in challenging environments (low-light, high-clutter, high-speed, GPS-denied, obscured). Applications include persistent surveillance, enhanced ISR payload performance, platform survivability, force protection, and remote sensing.</li>
+                <li><strong>AI-Powered Multi-INT Exploitation & Decision Support:</strong> Creating sophisticated, trustworthy AI/ML algorithms optimized for real-time analysis of diverse intelligence data streams (Multi-INT). Focus includes automated pattern-of-life analysis, anomaly detection, predictive threat modeling, course-of-action assessment, and intuitive decision support tools deployable from secure cloud environments (e.g., GovCloud) to tactical edge devices for information dominance.</li>
+                <li><strong>Enhanced Autonomous Systems Capabilities:</strong> Integrating advanced perception (including neuromorphic vision for low-latency reaction), AI-driven control algorithms, secure and resilient communications (LPI/LPD concepts), and robust navigation techniques (including bio-inspired approaches like anemotaxis) into unmanned platforms (UAVs, UGVs, Swarms) to improve mission effectiveness, operational reach, adaptability in complex terrains, and survivability in contested or denied environments.</li>
+                <li><strong>Advanced Defensive Technology Concepts:</strong> Researching and conceptualizing novel materials (e.g., graphene metamaterials, BNNTs for thermal management), advanced sensor concepts (e.g., for detecting directed energy signatures), and AI-driven countermeasures to protect critical assets and personnel against emerging threats, including Directed Energy Weapons (DEW - HEL, HPM) and sophisticated electronic warfare (EW) tactics.</li>
+                <li><strong>Custom Hardware Acceleration & Low-SWaP Solutions:</strong> Designing and leveraging specialized hardware, including custom ROICs, FPAs, Field-Programmable Gate Arrays (FPGAs), and System-on-a-Chip (SoC) solutions, to accelerate computationally intensive AI/ML algorithms and sensor processing pipelines for demanding low-Size, Weight, and Power (<strong>low-SWaP</strong>) applications on embedded systems and edge platforms. Draws on experience developing FPGA-based AI that reduced vulnerabilities and exceeded GPU performance benchmarks in specific tasks.</li>
             </ul>
-            <p><em>AetherVision is committed to pushing the boundaries of science and engineering to provide decisive technological advantages for our clients.</em></p>
+            <p><em>AetherVision is committed to pushing the boundaries of science and engineering to provide tangible, decisive technological advantages for our clients' most critical missions.</em></p>
         </section>
         <!-- **** END Enhanced Technology Focus Areas Section **** -->
 
-         <!-- **** REVISED Differentiators Image Banner Section **** -->
-         <!-- Now contains the H2 title -->
-         <!-- NOTE: Corresponding CSS changes in style.css are REQUIRED -->
-         <section id="differentiators-image-banner">
-             <h2>Our Differentiators: Why Partner with AetherVision?</h2>
-             <!-- This section has background image styled via CSS -->
+         <!-- **** Differentiators Image Banner Section (Title inside) **** -->
+         <section id="differentiators-image-banner" aria-labelledby="differentiators-heading">
+             <h2 id="differentiators-heading">Our Differentiators: Why Partner with AetherVision?</h2>
+             <!-- Background image set via CSS -->
          </section>
          <!-- **** END Differentiators Image Banner Section **** -->
 
-         <!-- **** REVISED Differentiators Content Section **** -->
-         <!-- Now contains ONLY the UL list -->
-         <!-- NOTE: Corresponding CSS changes in style.css are REQUIRED -->
-         <section id="differentiators-content">
+         <!-- **** Differentiators Content Section (List below banner) **** -->
+         <section id="differentiators-content" aria-describedby="differentiators-heading">
               <ul>
-                  <li><strong>Verified Service-Disabled Veteran-Owned Small Business (SDVOSB):</strong> Providing unique eligibility for set-aside and sole-source federal contracting opportunities, enabling rapid acquisition pathways.</li>
-                  <li><strong>Founder's Unique Multi-Domain Leadership:</strong> Led by Dr. Sunil Kukreja, whose unparalleled experience bridges military service (USAF/Army), NASA research leadership, academia (NUS Director), and private sector innovation (Raytheon Assoc. Director, DARPA PI).</li>
-                  <li><strong>Proven DARPA Program Success:</strong> Demonstrated ability to successfully propose, lead, and deliver on high-risk, high-reward advanced technology programs (e.g., FENCE TRL-6 prototype delivered exceeding milestones).</li>
-                  <li><strong>Focus on Disruptive, Mission-Relevant Innovation:</strong> Dedication to developing beyond-next-generation technologies specifically targeting critical IC and DoD capability gaps and operational challenges.</li>
-                  <li><strong>Deep Technical Exploitation Expertise:</strong> Proven ability to extract actionable intelligence and insights from complex data sources and leverage technology for strategic advantage.</li>
-                  <li><strong>Agile, Responsive, and Mission-Focused:</strong> A lean, customer-centric approach ensuring rapid development cycles, adaptability to evolving requirements, and unwavering focus on mission success.</li>
-                  <li><strong>Understanding of Government R&D Ecosystem:</strong> Extensive experience navigating government funding mechanisms (SBIR/STTR, BAAs) and collaborating effectively with government PMs and contracting officers.</li>
-                  <li><strong>Commitment to Veterans & Inclusion:</strong> Actively prioritizing the recruitment, hiring, and support of fellow veterans and fostering a diverse, inclusive workforce.</li>
+                  <li><strong>Verified Service-Disabled Veteran-Owned Small Business (SDVOSB):</strong> Providing unique eligibility for set-aside and sole-source federal contracting opportunities (FAR 19.14), enabling rapid acquisition pathways for urgent government needs.</li>
+                  <li><strong>Founder's Unique Multi-Domain Leadership Credibility:</strong> Led by Dr. Sunil Kukreja, whose unparalleled experience bridges decorated military service (USAF/Army), senior NASA research leadership (Senior Principal Scientist), international academic center direction (NUS Director), and major defense contractor R&D executive management (Raytheon Assoc. Director, DARPA PI).</li>
+                  <li><strong>Proven DARPA Program Success & TRL Maturation:</strong> Demonstrated ability to successfully conceptualize, propose, win, lead (<strong>$5.5M</strong>), and execute high-risk, high-reward advanced technology programs (e.g., FENCE <strong>TRL-6</strong> neuromorphic prototype delivered exceeding all milestones by <strong>20%+</strong>), proving capability to advance technology readiness levels.</li>
+                  <li><strong>Focus on Disruptive, Mission-Relevant Innovation:</strong> Dedication to developing beyond-next-generation technologies (neuromorphic, edge AI, advanced sensing, secure platforms) specifically targeting critical IC and DoD capability gaps and pressing operational challenges.</li>
+                  <li><strong>Deep Technical Exploitation Expertise:</strong> Proven ability, honed through leadership roles, to extract actionable intelligence and insights from complex multi-INT data sources and leverage cutting-edge technology (AI/ML, advanced analytics, neuromorphic) for tangible strategic and tactical advantage.</li>
+                  <li><strong>Agile, Responsive, and Mission-Focused Execution:</strong> A lean, customer-centric SDVOSB structure combined with extensive experience driving large-scale Agile transformations ensures rapid development cycles, adaptability to evolving requirements, and unwavering focus on delivering mission success.</li>
+                  <li><strong>Expertise in Government R&D Ecosystem Navigation:</strong> Extensive experience securing competitive funding (<strong>$30M+</strong> grants across career), successfully navigating diverse government mechanisms (SBIR/STTR, BAAs, OTs), and collaborating effectively with government Program Managers and contracting officers across DoD and IC.</li>
+                  <li><strong>Embedded Commitment to Security & Compliance:</strong> Deep, practical understanding and leadership experience implementing robust cybersecurity (NIST SP 800-171, RMF, CMMC principles), secure data governance, and ITAR/EAR compliance essential for sensitive national security work.</li>
+                  <li><strong>Authentic Commitment to Veterans & Inclusion:</strong> Actively prioritizing the recruitment, hiring, development, and support of fellow veterans and fostering a diverse, inclusive workforce as a core company value.</li>
               </ul>
          </section>
          <!-- **** END Differentiators Content Section **** -->
 
-         <!-- Page Navigation -->
+         <!-- Updated Page Navigation -->
          <div class="page-navigation">
              <a href="about.html" class="prev-page">← Previous: About Us</a>
-             <a href="contracting.html" class="next-page">Next: Contracting →</a>
+             <a href="past-performance.html" class="next-page">Next: Past Performance →</a>
          </div>
     </main>
 
     <footer>
-        <!-- Footer remains the same -->
-        <p>© <span id="year-cap"></span> AetherVision LLC. All Rights Reserved.</p>
-        <!-- Enhanced Footer SDVOSB Mention -->
+        <div class="certification-logos-footer">
+            <img src="images/sdvosb-verified-logo.png" alt="Official Verified Service-Disabled Veteran-Owned Small Business Logo">
+            <img src="images/veteran-owned.png" alt="Official Veteran-Owned Business Logo">
+        </div>
+        <p>© <span id="year-cap">2025</span> AetherVision LLC. All Rights Reserved.</p> <!-- Default year added -->
         <p><small>A Verified Service-Disabled Veteran-Owned Small Business (SDVOSB)</small></p>
     </footer>
 
+     <!-- Hamburger Menu & Year Script -->
      <script>
          document.addEventListener('DOMContentLoaded', function() {
-            const yearSpan = document.getElementById('year-cap');
-            if (yearSpan) {
+             const menuToggle = document.querySelector('.menu-toggle');
+             const mainNav = document.querySelector('#main-nav');
+             const yearSpan = document.getElementById('year-cap'); // Ensure ID matches footer span
+
+             // Hamburger Menu Toggle Logic
+             if (menuToggle && mainNav) {
+                 menuToggle.addEventListener('click', function() {
+                     const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                     menuToggle.setAttribute('aria-expanded', !isExpanded);
+                     menuToggle.classList.toggle('active');
+                     mainNav.classList.toggle('active');
+                 });
+             } else {
+                 if (!menuToggle) console.error('Menu toggle button (.menu-toggle) not found!');
+                 if (!mainNav) console.error('Main navigation element (#main-nav) not found!');
+             }
+
+             // Update Copyright Year Dynamically
+             if (yearSpan) {
                  yearSpan.textContent = new Date().getFullYear();
-            }
-        });
+             } else {
+                  console.warn('Footer year span (#year-cap) not found!');
+             }
+         });
      </script>
 
 </body>

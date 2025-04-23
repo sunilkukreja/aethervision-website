@@ -3,22 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About AetherVision LLC</title>
+    <!-- **** SEO & Metadata Enhancement **** -->
+    <title>About AetherVision LLC | SDVOSB Leadership & Expertise | Dr. Sunil Kukreja</title>
+    <meta name="description" content="Learn about AetherVision LLC, a verified SDVOSB led by Dr. Sunil Kukreja. Discover our mission, vision, values, and deep expertise forged at NASA, Raytheon, and leading DARPA programs, focused on national security technology and veteran support.">
+    <meta name="keywords" content="About AetherVision, SDVOSB, Service-Disabled Veteran-Owned Small Business, Veteran-Owned Business, Dr. Sunil Kukreja, Founder, CEO, DARPA FENCE, Raytheon Technologies Research Center, NASA, Neuromorphic Engineering, AI, ML, ISR, National Security, Veteran Hiring, Inclusion, Compliance, Mission, Vision, Values, Connecticut, Delaware LLC">
+    <!-- **** End SEO & Metadata Enhancement **** -->
+
     <!-- Link to the SAME CSS file -->
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Learn about AetherVision LLC, an SDVOSB founded by Dr. Sunil Kukreja, specializing in AI/ML, neuromorphic sensing, and advanced ISR solutions for national security.">
+    <!-- === GOOGLE FONT IMPORTS (Ensure consistency) === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Pinyon+Script&family=Sacramento&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <!-- === END GOOGLE FONT IMPORTS === -->
+
+    <!-- Schema.org JSON-LD - Enhanced & Corrected URLs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "About AetherVision LLC | SDVOSB Leadership & Expertise",
+      "description": "Learn about AetherVision LLC, our mission, vision, values, and the extensive expertise of our founder, Dr. Sunil Kukreja. A verified SDVOSB focused on disruptive national security technology.",
+      "url": "https://www.aethervision-rd.com/about.html", // Use PRODUCTION URL
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AetherVision LLC",
+        "url": "https://www.aethervision-rd.com" // Use PRODUCTION URL
+      },
+      "mainEntity": {
+         "@type": "Organization",
+         "name": "AetherVision LLC",
+         "legalName": "AetherVision LLC",
+         "url": "https://www.aethervision-rd.com", // Use PRODUCTION URL
+         "logo": "https://www.aethervision-rd.com/images/AetherVision-logo.png", // Use PRODUCTION URL
+         "description": "AetherVision LLC is a verified Service-Disabled Veteran-Owned Small Business (SDVOSB) specializing in advanced AI/ML, Neuromorphic Vision, Sensing, and ISR solutions for National Security, founded by Dr. Sunil Kukreja.",
+         "founder": {
+            "@type": "Person",
+            "name": "Dr. Sunil Kukreja",
+            "jobTitle": "Founder and CEO",
+            "url": "https://linkedin.com/in/sunil-kukreja-92a17b141/",
+            "sameAs": "https://linkedin.com/in/sunil-kukreja-92a17b141/",
+            "alumniOf": ["McGill University", "Johns Hopkins University"],
+            "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Neuromorphic Engineering", "Robotics", "ISR", "DARPA programs", "NASA programs", "DoD Contracting", "Veteran Affairs", "Systems Engineering", "Cybersecurity", "Cloud Computing", "Edge Computing", "Agile Management", "Program Management", "Risk Management", "Sensor Fusion", "Autonomous Systems", "TRL Maturation"],
+            "honorificPrefix": "Dr.",
+            "honorificSuffix": "Ph.D.",
+            "memberOf": [
+               {"@type": "Organization", "name": "United States Air Force"},
+               {"@type": "Organization", "name": "United States Army"}
+            ]
+         },
+         "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Avon",
+            "addressRegion": "CT",
+            "postalCode": "06001",
+            "addressCountry": "US",
+            "description": "Operating Location"
+          },
+          "location": {
+             "@type": "Place",
+             "address": {
+               "@type": "PostalAddress",
+               "streetAddress": "8 The Green, Suite B",
+               "addressLocality": "Dover",
+               "addressRegion": "DE",
+               "postalCode": "19901",
+               "addressCountry": "US",
+               "description": "Registered Office (c/o Northwest Registered Agent Service Inc.)"
+             }
+          },
+         "governmentBenefitsInfo": [
+            {
+               "@type": "GovernmentBenefitsInfo",
+               "name": "SDVOSB",
+               "description": "Verified Service-Disabled Veteran-Owned Small Business",
+               "governmentBenefitType": {
+                  "@type": "GovernmentServiceType",
+                  "name": "ServiceDisabledVeteranOwned"
+               }
+            },
+           {
+             "@type": "GovernmentBenefitsInfo",
+             "name": "Veteran Owned",
+             "description": "Veteran-Owned Business",
+             "governmentBenefitType": {
+                "@type": "GovernmentServiceType",
+                "name": "VeteranOwned"
+             }
+           }
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-415-779-6858",
+            "contactType": "Customer Service / General Inquiry",
+            "areaServed": "US",
+            "availableLanguage": "English"
+          }
+      }
+    }
+    </script>
+    <!-- Styles moved to style.css -->
+
 </head>
-<body class="about-page"> <!-- Use a class to scope About page specific styles if needed -->
+<body class="about-page">
 
     <header>
-        <!-- Logo assumes PNG format in 'images' folder -->
-        <img src="images/AetherVision-logo.png" alt="AetherVision LLC Logo" class="logo">
+        <img src="images/AetherVision-logo.png" alt="AetherVision LLC Logo - SDVOSB & Veteran-Owned" class="logo">
 
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-icon"></span>
+        </button>
+
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li> <!-- Active link -->
+                <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
                 <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="past-performance.html">Past Performance</a></li>
                 <li><a href="contracting.html">Contracting</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -28,71 +129,110 @@
     <main>
         <h1>About AetherVision LLC</h1>
 
-        <section id="company-overview">
-             <div class="company-overview-text-body"> <!-- Wrapper for Text -->
-                 <h2>Pioneering Advanced Technology for National Security</h2>
-                 <p>AetherVision LLC is a Service-Disabled Veteran-Owned Small Business (SDVOSB) founded with the mission to develop and deliver disruptive technological solutions addressing critical challenges faced by the Department of Defense (DoD), Intelligence Community (IC), and other federal agencies. We specialize in the research, development, and application of cutting-edge technologies at the intersection of Artificial Intelligence (AI), Machine Learning (ML), Neuromorphic Engineering, and advanced ISR (Intelligence, Surveillance, and Reconnaissance) platforms.</p>
-                 <p>Our foundation rests upon deep technical expertise and a proven history of translating complex scientific principles into tangible, high-impact capabilities. We are driven by a commitment to innovation, agility, and unwavering dedication to supporting the nation's security objectives.</p>
-             </div>
+        <!-- SPLIT Company Overview Section -->
+        <!-- Part 1: Image Banner with Title -->
+        <section id="company-overview-image-banner" aria-labelledby="company-overview-heading">
+             <h2 id="company-overview-heading">Our Company: Mission-Focused SDVOSB Innovator</h2>
         </section>
+        <!-- Part 2: Content Block Below Banner -->
+        <section id="company-overview-content" aria-labelledby="company-overview-heading">
+            <div class="company-overview-text-body">
+                <p>AetherVision LLC is a formally verified 100% Service-Disabled Veteran-Owned Small Business (SDVOSB) established to address critical national security challenges through the agile development and delivery of disruptive technologies. Founded and led by Dr. Sunil Kukreja, a service-disabled U.S. Air Force and Army veteran with extensive leadership experience at the forefront of defense and aerospace R&D, AetherVision operates at the crucial intersection of advanced research and mission-driven application.</p>
+                <p>We specialize in Artificial Intelligence and Machine Learning (AI/ML), Intelligence, Surveillance, and Reconnaissance (ISR) system enhancement, cutting-edge neuromorphic (event-based) vision sensors, and integrated sensing solutions tailored for the complex operating environments faced by the Intelligence Community (IC), Department of Defense (DoD), and other federal agencies.</p>
+                 <p>As a verified SDVOSB registered in SAM.gov, AetherVision offers government partners streamlined acquisition pathways and benefits from contracting preferences designed to support veteran entrepreneurs. Our lean operational structure, based in Avon, CT, combined with our registration as a Delaware LLC, ensures agility, client responsiveness, and efficient resource allocation, allowing us to scale effectively to meet demanding mission requirements.</p>
+            </div>
+        </section>
+        <!-- END SPLIT Company Overview Section -->
 
-        <section id="mission-vision-values">
-            <h2>Mission, Vision & Values</h2>
-            <p><strong>Mission:</strong> To empower the U.S. Government with decisive technological advantages by developing and deploying next-generation sensing, perception, and intelligence solutions.</p>
-            <p><strong>Vision:</strong> To be the leading SDVOSB innovator, recognized for pioneering transformative technologies that redefine capabilities in national security and intelligence domains.</p>
-            <p><strong>Core Values:</strong></p>
+        <!-- **** SPLIT Mission, Vision & Values Section **** -->
+        <!-- Part 1: Image Banner -->
+        <section id="mission-vision-values-image-banner" aria-labelledby="mission-vision-values-heading">
+             <h2 id="mission-vision-values-heading">Mission, Vision & Values</h2>
+             <!-- Background image via CSS -->
+        </section>
+        <!-- Part 2: Content Block -->
+        <section id="mission-vision-values-content" aria-labelledby="mission-vision-values-heading">
+            <p><strong>Mission:</strong> To develop and deliver groundbreaking technologies that enhance national security, improve intelligence capabilities, provide warfighters with a decisive advantage, and safeguard U.S. interests in an ever-evolving global threat landscape.</p>
+            <p><strong>Vision:</strong> To be the premier SDVOSB technology partner for the IC and DoD, recognized for disruptive innovations in AI/ML, ISR, and neuromorphic systems, unwavering commitment to mission success, and exceptional service built on integrity and technical excellence.</p>
+            <p><strong>Our Core Values:</strong></p>
             <ul>
-                <li><strong>Innovation:</strong> Relentlessly pursuing novel approaches and breakthrough technologies.</li>
-                <li><strong>Integrity:</strong> Upholding the highest ethical standards in all operations and interactions.</li>
-                <li><strong>Excellence:</strong> Striving for superior quality and impactful results in every endeavor.</li>
-                <li><strong>Agility:</strong> Responding rapidly and effectively to evolving customer needs and mission requirements.</li>
-                <li><strong>Collaboration:</strong> Building strong partnerships to achieve shared objectives and enhance collective capabilities.</li>
-                <li><strong>Commitment:</strong> Dedication to the mission success of our clients and the well-being of our nation and its veterans.</li>
+                <li><strong>Patriotism:</strong> Unwavering dedication to serving the United States and protecting its security through technological superiority and mission focus.</li>
+                <li><strong>Integrity:</strong> Upholding the highest ethical standards, ensuring transparency, and maintaining absolute accountability in all operations and interactions.</li>
+                <li><strong>Innovation:</strong> Relentlessly pursuing and developing novel, groundbreaking technologies to overcome the nation's toughest technical and operational challenges.</li>
+                <li><strong>Excellence:</strong> Committing to delivering exceptional results, consistently exceeding expectations, and ensuring the success of our clients' missions.</li>
+                <li><strong>Collaboration:</strong> Fostering strategic partnerships with government, industry primes, small businesses, and academia to achieve shared national security goals.</li>
+                <li><strong>Agility:</strong> Responding rapidly and adapting effectively to dynamic mission needs, evolving requirements, and emerging technological advancements.</li>
+                <li><strong>Inclusion & Veteran Support:</strong> Actively committing to building a diverse and inclusive workplace, prioritizing the hiring, development, and support of fellow veterans and individuals with disabilities.</li>
             </ul>
         </section>
+        <!-- **** END SPLIT Mission, Vision & Values Section **** -->
 
-        <section id="founder-bio">
-            <h2>Founder's Expertise: Dr. Sunil Kukreja, Ph.D.</h2>
-            <p>AetherVision was founded by Dr. Sunil Kukreja, a U.S. Veteran (Air Force & Army, Honorable Discharge) whose career embodies a unique convergence of military service, advanced academic research, and high-impact technology development within the defense and aerospace sectors. His experience spans critical roles at NASA, Raytheon Technologies Research Center, and the National University of Singapore (NUS), providing him with unparalleled multi-domain expertise.</p>
-            <p>At NASA, Dr. Kukreja served as a Senior Principal Research Scientist, leading research programs focused on astronaut health, advanced control systems for high-performance aircraft (like the F/A-18), and pioneering AI/ML applications for predictive modeling and system analysis, contributing significantly to mission safety and effectiveness.</p>
-            <p>During his tenure as Associate Director of AI, Machine Learning, and Robotics at Raytheon Technologies Research Center, Dr. Kukreja conceptualized, pitched, led, and executed critical programs for DARPA and other DoD agencies. This included leadership of the highly successful $5.5M FENCE program (Fast Event-driven Neuromorphic Camera for Enhanced situational awareness), which exceeded all milestones and delivered a TRL-6 prototype demonstrating revolutionary neuromorphic vision capabilities for threat detection with significant improvements in sensitivity, false alarm reduction, and power efficiency. His work consistently involved developing secure, AI-powered systems for ISR, autonomous robotics, predictive maintenance, and multi-swarm autonomy, often managing large, geographically dispersed teams and complex budgets.</p>
-             <p>As an Associate Professor and Director of Neuromorphic Engineering & Robotics at NUS, Dr. Kukreja built and led a world-renowned research team, securing $10 million in competitive funding. His research drove significant advancements in surgical robotics (achieving a 40% increase in precision for a novel platform), AI-powered medical devices, neuromorphic sensing, and human performance analysis, resulting in numerous high-impact publications and patents.</p>
-            <p>Dr. Kukreja's deep technical expertise encompasses AI/ML, neuromorphic computing, event-based sensing, robotics, ISR platforms, sensor fusion, advanced algorithms, secure cloud architectures, and edge computing. His proven ability to secure funding, lead complex programs (up to $60M), drive innovation from concept to deployment, and navigate demanding technical and regulatory landscapes forms the bedrock of AetherVision's capabilities. His commitment extends to fostering diversity and mentoring the next generation of engineers and scientists.</p>
-             <!-- Optional: Add a link to LinkedIn profile if desired -->
-             <!-- <p>Connect with Dr. Kukreja on <a href="[Your LinkedIn Profile URL]" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p> -->
+         <!-- Founder Bio Section (Unchanged) -->
+         <section id="founder-bio" aria-labelledby="founder-bio-heading">
+            <h2 id="founder-bio-heading">Our Founder: Dr. Sunil Kukreja – Visionary Leadership, Proven Results</h2>
+            <p>AetherVision is led by its founder, Dr. Sunil Kukreja, a highly accomplished senior executive, Ph.D. biomedical engineer, and service-disabled veteran of both the U.S. Air Force & U.S. Army. With over 20 years of impactful experience spearheading high-consequence research and development programs across the defense, aerospace, and federal sectors, Dr. Kukreja brings a rare combination of deep technical mastery and proven strategic leadership to the company.</p>
+            <p><strong>Prior Leadership Experience:</strong> Before establishing AetherVision, Dr. Kukreja held significant roles demonstrating his ability to deliver results in complex environments. As Associate Director of AI, Machine Learning, and Robotics at <strong>Raytheon Technologies Research Center (RTRC)</strong>, he managed large, mission-critical DoD program portfolios (valued at <strong>$60M+</strong> annually) focused on AI/ML platforms for autonomous systems and advanced sensing. Notably, he <strong>conceptualized, successfully pitched to DARPA, led the internal technical council approval process influencing the BAA release, and subsequently directed the high-impact $5.5M DARPA FENCE program execution</strong>. This effort exceeded all technical milestones (average <strong>20%</strong> margin) and delivered a <strong>TRL-6</strong> neuromorphic camera prototype, demonstrably reducing operator cognitive load (by <strong>30%</strong>) and significantly enhancing sensitivity (<strong>60%</strong> improvement). His tenure at RTRC included managing large multidisciplinary teams (up to <strong>87 personnel</strong>, achieving <strong>95%</strong> employee satisfaction), overseeing Profit & Loss (P&L) for substantial engineering budgets, architecting secure cloud systems (AWS GovCloud, Azure Government) for multi-INT ISR data analysis, and directing AI-powered robotic inspection systems that realized significant cost savings (<strong>$15-20M annually</strong>). He implemented robust technical oversight adhering to ITAR and cybersecurity standards (NIST/RMF), drove successful Agile transformations (Scrum/Kanban) resulting in significantly reduced development cycles (e.g., <strong>35% reduction</strong>) and increased team velocity (<strong>20% increase</strong>), championed Infrastructure as Code (IaC using Terraform) for scalable cloud deployments (achieving <strong>30% reduction</strong> in provisioning time), and ensured rigorous risk management (FMEA) for high-consequence operations. His leadership consistently resulted in on-time, on-budget delivery (<strong>100%</strong> on managed $60M portfolio), exceeding customer expectations (<strong>90%+</strong>) and securing follow-on contracts.</p>
+            <p>As a Senior Principal Research Scientist at <strong>NASA</strong>, Dr. Kukreja led teams developing critical AI/ML models for flight safety, including F/A-18 flutter prediction systems that achieved a <strong>100% success rate</strong> in preventing flutter incidents in tests and improved control effectiveness by <strong>15-20%</strong>. He also contributed to astronaut health monitoring systems, improving predictive accuracy by <strong>25%</strong>. He established gold-standard data governance frameworks for sensitive astronaut data (achieving <strong>100% compliance</strong> and <strong>zero breaches</strong>) and championed the adoption of Model-Based Systems Engineering (MBSE), significantly increasing divisional capability (<strong>40% increase</strong>).</p>
+            <p>Prior to his industry and government roles, Dr. Kukreja directed a world-renowned Neuromorphic Engineering & Robotics research center at the <strong>National University of Singapore (NUS)</strong>. There, he secured over <strong>$10 million</strong> in competitive international funding (including ONR Global) and led pioneering advancements in neuromorphic tactile sensing (achieving <strong>100x</strong> density, <strong>90%</strong> power reduction in prior NUS work), surgical robotics (achieving <strong>40% increase</strong> in precision), and cognitive performance analysis (improving accuracy by <strong>25%</strong>).</p>
+            <p>Dr. Kukreja's career is marked by an exceptional ability to manage complex technical programs from concept to delivery, lead large, diverse teams effectively, secure significant funding (over <strong>$30M+</strong> in competitive research grants throughout career), deliver cutting-edge technology resulting in tangible impact (<strong>7+ patents</strong> filed/granted, <strong>100+ publications</strong>), foster cultures of technical excellence and inclusion, and maintain a strong commitment to mentoring (<strong>65+</strong> individuals) and veteran hiring. His extensive technical expertise spans AI/ML, robotics, autonomous systems, neuromorphic engineering, sensor fusion, systems engineering (MBSE), secure cloud computing (AWS/Azure/GCP), edge computing, cybersecurity (NIST/RMF/CMMC principles), and data governance.</p>
+             <p>Connect with Dr. Kukreja on <a href="https://linkedin.com/in/sunil-kukreja-92a17b141/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
         </section>
+         <!-- END Founder Bio Section -->
 
-         <section id="commitment">
-              <div class="commitment-text-area"> <!-- Wrapper for Text -->
-                  <h2>Our Commitment</h2>
-                  <p>As an SDVOSB founded and led by a veteran, AetherVision is deeply committed to supporting the warfighter and the intelligence professional. We prioritize hiring and mentoring fellow veterans, recognizing the invaluable skills, dedication, and mission focus they bring. We strive to build a diverse and inclusive team dedicated to excellence and delivering solutions that make a tangible difference in safeguarding national security.</p>
-              </div>
-               <div class="commitment-image-area"> <!-- Empty Div for Image Background -->
-                  <!-- This div remains empty, its background will be styled via CSS -->
-               </div>
+         <!-- SPLIT Commitment Section -->
+         <!-- Part 1: Image Banner with Title -->
+         <section id="commitment-image-banner" aria-labelledby="commitment-heading">
+             <h2 id="commitment-heading">Our Commitment to Excellence & Integrity</h2>
          </section>
+         <!-- Part 2: Content Block Below Banner -->
+         <section id="commitment-content" aria-labelledby="commitment-heading">
+            <p>AetherVision LLC operates with an unwavering commitment to the highest standards of ethical conduct, rigorous quality management practices (aligned with ISO 9001 principles), and robust cybersecurity protocols architected to meet stringent U.S. government requirements. This includes proactive alignment with NIST guidelines (SP 800-171), DFARS cybersecurity clauses (252.204-7012), and preparation for Cybersecurity Maturity Model Certification (CMMC) compliance as dictated by contract needs.</p>
+            <p>We ensure full compliance with all applicable regulations, including International Traffic in Arms Regulations (ITAR) and Export Administration Regulations (EAR) for handling export-controlled technologies and data. Protecting Controlled Unclassified Information (CUI) and mission-sensitive data is integral to our operations.</p>
+            <p>Furthermore, we are dedicated to fostering an inclusive and diverse workplace environment. We actively prioritize veteran hiring initiatives and promote opportunities for individuals with disabilities, reflecting the core values of our founder and our dedication to the nation we serve.</p>
+         </section>
+         <!-- END SPLIT Commitment Section -->
 
-         <!-- Page Navigation -->
-         <div class="page-navigation">
-             <a href="index.html" class="prev-page">← Previous: Home</a>
-             <a href="capabilities.html" class="next-page">Next: Capabilities →</a>
-         </div>
+        <!-- Updated Page Navigation -->
+        <div class="page-navigation">
+            <a href="index.html" class="prev-page">← Previous: Home</a>
+            <a href="capabilities.html" class="next-page">Next: Capabilities →</a>
+        </div>
     </main>
 
     <footer>
-        <!-- Reuse footer from other pages -->
-        <p>© <span id="year-about"></span> AetherVision LLC. All Rights Reserved.</p>
-        <p><small>A Service-Disabled Veteran-Owned Small Business (SDVOSB)</small></p>
+         <div class="certification-logos-footer">
+            <img src="images/sdvosb-verified-logo.png" alt="Official Verified Service-Disabled Veteran-Owned Small Business Logo">
+            <img src="images/veteran-owned.png" alt="Official Veteran-Owned Business Logo">
+         </div>
+        <p>© <span id="year-about">2025</span> AetherVision LLC. All Rights Reserved.</p>
+        <p><small>A Verified Service-Disabled Veteran-Owned Small Business (SDVOSB)</small></p>
     </footer>
 
+     <!-- Hamburger Menu & Year Script -->
      <script>
-         // Ensure unique ID for year span if needed, or use a class
          document.addEventListener('DOMContentLoaded', function() {
-            const yearSpan = document.getElementById('year-about');
-            if (yearSpan) {
+             const menuToggle = document.querySelector('.menu-toggle');
+             const mainNav = document.querySelector('#main-nav');
+             const yearSpan = document.getElementById('year-about');
+
+             if (menuToggle && mainNav) {
+                 menuToggle.addEventListener('click', function() {
+                     const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                     menuToggle.setAttribute('aria-expanded', !isExpanded);
+                     menuToggle.classList.toggle('active');
+                     mainNav.classList.toggle('active');
+                 });
+             } else {
+                 if (!menuToggle) console.error('Menu toggle button (.menu-toggle) not found!');
+                 if (!mainNav) console.error('Main navigation element (#main-nav) not found!');
+             }
+
+             if (yearSpan) {
                  yearSpan.textContent = new Date().getFullYear();
-            }
-        });
+             } else {
+                  console.warn('Footer year span (#year-about) not found!');
+             }
+         });
      </script>
 
 </body>
