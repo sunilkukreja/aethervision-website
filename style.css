@@ -786,7 +786,7 @@ section p {
     /* background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AetherVision-sublogo-15.png'); */ /* OVERLAY REMOVED */
     background-image: url('images/AetherVision-sublogo-15.png'); /* ONLY IMAGE */
     background-color: #3a3f4a; border-left-color: #C3B1E1; color: #ffffff;
-    background-size: cover; padding: 30px;
+    background-size: cover;  background-position: center center; background-repeat: no-repeat; padding: 30px;
 }
 .contracting-page section#sdvosb-status > * { position: relative; z-index: 3; }
 .contracting-page section#sdvosb-status h2 {
@@ -821,7 +821,7 @@ section p {
     /* background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/AetherVision-sublogo-16.png'); */ /* OVERLAY REMOVED */
     background-image: url('images/AetherVision-sublogo-16.png'); /* ONLY IMAGE */
     background-color: #202528; border-left-color: #D4AF37; color: #ffffff;
-    background-size: cover; padding: 30px;
+    background-size: cover; background-position: center center; background-repeat: no-repeat; padding: 30px;
 }
 .contracting-page section#compliance-security > * { position: relative; z-index: 3; }
 .contracting-page section#compliance-security h2 {
