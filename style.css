@@ -972,7 +972,6 @@ section:not(#hero-section):not([id$="-content"]) p { /* Added :not(#hero-section
     border-left: 5px solid #4682B4; /* Steel Blue */
     min-height: 450px;
 }
-/* *** UPDATED H2 Color *** */
 .pitch-deck-page section#pitch-contact-image-banner h2 { color: #ADD8E6; } /* Light Blue */
 .pitch-deck-page section#pitch-contact-content { border-left-color: #4682B4; }
 .pitch-deck-page section#pitch-contact-content p { margin-bottom: 1em; }
@@ -981,6 +980,7 @@ section:not(#hero-section):not([id$="-content"]) p { /* Added :not(#hero-section
 .pitch-deck-page section#pitch-contact-content .contact-details a { color: #B0E0E6; }
 .pitch-deck-page section#pitch-contact-content .contact-details a:hover { color: #ffffff; }
 .pitch-deck-page section#pitch-contact-content p:last-of-type a { color: #ADD8E6; }
+
 
 /* Concluding paragraph on Past Performance page */
 .past-performance-page p.page-conclusion {
