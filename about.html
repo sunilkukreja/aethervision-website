@@ -114,16 +114,19 @@
             <span class="hamburger-icon"></span>
         </button>
 
+        <!-- *** MODIFIED Navigation *** -->
         <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About Us</a></li> <!-- Active link -->
                 <li><a href="capabilities.html">Capabilities</a></li>
                 <li><a href="past-performance.html">Past Performance</a></li>
                 <li><a href="contracting.html">Contracting</a></li>
+                <li><a href="pitch-deck.html">Pitch Deck</a></li> <!-- ** ADDED LINK ** -->
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+         <!-- *** END MODIFIED Navigation *** -->
     </header>
 
     <main>
@@ -167,19 +170,24 @@
         </section>
         <!-- **** END SPLIT Mission, Vision & Values Section **** -->
 
-         <!-- Founder Bio Section (Unchanged) -->
-         <section id="founder-bio" aria-labelledby="founder-bio-heading">
-            <h2 id="founder-bio-heading">Our Founder: Dr. Sunil Kukreja – Visionary Leadership, Proven Results</h2>
+         <!-- **** START SPLIT Founder Bio Section **** -->
+         <!-- Part 1: Image Banner -->
+         <section id="founder-bio-image-banner" aria-labelledby="founder-bio-heading">
+             <h2 id="founder-bio-heading">Our Founder: Dr. Sunil Kukreja – Visionary Leadership, Proven Results</h2>
+             <!-- Background image via CSS -->
+         </section>
+         <!-- Part 2: Content Block -->
+         <section id="founder-bio-content" aria-labelledby="founder-bio-heading">
             <p>AetherVision is led by its founder, Dr. Sunil Kukreja, a highly accomplished senior executive, Ph.D. biomedical engineer, and service-disabled veteran of both the U.S. Air Force & U.S. Army. With over 20 years of impactful experience spearheading high-consequence research and development programs across the defense, aerospace, and federal sectors, Dr. Kukreja brings a rare combination of deep technical mastery and proven strategic leadership to the company.</p>
             <p><strong>Prior Leadership Experience:</strong> Before establishing AetherVision, Dr. Kukreja held significant roles demonstrating his ability to deliver results in complex environments. As Associate Director of AI, Machine Learning, and Robotics at <strong>Raytheon Technologies Research Center (RTRC)</strong>, he managed large, mission-critical DoD program portfolios (valued at <strong>$60M+</strong> annually) focused on AI/ML platforms for autonomous systems and advanced sensing. Notably, he <strong>conceptualized, successfully pitched to DARPA, led the internal technical council approval process influencing the BAA release, and subsequently directed the high-impact $5.5M DARPA FENCE program execution</strong>. This effort exceeded all technical milestones (average <strong>20%</strong> margin) and delivered a <strong>TRL-6</strong> neuromorphic camera prototype, demonstrably reducing operator cognitive load (by <strong>30%</strong>) and significantly enhancing sensitivity (<strong>60%</strong> improvement). His tenure at RTRC included managing large multidisciplinary teams (up to <strong>87 personnel</strong>, achieving <strong>95%</strong> employee satisfaction), overseeing Profit & Loss (P&L) for substantial engineering budgets, architecting secure cloud systems (AWS GovCloud, Azure Government) for multi-INT ISR data analysis, and directing AI-powered robotic inspection systems that realized significant cost savings (<strong>$15-20M annually</strong>). He implemented robust technical oversight adhering to ITAR and cybersecurity standards (NIST/RMF), drove successful Agile transformations (Scrum/Kanban) resulting in significantly reduced development cycles (e.g., <strong>35% reduction</strong>) and increased team velocity (<strong>20% increase</strong>), championed Infrastructure as Code (IaC using Terraform) for scalable cloud deployments (achieving <strong>30% reduction</strong> in provisioning time), and ensured rigorous risk management (FMEA) for high-consequence operations. His leadership consistently resulted in on-time, on-budget delivery (<strong>100%</strong> on managed $60M portfolio), exceeding customer expectations (<strong>90%+</strong>) and securing follow-on contracts.</p>
             <p>As a Senior Principal Research Scientist at <strong>NASA</strong>, Dr. Kukreja led teams developing critical AI/ML models for flight safety, including F/A-18 flutter prediction systems that achieved a <strong>100% success rate</strong> in preventing flutter incidents in tests and improved control effectiveness by <strong>15-20%</strong>. He also contributed to astronaut health monitoring systems, improving predictive accuracy by <strong>25%</strong>. He established gold-standard data governance frameworks for sensitive astronaut data (achieving <strong>100% compliance</strong> and <strong>zero breaches</strong>) and championed the adoption of Model-Based Systems Engineering (MBSE), significantly increasing divisional capability (<strong>40% increase</strong>).</p>
             <p>Prior to his industry and government roles, Dr. Kukreja directed a world-renowned Neuromorphic Engineering & Robotics research center at the <strong>National University of Singapore (NUS)</strong>. There, he secured over <strong>$10 million</strong> in competitive international funding (including ONR Global) and led pioneering advancements in neuromorphic tactile sensing (achieving <strong>100x</strong> density, <strong>90%</strong> power reduction in prior NUS work), surgical robotics (achieving <strong>40% increase</strong> in precision), and cognitive performance analysis (improving accuracy by <strong>25%</strong>).</p>
             <p>Dr. Kukreja's career is marked by an exceptional ability to manage complex technical programs from concept to delivery, lead large, diverse teams effectively, secure significant funding (over <strong>$30M+</strong> in competitive research grants throughout career), deliver cutting-edge technology resulting in tangible impact (<strong>7+ patents</strong> filed/granted, <strong>100+ publications</strong>), foster cultures of technical excellence and inclusion, and maintain a strong commitment to mentoring (<strong>65+</strong> individuals) and veteran hiring. His extensive technical expertise spans AI/ML, robotics, autonomous systems, neuromorphic engineering, sensor fusion, systems engineering (MBSE), secure cloud computing (AWS/Azure/GCP), edge computing, cybersecurity (NIST/RMF/CMMC principles), and data governance.</p>
              <p>Connect with Dr. Kukreja on <a href="https://linkedin.com/in/sunil-kukreja-92a17b141/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
-        </section>
-         <!-- END Founder Bio Section -->
+         </section>
+         <!-- **** END SPLIT Founder Bio Section **** -->
 
-         <!-- SPLIT Commitment Section -->
+         <!-- **** START SPLIT Commitment Section **** -->
          <!-- Part 1: Image Banner with Title -->
          <section id="commitment-image-banner" aria-labelledby="commitment-heading">
              <h2 id="commitment-heading">Our Commitment to Excellence & Integrity</h2>
@@ -190,7 +198,7 @@
             <p>We ensure full compliance with all applicable regulations, including International Traffic in Arms Regulations (ITAR) and Export Administration Regulations (EAR) for handling export-controlled technologies and data. Protecting Controlled Unclassified Information (CUI) and mission-sensitive data is integral to our operations.</p>
             <p>Furthermore, we are dedicated to fostering an inclusive and diverse workplace environment. We actively prioritize veteran hiring initiatives and promote opportunities for individuals with disabilities, reflecting the core values of our founder and our dedication to the nation we serve.</p>
          </section>
-         <!-- END SPLIT Commitment Section -->
+         <!-- **** END SPLIT Commitment Section **** -->
 
         <!-- Updated Page Navigation -->
         <div class="page-navigation">

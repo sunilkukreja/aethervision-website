@@ -183,39 +183,60 @@ main { padding: 30px; max-width: 1140px; margin: 30px auto; }
 */
 
 /* Hero Section Styling (index.html) */
-.hero {
+section#hero-section {
     text-align: center; padding: 40px 30px 80px 30px;
     min-height: 350px;
     display: flex;
     flex-direction: column; justify-content: center;
     align-items: center; background-color: #000000; /* Fallback */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('images/AetherVision-sublogo-1.png'); */ /* OVERLAY REMOVED */
     background-image: url('images/AetherVision-sublogo-1.png'); /* ONLY IMAGE */
     background-repeat: no-repeat; background-position: center center;
     background-size: cover;
     color: #ffffff; border-radius: 8px; margin-bottom: 40px; box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35); position: relative;
 }
 /* Ensure Hero text remains visible - KEEP SHADOWS ON TEXT */
-.hero h1, .hero h2, .hero p {
-    position: relative; z-index: 2; color: #ffffff;
+#hero-section h1, #hero-section h2, #hero-section p {
+    position: relative; z-index: 2; color: #ffffff; /* Base color for hero text */
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
-    margin-bottom: 0.6em;
+    margin-bottom: 0.6em; /* Default bottom margin for spacing */
 }
-.hero h1.hero-h1 { font-family: 'Sacramento', cursive; font-size: 5em; margin-bottom: 0.2em; margin-top: 0; font-weight: 400; }
-.hero h2.hero-h2 { margin-bottom: 0.1em; font-family: 'Tangerine', cursive; font-size: 3.4em; font-weight: 700; font-style: normal; }
-.hero p.hero-tagline { margin-top: 0; margin-bottom: 30px; font-family: 'Tangerine', cursive; font-size: 3.0em; font-weight: 700; font-style: normal; line-height: 1.1; }
-.hero p.hero-sdvosb-text { font-size: 1.2em; max-width: 850px; margin-left: auto; margin-right: auto; margin-top: 40px; font-family: 'Open Sans', sans-serif; line-height: 1.7; }
-.hero p.hero-sdvosb-text strong { color: #FFD700; /* Keep highlight color */ }
+#hero-section h1.hero-h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 5em;
+    margin-bottom: 0; /* Explicitly remove bottom margin */
+    margin-top: 0;
+    font-weight: 400;
+}
+#hero-section h2.hero-h2 {
+    margin-top: 0; /* Explicitly remove top margin */
+    margin-bottom: 0.1em; /* Keep small bottom margin before tagline */
+    font-family: 'Tangerine', cursive;
+    font-size: 3.4em;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffffff; /* Ensure white color is applied */
+}
+#hero-section p.hero-tagline {
+    margin-top: 0; margin-bottom: 30px;
+    font-family: 'Tangerine', cursive;
+    font-size: 3.0em; /* Original size */
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.1;
+}
+#hero-section p.hero-sdvosb-text { font-size: 1.2em; max-width: 850px; margin-left: auto; margin-right: auto; margin-top: 40px; font-family: 'Open Sans', sans-serif; line-height: 1.7; }
+#hero-section p.hero-sdvosb-text strong { color: #FFD700; /* Keep highlight color */ }
+
 
 
 /* General Section Styling */
 section {
     margin-bottom: 40px; /* Default bottom margin */
-    padding: 30px; /* Default padding */
-    background-color: #ffffff; /* Default background for sections without images */
+    padding: 30px; /* Default padding - WILL BE OVERRIDDEN by split sections */
+    background-color: #ffffff; /* Default background for sections without images or non-split */
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Slightly enhanced shadow */
-    border-left: 5px solid #191970; /* Default border */
+    border-left: 5px solid #191970; /* Default border - WILL BE OVERRIDDEN by split sections */
     color: #212a35; /* Default text color for light backgrounds */
     position: relative;
     z-index: 1;
@@ -224,44 +245,106 @@ section {
     background-position: center center;
     background-size: cover;
 }
-/* Reset padding for sections using split layouts */
+
+/* --- Base Styles for Split Layouts (Applicable to multiple pages) --- */
+
+/* Reset padding for all split sections */
+section[id$="-image-banner"],
+section[id$="-content"]
 {
-    padding: 0;
-}
-/* Set padding for split content blocks */
-/* *** Ensure all split content blocks below have rgb(0,0,0) background *** */
-.about-page section#company-overview-content,
-.about-page section#commitment-content,
-.capabilities-page section#differentiators-content,
-.contracting-page section#contracting-vehicles-content,
-.contracting-page section#partnering-strategy-content,
-.contracting-page section#contracting-contact-content,
-.contact-page section#career-note-content,
-.about-page section#mission-vision-values-content,
-.index-page section#contact-summary-content
-{
-    padding: 30px;
-    background-color: rgb(0, 0, 0); /* Explicitly set/confirm black background */
+    padding: 0; /* Remove default section padding */
 }
 
-/* Remove default padding & border for image banner sections */
-.capabilities-page section#differentiators-image-banner,
-.about-page section#company-overview-image-banner,
-.about-page section#commitment-image-banner,
-.contracting-page section#contracting-vehicles-image-banner,
-.contracting-page section#partnering-strategy-image-banner,
-.contracting-page section#contracting-contact-image-banner,
-.contact-page section#career-note-image-banner,
-.about-page section#mission-vision-values-image-banner,
-.index-page section#contact-summary-image-banner
-{
+/* Apply padding ONLY for the content blocks */
+section[id$="-content"] {
+    padding: 30px; /* Re-apply padding only to content blocks */
+}
+
+/* Base styles for ALL split image banners */
+section[id$="-image-banner"] {
+    padding: 25px 30px; /* Padding for title positioning */
+    margin-bottom: 0; /* Remove space between banner and content */
+    border-radius: 8px 8px 0 0; /* Round top corners */
+    border: none; /* Remove default border */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start; /* Align title to top */
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* min-height is set per section/page */
+}
+/* Base H2 styling within split image banners */
+section[id$="-image-banner"] h2 {
+    margin: 0;
     padding: 0;
-    border: none; /* Explicitly remove other borders */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: left;
+    text-shadow: none; /* Titles in banners should NOT have shadow */
+    /* Specific color set per section */
+}
+
+/* Base styles for ALL split content blocks */
+section[id$="-content"] {
+    /* padding: 30px; -- Moved to the multi-page rule */
+    margin-top: 0;
+    margin-bottom: 40px; /* Keep space after the whole block */
+    border-radius: 0 0 8px 8px; /* Round bottom corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: none; /* Remove default border */
+    background-color: rgb(0, 0, 0); /* Black background */
+    color: #ffffff; /* White text */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    /* Border-left set individually */
+}
+/* Base text styling within split content blocks */
+section[id$="-content"] p,
+section[id$="-content"] ul li {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Allow shadow */
+}
+section[id$="-content"] p { margin-bottom: 1.1em; }
+section[id$="-content"] ul { list-style: disc; padding-left: 25px; margin-bottom: 20px; }
+section[id$="-content"] ul li { margin-bottom: 10px; }
+section[id$="-content"] a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: none; /* No shadow on links */
+    /* Color set individually */
+}
+section[id$="-content"] a:hover { color: #ffffff; text-decoration: underline; }
+section[id$="-content"] strong {
+    font-weight: bold;
+    text-shadow: none; /* No shadow on strong tags */
+    /* Color set individually */
+}
+/* Base H3 styling within split content blocks */
+section[id$="-content"] h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    margin-top: 30px; /* Adjust top margin */
+    margin-bottom: 15px;
+    padding-bottom: 8px; /* Space for border */
+    border-bottom-width: 1px; /* Default border */
+    border-bottom-style: solid;
+    /* Color and border-color set individually */
+    /* Text shadow set individually */
 }
 
 
 /* === General H1, H2 Styling (Default, No Shadow) === */
-section h1, section h2 { /* Applied to most section titles */
+/* Adjusted to exclude ALL split banner h2s and hero h2 */
+section:not(#hero-section):not([id$="-image-banner"]) h2 {
     color: #191970; margin-top: 0; border-bottom: none; padding-bottom: 0; margin-bottom: 25px;
     font-family: 'Montserrat', sans-serif; font-size: 1.8em;
     text-shadow: none; /* Ensure default H2 has no shadow */
@@ -276,504 +359,334 @@ main > h1 { /* Top-level H1 on each page */
     margin-bottom: 40px;
     color: #343a40;
 }
-section h3 { /* Sub-headings within sections */
+/* Adjusted H3 to exclude split content blocks */
+section:not([id$="-content"]) h3 {
     font-family: 'Montserrat', sans-serif; color: #343a40; font-size: 1.3em;
     margin-top: 25px; margin-bottom: 15px; text-shadow: none;
 }
-ul { /* General list styling */
+/* General list styling for non-split sections */
+section:not(#hero-section):not([id$="-content"]) ul { /* Added :not(#hero-section) */
     padding-left: 25px; margin-bottom: 20px;
 }
-ul li { margin-bottom: 10px; }
-/* Default strong tag style within standard sections */
-ul li strong {
+section:not(#hero-section):not([id$="-content"]) ul li { margin-bottom: 10px; } /* Added :not(#hero-section) */
+/* Default strong tag style within standard non-split sections */
+section:not(#hero-section):not([id$="-content"]) ul li strong { /* Added :not(#hero-section) */
      color: #111e36;
      font-weight: 700;
      text-shadow: none;
 }
-section a { /* General link styling within sections */
+/* General link styling within standard non-split sections */
+section:not(#hero-section):not([id$="-content"]) a { /* Added :not(#hero-section) */
     color: #191970; text-decoration: none; font-weight: bold; text-shadow: none;
     border-radius: 2px; /* For focus */
 }
-section a:hover { color: #2c2c8c; text-decoration: underline; }
-section a:focus { /* Basic focus indicator for links within sections */
+section:not(#hero-section):not([id$="-content"]) a:hover { color: #2c2c8c; text-decoration: underline; } /* Added :not(#hero-section) */
+section:not(#hero-section):not([id$="-content"]) a:focus { /* Basic focus indicator for links within sections */ /* Added :not(#hero-section) */
      outline: 2px solid #191970;
      outline-offset: 1px;
      background-color: rgba(25, 25, 112, 0.1); /* Subtle background */
 }
-/* Base paragraph styling */
-section p {
+/* Base paragraph styling for non-split sections */
+section:not(#hero-section):not([id$="-content"]) p { /* Added :not(#hero-section) */
     text-shadow: none;
     margin-bottom: 1.1em; /* Default paragraph spacing */
 }
 
 
-/* === STYLES SPECIFIC TO HOMEPAGE === */
-/* Mission/Vision on Homepage (RESTORED ORIGINAL STYLE - NOW WITH COLOR UPDATES) */
-.index-page section#mission-vision { /* This applies to the entire section container */
-    background-image: url('images/AetherVision-sublogo-5.png'); /* ONLY IMAGE */
-    background-color: #0a192f; border-left-color: #46CAF5; color: #ffffff;
-    background-size: cover; background-position: center center; background-repeat: no-repeat; /* Added background handling */
-    padding: 30px; /* Ensure padding is applied */
-}
-.index-page section#mission-vision > * { position: relative; z-index: 3; }
-.index-page section#mission-vision h2 {
-    color: #61dafb; /* UPDATED: Was #46CAF5 */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
-}
-.index-page section#mission-vision p,
-.index-page section#mission-vision p strong, /* Target strong tag within this section */
-.index-page section#mission-vision a { /* Target link tag within this section */
-    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Keep text shadow */
-}
-.index-page section#mission-vision p strong { /* Style for strong text */
-    font-weight: bold;
-    color: #98FB98 !important; /* UPDATED: Was #50fa7b */
-    text-shadow: none !important; /* Ensure colored text has no shadow */
-}
-.index-page section#mission-vision p a { /* Style for the 'Learn More' link */
-    color: #98FB98; /* UPDATED: Was #50fa7b */
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-.index-page section#mission-vision a:hover { color: #ffffff; text-decoration: underline; }
+/* === STYLES SPECIFIC TO INDEX PAGE === */
 
-/* Capabilities Summary on Homepage */
-.index-page section#capabilities-summary { /* Changed selector to be page-specific */
-    /* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/AetherVision-sublogo-3.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-3.png'); /* ONLY IMAGE */
+/* Mission/Vision Split */
+.index-page #mission-vision-image-banner {
+    background-image: url('images/AetherVision-sublogo-5.png');
+    border-left: 5px solid #46CAF5;
+    background-color: #0a192f;
+    min-height: 650px;
+}
+.index-page #mission-vision-image-banner h2 { color: #61dafb; }
+.index-page #mission-vision-content { border-left: 5px solid #46CAF5; }
+.index-page #mission-vision-content p strong { color: #98FB98 !important; }
+.index-page #mission-vision-content p a { color: #98FB98; }
+
+/* Capabilities Summary Split */
+.index-page #capabilities-summary-image-banner {
+    background-image: url('images/AetherVision-sublogo-3.png');
+    border-left: 5px solid #6495ED;
     background-color: #050a10;
-    border-left-color: #6495ED; color: #ffffff;
-    background-size: cover; background-position: center center; background-attachment: fixed;
-    padding: 30px;
+    min-height: 650px;
 }
-.index-page section#capabilities-summary > * { position: relative; z-index: 3; }
-.index-page section#capabilities-summary h2 {
-    color: #4FC3F7; /* UPDATED: Was #6495ED */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
-}
-.index-page section#capabilities-summary p,
-.index-page section#capabilities-summary ul li,
-.index-page section#capabilities-summary a {
-    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Keep text shadow */
-}
-.index-page section#capabilities-summary ul { list-style-type: disc; padding-left: 25px; }
-.index-page section#capabilities-summary ul li strong { /* Target strong tags within list items */
-    color: #87CEFA; /* Keep original color */
-    text-shadow: none;
-    font-weight: bold;
-}
-.index-page section#capabilities-summary p a { /* Target the 'Explore Capabilities' link */
-    color: #87CEFA; /* Keep original color */
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-.index-page section#capabilities-summary a:hover { color: #ffffff; text-decoration: underline; }
+.index-page #capabilities-summary-image-banner h2 { color: #4FC3F7; }
+.index-page #capabilities-summary-content { border-left: 5px solid #6495ED; }
+.index-page #capabilities-summary-content ul li strong { color: #87CEFA; }
+.index-page #capabilities-summary-content p a { color: #87CEFA; }
 
-/* About Summary on Homepage */
-.index-page section#about-summary { /* Changed selector to be page-specific */
-    /* background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/AetherVision-sublogo-8.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-8.png'); /* ONLY IMAGE */
-    background-color: #4A5459; border-left-color: #58DFD1; color: #ffffff;
-    background-size: cover; padding: 30px;
+/* About Summary Split */
+.index-page #about-summary-image-banner {
+    background-image: url('images/AetherVision-sublogo-8.png');
+    border-left: 5px solid #58DFD1;
+    background-color: #4A5459;
+    min-height: 650px;
 }
-.index-page section#about-summary > * { position: relative; z-index: 3; }
-.index-page section#about-summary h2 {
-    color: #4DB6AC; /* UPDATED: Was #58DFD1 */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
-}
-.index-page section#about-summary p { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
-.index-page section#about-summary p strong { /* Target strong tags */
-    color: #a1ffee; /* Keep original color */
-    text-shadow: none;
-    font-weight: bold;
-}
-.index-page section#about-summary p a { /* Target 'Learn More' link */
-    color: #58DFD1; /* Keep original color */
-    font-weight: bold;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-}
-.index-page section#about-summary a:hover { color: #ffffff; text-decoration: underline; }
+.index-page #about-summary-image-banner h2 { color: #4DB6AC; }
+.index-page #about-summary-content { border-left: 5px solid #58DFD1; }
+.index-page #about-summary-content p strong { color: #a1ffee; }
+.index-page #about-summary-content p a { color: #58DFD1; }
 
-/* Split Contact Summary on Index */
-/* Part 1: Image Banner */
-.index-page section#contact-summary-image-banner {
-    background-image: url('images/AetherVision-sublogo-2.png'); /* Use original image */
-    background-color: #102a10; /* Fallback */
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 450px; /* Requested height */
-    margin-bottom: 0; padding: 25px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #46CAF5; /* Original border */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+/* Contact Summary Split */
+.index-page #contact-summary-image-banner {
+    background-image: url('images/AetherVision-sublogo-2.png');
+    border-left: 5px solid #46CAF5;
+    background-color: #102a10;
+    min-height: 450px;
 }
-.index-page section#contact-summary-image-banner h2 {
-    color: #FFD700; /* UPDATED: Was #46CAF5 */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.7); /* Add shadow for light text on image */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
-}
-/* Part 2: Content Block - Already confirmed black */
-.index-page section#contact-summary-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #46CAF5; /* Match banner border */
-    color: #ffffff; position: relative; z-index: 1; overflow: hidden;
-}
-.index-page section#contact-summary-content p,
-.index-page section#contact-summary-content p strong,
-.index-page section#contact-summary-content small,
-.index-page section#contact-summary-content a {
-    color: #ffffff; text-shadow: none; /* No shadow on black bg */
-}
-.index-page section#contact-summary-content p { margin-bottom: 1em; line-height: 1.7; font-family: 'Open Sans', sans-serif; }
-.index-page section#contact-summary-content p.contact-person-first { margin-bottom: 0.2em; }
-.index-page section#contact-summary-content p.contact-person { margin-top: 0; margin-bottom: 1em; }
-.index-page section#contact-summary-content p strong { font-weight: bold; }
-.index-page section#contact-summary-content small { color: #dddddd; font-size: 0.9em; }
-.index-page section#contact-summary-content a { text-decoration: none; font-weight: bold; }
-.index-page section#contact-summary-content a[href^="tel"] { color: #42B5E6; } /* Keep original */
-.index-page section#contact-summary-content a[href^="mailto"] { color: #7fffd4; } /* Keep original */
-.index-page section#contact-summary-content p:last-of-type a { color: #42B5E6; } /* Keep original */
-.index-page section#contact-summary-content a:hover { color: #ffffff; text-decoration: underline; }
+.index-page #contact-summary-image-banner h2 { color: #FFD700; text-shadow: none; }
+.index-page #contact-summary-content { border-left: 5px solid #46CAF5; }
+.index-page #contact-summary-content p.contact-person-first { margin-bottom: 0.2em; }
+.index-page #contact-summary-content p.contact-person { margin-top: 0; margin-bottom: 1em; }
+.index-page #contact-summary-content small { color: #dddddd; font-size: 0.9em; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
+.index-page #contact-summary-content a[href^="tel"] { color: #42B5E6; }
+.index-page #contact-summary-content a[href^="mailto"] { color: #7fffd4; }
+.index-page #contact-summary-content p:last-of-type a { color: #42B5E6; }
 
 
 /* === STYLES SPECIFIC TO ABOUT PAGE === */
 
 /* Split Company Overview Section */
-/* Part 1: Image Banner */
 .about-page section#company-overview-image-banner {
-    background-image: url('images/AetherVision-sublogo-7.png'); /* ONLY IMAGE */
+    background-image: url('images/AetherVision-sublogo-7.png');
     background-color: #0D211E;
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 500px; /* Height updated */
-    margin-bottom: 0; padding: 25px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #42C7FF;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+    min-height: 500px;
+    border-left: 5px solid #42C7FF;
 }
 .about-page section#company-overview-image-banner h2 {
-    color: #64B5F6; /* UPDATED: Brighter Blue */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow for visibility */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
+    color: #64B5F6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7);
 }
-/* Part 2: Content Block - Already confirmed black */
 .about-page section#company-overview-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #42C7FF; color: #ffffff;
-    position: relative; z-index: 1; overflow: hidden;
+    border-left: 5px solid #42C7FF;
 }
 .about-page section#company-overview-content .company-overview-text-body p {
-    color: #ffffff; text-shadow: none; /* No shadow needed on black bg */
-    margin-bottom: 1em;
+    color: #ffffff; text-shadow: none;
 }
 
 /* Split Mission/Vision/Values Section */
-/* Part 1: Image Banner */
 .about-page section#mission-vision-values-image-banner {
-    background-image: url('images/AetherVision-sublogo-6.png'); /* ONLY IMAGE */
-    background-color: #474B52; /* Fallback */
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 500px; /* Requested height */
-    margin-bottom: 0; padding: 25px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #FA003F; /* Original border color */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+    background-image: url('images/AetherVision-sublogo-6.png');
+    background-color: #474B52;
+    min-height: 500px;
+    border-left: 5px solid #FA003F;
 }
 .about-page section#mission-vision-values-image-banner h2 {
-    color: #EF5350; /* UPDATED: Softer Red */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow for visibility */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
+    color: #EF5350;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7);
 }
-/* Part 2: Content Block - Already confirmed black */
 .about-page section#mission-vision-values-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #FA003F; /* Match banner border */
-    color: #f0f0f5; position: relative; z-index: 1; overflow: hidden;
+    border-left: 5px solid #FA003F;
+    color: #f0f0f5;
 }
 .about-page section#mission-vision-values-content p {
-    color: #f0f0f5; text-shadow: none; /* No shadow needed on black bg */
+    color: #f0f0f5; text-shadow: none;
 }
 .about-page section#mission-vision-values-content p > strong,
 .about-page section#mission-vision-values-content ul li > strong {
-    color: #EF5350 !important; /* UPDATED: Softer Red to match H2 */
-    text-shadow: none !important; font-weight: bold;
+    color: #EF5350 !important; text-shadow: none !important; font-weight: bold;
 }
 .about-page section#mission-vision-values-content ul { list-style: none; padding-left: 0; }
 .about-page section#mission-vision-values-content ul li {
     padding-left: 1.5em; position: relative; margin-bottom: 0.5em;
-    color: #d8d8e0; text-shadow: none; /* No shadow needed on black bg */
+    color: #d8d8e0; text-shadow: none;
 }
 .about-page section#mission-vision-values-content ul li::before {
-    content: '•'; color: #EF5350 !important; /* UPDATED: Softer Red to match */
-    font-weight: bold;
+    content: '•'; color: #EF5350 !important; font-weight: bold;
     display: inline-block; position: absolute; left: 0; width: 1em; text-shadow: none !important;
 }
 
-/* Founder Bio on About Page */
-.about-page section#founder-bio { /* Add page specific selector */
-    /* background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AetherVision-sublogo-4.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-4.png'); /* ONLY IMAGE */
-    background-color: #004d00; border-left-color: #90EE90; color: #ffffff;
-    background-size: cover; background-position: center center; background-attachment: fixed; padding: 30px;
+/* Split Founder Bio Rules */
+.about-page section#founder-bio-image-banner {
+    background-image: url('images/AetherVision-sublogo-4.png');
+    background-color: #004d00;
+    min-height: 450px;
+    border-left: 5px solid #90EE90;
 }
-.about-page section#founder-bio > * { position: relative; z-index: 3; }
-.about-page section#founder-bio h2 {
-    color: #81C784; /* UPDATED: Richer Green */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
+.about-page section#founder-bio-image-banner h2 {
+    color: #81C784; text-shadow: none;
 }
-.about-page section#founder-bio p,
-.about-page section#founder-bio a {
-    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
-.about-page section#founder-bio p strong {
-    color: #A5D6A7; /* UPDATED: Complementary Lighter Green */
-    font-weight: bold;
-    text-shadow: none;
+.about-page section#founder-bio-content {
+    border-left: 5px solid #90EE90;
 }
-.about-page section#founder-bio p a {
-    color: #A5D6A7; /* UPDATED: Complementary Lighter Green */
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+.about-page section#founder-bio-content p,
+.about-page section#founder-bio-content a {
+    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
 }
-.about-page section#founder-bio a:hover { color: #ffffff; text-decoration: underline;}
+.about-page section#founder-bio-content p strong {
+    color: #A5D6A7; font-weight: bold; text-shadow: none;
+}
+.about-page section#founder-bio-content p a {
+    color: #A5D6A7; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: bold; text-shadow: none;
+}
+.about-page section#founder-bio-content a:hover { color: #ffffff; text-decoration: underline;}
 
 
 /* Split Commitment Section */
-/* Part 1: Image Banner */
 .about-page section#commitment-image-banner {
     background-image: url('images/AetherVision-sublogo-9.png');
-    background-color: #FAFAFA; /* Fallback */
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 350px; /* Height adjusted */
-    margin-bottom: 0; padding: 25px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #FDCF3E;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+    background-color: #FAFAFA;
+    min-height: 350px;
+    border-left: 5px solid #FDCF3E;
 }
-/* Title inside the banner */
 .about-page section#commitment-image-banner h2 {
-    color: #FDCF3E; /* Keep original gold */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow for visibility */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
+    color: #FDCF3E;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow */
 }
-/* Part 2: Content Block - Already confirmed black */
 .about-page section#commitment-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #FDCF3E; /* Match banner border */
-    color: #ffffff; /* Ensure text is light */
-    position: relative; z-index: 1; overflow: hidden;
+    border-left: 5px solid #FDCF3E;
 }
-/* Text styling within content block */
 .about-page section#commitment-content p {
-    color: #ffffff; text-shadow: none; /* No shadow needed on solid background */
-    margin-top: 0; margin-bottom: 1em; /* Restore bottom margin */
+    color: #ffffff; text-shadow: none;
     line-height: 1.7; font-family: 'Open Sans', sans-serif;
 }
 
 
 /* === STYLES SPECIFIC TO CAPABILITIES PAGE === */
-/* Core Competencies on Capabilities Page */
-.capabilities-page section#core-competencies {
-    /* background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AetherVision-sublogo-10.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-10.png'); /* ONLY IMAGE */
-    background-color: #2a3a4a; border-left-color: #4FA1C4; color: #ffffff;
-    background-size: cover; background-position: center center; background-attachment: fixed;
-    padding: 30px;
+
+/* Split Core Competencies Rules */
+.capabilities-page section#core-competencies-image-banner {
+    background-image: url('images/AetherVision-sublogo-10.png');
+    background-color: #2a3a4a;
+    border-left: 5px solid #4FA1C4;
+    min-height: 650px;
 }
-.capabilities-page section#core-competencies > * { position: relative; z-index: 3; }
-.capabilities-page section#core-competencies h2 {
-    color: #4FC3F7; /* UPDATED: Was rgba(255, 0, 0, 0.8) - Reused light blue */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
+.capabilities-page section#core-competencies-image-banner h2 {
+    color: #4FC3F7; text-shadow: none;
 }
-.capabilities-page section#core-competencies h3 {
-    color: #FDFF73; /* Keep original yellow */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Keep H3 shadow */
-    border-bottom: 1px solid rgba(253, 255, 115, 0.5);
-    padding-bottom: 8px; margin-top: 30px;
+.capabilities-page section#core-competencies-content {
+    border-left: 5px solid #4FA1C4;
 }
-.capabilities-page section#core-competencies p,
-.capabilities-page section#core-competencies ul li {
-    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
-.capabilities-page section#core-competencies ul { list-style: disc; padding-left: 25px; margin-top: 10px; }
-.capabilities-page section#core-competencies ul li { padding-left: 0; position: static; margin-bottom: 10px; }
-.capabilities-page section#core-competencies ul li::before { content: none; }
-.capabilities-page section#core-competencies ul li strong {
-    color: #FDFF73; /* Keep original yellow */
-    text-shadow: none;
-    font-weight: bold;
+.capabilities-page section#core-competencies-content p {
+    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.capabilities-page section#core-competencies-content h3 {
+    color: #FDFF73; border-color: rgba(253, 255, 115, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Keep shadow */
+}
+.capabilities-page section#core-competencies-content ul { list-style: disc; padding-left: 25px; margin-top: 10px; }
+.capabilities-page section#core-competencies-content ul li {
+    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+    padding-left: 0; position: static; margin-bottom: 10px;
+}
+.capabilities-page section#core-competencies-content ul li::before { content: none; }
+.capabilities-page section#core-competencies-content ul li strong {
+    color: #FDFF73; text-shadow: none; font-weight: bold;
 }
 
-/* Technology Focus Areas on Capabilities Page */
-.capabilities-page section#technology-focus-areas {
-    /* background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/AetherVision-sublogo-11.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-11.png'); /* ONLY IMAGE */
-    background-color: #101722; border-left-color: #6D9EEB; color: #ffffff;
-    background-size: cover; background-position: center center; padding: 30px;
+/* Split Technology Focus Areas Rules */
+.capabilities-page section#technology-focus-areas-image-banner {
+    background-image: url('images/AetherVision-sublogo-11.png');
+    background-color: #101722;
+    border-left: 5px solid #6D9EEB;
+    min-height: 450px;
 }
-.capabilities-page section#technology-focus-areas > * { position: relative; z-index: 3; }
-.capabilities-page section#technology-focus-areas h2 {
-    color: #64B5F6; /* UPDATED: Was #87CEFA - Richer Blue */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
+.capabilities-page section#technology-focus-areas-image-banner h2 {
+    color: #64B5F6; text-shadow: none;
 }
-.capabilities-page section#technology-focus-areas p { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
-.capabilities-page #technology-focus-areas ul { list-style: none; padding-left: 0; }
-.capabilities-page #technology-focus-areas ul li { padding-left: 1.5em; position: relative; margin-bottom: 0.5em; color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
-.capabilities-page #technology-focus-areas ul li::before { content: '•'; color: #FFD700 !important; font-weight: bold; display: inline-block; position: absolute; left: 0; width: 1em; text-shadow: none !important; }
-.capabilities-page #technology-focus-areas ul li > strong {
+.capabilities-page section#technology-focus-areas-content {
+    border-left: 5px solid #6D9EEB;
+}
+.capabilities-page section#technology-focus-areas-content p {
+    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.capabilities-page section#technology-focus-areas-content ul { list-style: none; padding-left: 0; }
+.capabilities-page section#technology-focus-areas-content ul li {
+    padding-left: 1.5em; position: relative; margin-bottom: 0.5em;
+    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.capabilities-page section#technology-focus-areas-content ul li::before {
+    content: '•'; color: #FFD700 !important; font-weight: bold;
+    display: inline-block; position: absolute; left: 0; width: 1em; text-shadow: none !important;
+}
+.capabilities-page section#technology-focus-areas-content ul li strong {
     color: #FFD700 !important;
-    /* UPDATED: Reinstated text shadow for readability on light background parts */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6) !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6) !important; /* Keep shadow */
     font-weight: bold;
 }
-.capabilities-page section#technology-focus-areas p:last-of-type { font-style: italic; color: #cccccc; text-align: center; margin-top: 30px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
+.capabilities-page section#technology-focus-areas-content p:last-of-type {
+    font-style: italic; color: #cccccc; text-align: center; margin-top: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
 
 
 /* Differentiators Section (Two-Part) on Capabilities Page */
-/* Part 1: Image Banner */
 .capabilities-page section#differentiators-image-banner {
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('images/AetherVision-sublogo-12.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-12.png'); /* ONLY IMAGE */
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 280px; margin-bottom: 0; padding: 30px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #F5E36B;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+    background-image: url('images/AetherVision-sublogo-12.png');
+    min-height: 280px; border-left: 5px solid #F5E36B;
 }
 .capabilities-page section#differentiators-image-banner h2 {
-    color: #F5E36B; /* Keep original color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow for visibility */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
+    color: #F5E36B;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7);
 }
-/* Part 2: Content Block - Already confirmed black */
 .capabilities-page section#differentiators-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #F5E36B; color: #ffffff;
-    position: relative; z-index: 1; overflow: hidden;
+    border-left: 5px solid #F5E36B;
 }
 .capabilities-page section#differentiators-content ul { list-style: none; padding-left: 0; margin-bottom: 0; position: relative; z-index: 2; }
-.capabilities-page section#differentiators-content ul li { color: #ffffff; text-shadow: none; /* No shadow needed on black bg */ margin-bottom: 10px; padding-left: 1.8em; position: relative; line-height: 1.7; font-family: 'Open Sans', sans-serif; }
+.capabilities-page section#differentiators-content ul li { color: #ffffff; text-shadow: none; margin-bottom: 10px; padding-left: 1.8em; position: relative; line-height: 1.7; font-family: 'Open Sans', sans-serif; }
 .capabilities-page section#differentiators-content ul li::before { content: '✓'; color: #F5E36B; position: absolute; left: 0; top: 0.1em; font-weight: bold; font-size: 1.1em; text-shadow: none; }
 .capabilities-page section#differentiators-content ul li strong {
-    color: #F5E36B; /* Keep original color */
-    text-shadow: none;
-    font-weight: bold;
+    color: #F5E36B; text-shadow: none; font-weight: bold;
 }
 
 
 /* === STYLES SPECIFIC TO CONTACT PAGE === */
-/* Contact Info Section */
-.contact-page section#contact-info {
-    /* background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AetherVision-sublogo-13.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-13.png'); /* ONLY IMAGE */
-    background-color: #1a1f25; border-left-color: #FFA500; color: #ffffff;
-    background-size: cover; padding: 30px;
+
+/* Split Contact Info Rules */
+.contact-page section#contact-info-image-banner {
+    background-image: url('images/AetherVision-sublogo-13.png');
+    background-color: #1a1f25;
+    border-left: 5px solid #FFA500;
+    min-height: 550px; /* Requested height */
 }
-.contact-page section#contact-info > * { position: relative; z-index: 3; }
-.contact-page section#contact-info h2 {
-    color: #FFB74D; /* UPDATED: Was #FFA500 - Lighter Orange */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
+.contact-page section#contact-info-image-banner h2 {
+    color: #FFB74D; /* Color from old rule */
+    text-shadow: none; /* No shadow requested */
 }
-.contact-page section#contact-info p,
-.contact-page section#contact-info p strong,
-.contact-page section#contact-info a,
-.contact-page section#contact-info small { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
-.contact-page section#contact-info p { margin-bottom: 1em; }
-.contact-page section#contact-info p strong {
-    font-weight: bold;
-    color: #FFD700; /* Keep original color */
-    text-shadow: none; /* UPDATED: No shadow on colored strong */
+.contact-page section#contact-info-content {
+    border-left: 5px solid #FFA500; /* Match banner */
 }
-.contact-page section#contact-info a {
-    color: #FFD700; /* Keep original color */
-    text-decoration: none;
-    font-weight: bold;
-    text-shadow: none; /* UPDATED: No shadow on links */
+.contact-page section#contact-info-content p,
+.contact-page section#contact-info-content .contact-details {
+    color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Shadow allowed */
 }
-.contact-page section#contact-info a:hover { color: #ffffff; text-decoration: underline;}
-.contact-page section#contact-info small { color: #dddddd; font-size: 0.9em;}
-.contact-page .contact-details { margin-top: 1em; }
+.contact-page section#contact-info-content p { margin-bottom: 1em; }
+.contact-page section#contact-info-content .contact-details p strong {
+    font-weight: bold; color: #FFD700; text-shadow: none;
+}
+.contact-page section#contact-info-content .contact-details a {
+    color: #FFD700; text-decoration: none; font-weight: bold; text-shadow: none;
+}
+.contact-page section#contact-info-content .contact-details a:hover { color: #ffffff; text-decoration: underline;}
+.contact-page section#contact-info-content .contact-details small { color: #dddddd; font-size: 0.9em;}
+.contact-page section#contact-info-content .contact-details { margin-top: 1em; }
 
 /* Split Career Note Section */
-/* Part 1: Image Banner */
 .contact-page section#career-note-image-banner {
     background-image: url('images/AetherVision-sublogo-14.png');
     background-color: #F0F0F0; /* Fallback */
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 400px; /* Height updated */
-    margin-bottom: 0; padding: 25px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #8A2BE2; /* Original border color */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+    min-height: 450px; /* Updated height */
+    border-left: 5px solid #8A2BE2;
 }
 .contact-page section#career-note-image-banner h2 {
-    color: #9370DB; /* Keep original color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow for visibility */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
+    color: #9370DB; text-shadow: none;
 }
-/* Part 2: Content Block - Already confirmed black */
 .contact-page section#career-note-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #8A2BE2; /* Match banner border */
-    color: #ffffff; position: relative; z-index: 1; overflow: hidden;
+    border-left: 5px solid #8A2BE2;
 }
 .contact-page section#career-note-content p,
 .contact-page section#career-note-content a {
-    color: #ffffff; text-shadow: none; /* No shadow needed on solid background */
+    color: #ffffff; text-shadow: none;
 }
 .contact-page section#career-note-content p {
-    margin-top: 0; margin-bottom: 1em;
     line-height: 1.7; font-family: 'Open Sans', sans-serif;
 }
 .contact-page section#career-note-content a {
-    color: #CE93D8; /* UPDATED: Was #BA55D3 - Lighter Purple */
-    font-weight: bold; text-decoration: none;
+    color: #CE93D8; font-weight: bold; text-decoration: none;
 }
 .contact-page section#career-note-content a:hover {
     color: #ffffff; text-decoration: underline;
@@ -781,372 +694,293 @@ section p {
 
 
 /* === STYLES SPECIFIC TO CONTRACTING PAGE === */
-/* SDVOSB Status Section */
-.contracting-page section#sdvosb-status {
-    /* background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AetherVision-sublogo-15.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-15.png'); /* ONLY IMAGE */
-    background-color: #3a3f4a; border-left-color: #C3B1E1; color: #ffffff;
-    background-size: cover;  background-position: center center; background-repeat: no-repeat; padding: 30px;
-}
-.contracting-page section#sdvosb-status > * { position: relative; z-index: 3; }
-.contracting-page section#sdvosb-status h2 {
-    color: #F0E68C; /* UPDATED: Was #D8BFD8 - Changed to Khaki/Light Gold */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
-}
-.contracting-page section#sdvosb-status p { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); margin-bottom: 1em; } /* Keep text shadow */
-.contracting-page section#sdvosb-status p strong {
-    color: #FFD700; /* Keep original gold */
-    font-weight: bold; text-shadow: none;
-}
-.contracting-page .contracting-identifiers { margin-bottom: 1.5em; }
-.contracting-page .sdvosb-identifier { font-family: 'Courier New', Courier, monospace; font-size: 1.05em; background-color: rgba(0,0,0, 0.2); padding: 3px 6px; border-radius: 3px; display: block; margin-bottom: 5px; max-width: fit-content; }
-.contracting-page .sdvosb-identifier strong { color: #FFD700 !important; }
-.contracting-page .naics-codes { margin-top: 1.5em; }
-.contracting-page .naics-codes h3 {
-    color: #F0E68C; /* UPDATED: Was #D8BFD8 - Match H2 */
-    margin-bottom: 0.5em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); /* Keep H3 shadow */
-}
-.contracting-page .naics-codes ul { list-style: none; padding-left: 0; margin-top: 0.5em; }
-.contracting-page .naics-codes ul li { margin-bottom: 0.3em; font-size: 0.95em; color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
-.contracting-page .naics-codes ul li strong { color: #FFD700; text-shadow: none; }
-.contracting-page .naics-codes small { color: #cccccc; font-size: 0.85em; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
 
-/* Compliance Section */
-.contracting-page section#compliance-security {
-    /* background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/AetherVision-sublogo-16.png'); */ /* OVERLAY REMOVED */
-    background-image: url('images/AetherVision-sublogo-16.png'); /* ONLY IMAGE */
-    background-color: #202528; border-left-color: #D4AF37; color: #ffffff;
-    background-size: cover; background-position: center center; background-repeat: no-repeat; padding: 30px;
+/* Split SDVOSB Status Section */
+.contracting-page section#sdvosb-status-image-banner {
+    background-image: url('images/AetherVision-sublogo-15.png');
+    background-color: #3a3f4a;
+    border-left-color: #C3B1E1;
+    min-height: 550px;
 }
-.contracting-page section#compliance-security > * { position: relative; z-index: 3; }
-.contracting-page section#compliance-security h2 {
-    color: #FFCA28; /* UPDATED: Was #FFBF00 - Brighter Gold/Amber */
-    text-shadow: none; /* Ensure no shadow */
-    font-family: 'Montserrat', sans-serif; /* Keep consistent */
-    font-size: 1.8em; /* Keep consistent */
-    margin-top: 0; /* Keep consistent */
-    margin-bottom: 25px; /* Keep consistent */
+.contracting-page section#sdvosb-status-image-banner h2 {
+    color: #F0E68C; text-shadow: none;
 }
-.contracting-page section#compliance-security p,
-.contracting-page section#compliance-security ul li { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); } /* Keep text shadow */
-.contracting-page section#compliance-security p { margin-bottom: 1em; }
-.contracting-page section#compliance-security ul { list-style: disc; padding-left: 25px; margin-top: 1em; }
-.contracting-page section#compliance-security ul li { margin-bottom: 0.5em; }
-.contracting-page section#compliance-security ul li strong {
-    color: #FFD700; /* Keep original gold */
-    text-shadow: none;
-    font-weight: bold;
+.contracting-page section#sdvosb-status-content {
+    border-left-color: #C3B1E1; /* Match banner */
 }
+.contracting-page section#sdvosb-status-content p { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
+.contracting-page section#sdvosb-status-content p strong { color: #FFD700; font-weight: bold; text-shadow: none; }
+.contracting-page section#sdvosb-status-content .contracting-identifiers { margin-bottom: 1.5em; }
+.contracting-page section#sdvosb-status-content .sdvosb-identifier { font-family: 'Courier New', Courier, monospace; font-size: 1.05em; background-color: rgba(0,0,0, 0.2); padding: 3px 6px; border-radius: 3px; display: block; margin-bottom: 5px; max-width: fit-content; }
+.contracting-page section#sdvosb-status-content .sdvosb-identifier strong { color: #FFD700 !important; text-shadow: none; }
+.contracting-page section#sdvosb-status-content .naics-codes { margin-top: 1.5em; }
+.contracting-page section#sdvosb-status-content .naics-codes h3 { color: #F0E68C; margin-bottom: 0.5em; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); border-bottom: none; padding-bottom: 0; }
+.contracting-page section#sdvosb-status-content .naics-codes ul { list-style: none; padding-left: 0; margin-top: 0.5em; margin-bottom: 0; }
+.contracting-page section#sdvosb-status-content .naics-codes ul li { margin-bottom: 0.3em; font-size: 0.95em; color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
+.contracting-page section#sdvosb-status-content .naics-codes ul li strong { color: #FFD700; text-shadow: none; }
+.contracting-page section#sdvosb-status-content .naics-codes small { color: #cccccc; font-size: 0.85em; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); display: block; margin-top: 1em;}
 
+/* Split Compliance Section */
+.contracting-page section#compliance-security-image-banner {
+    background-image: url('images/AetherVision-sublogo-16.png');
+    background-color: #202528;
+    border-left-color: #D4AF37;
+    min-height: 450px;
+}
+.contracting-page section#compliance-security-image-banner h2 {
+    color: #FFCA28; text-shadow: none;
+}
+.contracting-page section#compliance-security-content {
+    border-left-color: #D4AF37; /* Match banner */
+}
+.contracting-page section#compliance-security-content p,
+.contracting-page section#compliance-security-content ul li { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
+.contracting-page section#compliance-security-content p { margin-bottom: 1em; }
+.contracting-page section#compliance-security-content ul { list-style: disc; padding-left: 25px; margin-top: 1em; }
+.contracting-page section#compliance-security-content ul li { margin-bottom: 0.5em; }
+.contracting-page section#compliance-security-content ul li strong { color: #FFD700; text-shadow: none; font-weight: bold; }
 
 /* Split Contracting Vehicles Section */
-/* Part 1: Image Banner */
 .contracting-page section#contracting-vehicles-image-banner {
-    background-image: url('images/AetherVision-sublogo-17.png'); /* ONLY IMAGE */
-    background-color: #1a2a3a; /* Fallback */
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 400px; /* Height updated */
-    margin-bottom: 0; padding: 25px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #66CDAA; /* Original border color */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+    background-image: url('images/AetherVision-sublogo-17.png');
+    background-color: #1a2a3a;
+    min-height: 550px; /* Updated height */
+    border-left: 5px solid #66CDAA;
 }
 .contracting-page section#contracting-vehicles-image-banner h2 {
-    color: #98FB98; /* Keep original color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow for visibility */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
+    color: #98FB98; text-shadow: none;
 }
-/* Part 2: Content Block - Already confirmed black */
 .contracting-page section#contracting-vehicles-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #66CDAA; /* Match banner border */
-    color: #ffffff; position: relative; z-index: 1; overflow: hidden;
+    border-left: 5px solid #66CDAA;
 }
-.contracting-page section#contracting-vehicles-content p {
-    color: #ffffff; text-shadow: none; /* No shadow needed on black bg */
-    margin-bottom: 1em;
-}
+.contracting-page section#contracting-vehicles-content p { color: #ffffff; text-shadow: none; margin-bottom: 1em; }
 .contracting-page section#contracting-vehicles-content ul { list-style: none; padding-left: 0; }
-.contracting-page section#contracting-vehicles-content ul li {
-    color: #ffffff; text-shadow: none; /* No shadow needed on black bg */
-    margin-bottom: 10px; padding-left: 1.5em; position: relative;
-}
-.contracting-page section#contracting-vehicles-content ul li::before {
-    content: '▪ '; color: #98FB98; position: absolute; left: 0; font-weight: bold; text-shadow: none;
-}
-.contracting-page section#contracting-vehicles-content ul li strong {
-    color: #98FB98 !important; /* Keep original color */
-    font-weight: bold; text-shadow: none !important;
-}
+.contracting-page section#contracting-vehicles-content ul li { color: #ffffff; text-shadow: none; margin-bottom: 10px; padding-left: 1.5em; position: relative; }
+.contracting-page section#contracting-vehicles-content ul li::before { content: '▪ '; color: #98FB98; position: absolute; left: 0; font-weight: bold; text-shadow: none; }
+.contracting-page section#contracting-vehicles-content ul li strong { color: #98FB98 !important; font-weight: bold; text-shadow: none !important; }
 
 
 /* Split Partnering Strategy Section */
-/* Part 1: Image Banner */
 .contracting-page section#partnering-strategy-image-banner {
-    background-image: url('images/AetherVision-sublogo-18.png'); /* ONLY IMAGE */
-    background-color: #111111; /* Fallback */
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 400px; /* Height updated */
-    margin-bottom: 0; padding: 25px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #C0C0C0; /* Original border color */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+    background-image: url('images/AetherVision-sublogo-18.png');
+    background-color: #111111;
+    min-height: 450px; /* Updated height */
+    border-left: 5px solid #C0C0C0;
 }
 .contracting-page section#partnering-strategy-image-banner h2 {
-    color: #ADD8E6; /* Keep original color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow for visibility */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
+    color: #ADD8E6; text-shadow: none;
 }
-/* Part 2: Content Block - Already confirmed black */
 .contracting-page section#partnering-strategy-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #C0C0C0; /* Match banner border */
-    color: #ffffff; position: relative; z-index: 1; overflow: hidden;
+    border-left: 5px solid #C0C0C0;
 }
 .contracting-page section#partnering-strategy-content p,
-.contracting-page section#partnering-strategy-content ul li {
-    color: #ffffff; text-shadow: none; /* No shadow needed on black bg */
-}
+.contracting-page section#partnering-strategy-content ul li { color: #ffffff; text-shadow: none; }
 .contracting-page section#partnering-strategy-content p { margin-bottom: 1em; }
 .contracting-page section#partnering-strategy-content ul { list-style: none; padding-left: 0; }
-.contracting-page section#partnering-strategy-content ul li {
-    margin-bottom: 10px; padding-left: 1.5em; position: relative;
-}
-.contracting-page section#partnering-strategy-content ul li::before {
-    content: '🤝'; color: #ADD8E6; position: absolute; left: 0; text-shadow: none !important; font-size: 0.9em; top: 0.1em;
-}
-.contracting-page section#partnering-strategy-content ul li strong {
-    color: #6495ED !important; /* Keep original color */
-    text-shadow: none !important; font-weight: bold;
-}
+.contracting-page section#partnering-strategy-content ul li { margin-bottom: 10px; padding-left: 1.5em; position: relative; }
+.contracting-page section#partnering-strategy-content ul li::before { content: '🤝'; color: #ADD8E6; position: absolute; left: 0; text-shadow: none !important; font-size: 0.9em; top: 0.1em; }
+.contracting-page section#partnering-strategy-content ul li strong { color: #6495ED !important; text-shadow: none !important; font-weight: bold; }
 
 
 /* Split Contracting Contact Section */
-/* Part 1: Image Banner */
 .contracting-page section#contracting-contact-image-banner {
-    background-image: url('images/AetherVision-sublogo-19.png'); /* ONLY IMAGE */
-    background-color: #384048; /* Fallback */
-    background-size: cover; background-position: center center; background-repeat: no-repeat;
-    min-height: 400px; /* Height updated */
-    margin-bottom: 0; padding: 25px 30px;
-    border-radius: 8px 8px 0 0; border: none; border-left: 5px solid #D8BFD8; /* Original border color */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden;
-    display: flex; align-items: flex-start; box-sizing: border-box;
+    background-image: url('images/AetherVision-sublogo-19.png');
+    background-color: #384048;
+    min-height: 400px; border-left: 5px solid #D8BFD8;
 }
 .contracting-page section#contracting-contact-image-banner h2 {
-    color: #DDA0DD; /* Keep original color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); /* Keep shadow for visibility */
-    margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.8em;
-    position: relative; z-index: 2; width: 100%; text-align: left;
+    color: #DDA0DD; text-shadow: none;
 }
-/* Part 2: Content Block - Already confirmed black */
 .contracting-page section#contracting-contact-content {
-    margin-top: 0; margin-bottom: 40px; /* padding: 30px; */ /* Padding already set in block */
-    /* background-color: rgb(0, 0, 0); */ /* Background already set in block */
-    border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: none; border-left: 5px solid #D8BFD8; /* Match banner border */
-    color: #ffffff; position: relative; z-index: 1; overflow: hidden;
+    border-left: 5px solid #D8BFD8;
 }
-.contracting-page section#contracting-contact-content p {
-    color: #ffffff; text-shadow: none; margin-top: 0; margin-bottom: 1em;
-    line-height: 1.7; font-family: 'Open Sans', sans-serif;
-}
-.contracting-page section#contracting-contact-content p strong {
-    color: #ffffff; font-weight: bold; text-shadow: none;
-}
-.contracting-page section#contracting-contact-content a {
-    color: #FFDAB9; text-decoration: none; font-weight: bold; text-shadow: none;
-}
+.contracting-page section#contracting-contact-content p { color: #ffffff; text-shadow: none; margin-top: 0; margin-bottom: 1em; line-height: 1.7; font-family: 'Open Sans', sans-serif; }
+.contracting-page section#contracting-contact-content p strong { color: #ffffff; font-weight: bold; text-shadow: none; }
+.contracting-page section#contracting-contact-content a { color: #FFDAB9; text-decoration: none; font-weight: bold; text-shadow: none; }
 .contracting-page section#contracting-contact-content a[href^="mailto"] { color: #DDA0DD; }
 .contracting-page section#contracting-contact-content a[href^="tel"] { color: #DDA0DD; }
 .contracting-page section#contracting-contact-content a:hover { color: #FFFACD; text-decoration: underline; }
 
 
 /* === STYLES SPECIFIC TO PAST PERFORMANCE PAGE === */
-/* Note: These sections are NOT split layout; text overlays the main background */
-/* Base style for case study sections on past performance page */
-.past-performance-page .project-case-study {
-    margin-bottom: 50px;
-    padding: 0; /* Apply padding within */
-    border-bottom: 1px solid #dee2e6;
-    border-radius: 8px;
-    border-left: 5px solid #2c2c8c; /* Base color, overridden per section */
-    overflow: hidden;
-    position: relative;
-    min-height: 600px;
-    /* Fallback background color */
-    background-color: #212529; /* Dark fallback */
-    display: flex; /* Use flexbox to position content */
-    flex-direction: column; /* Stack title, details, csc vertically */
-    justify-content: flex-start; /* Align content to the top */
-    align-items: stretch; /* Stretch children horizontally */
-    background-size: contain; /* Use 'contain' as per last correction */
-    background-position: center center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
+
+/* --- Base Styles for Past Perf Split Layout --- */
+.past-performance-page section[id$="-image-banner"] h2 {
+     font-family: 'Montserrat', sans-serif; font-size: 1.8em; margin: 0; padding: 0;
+     position: relative; z-index: 2; width: 100%; text-align: left;
+     text-shadow: none; /* Titles in banner have no shadow */
 }
-.past-performance-page .project-case-study:last-of-type {
-    border-bottom: none;
+.past-performance-page section[id$="-content"] .project-details {
+    padding: 15px 25px; border-radius: 5px; margin: 0 0 25px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2); position: relative; z-index: 2; flex-shrink: 0;
+}
+.past-performance-page section[id$="-content"] .project-details p {
+    margin-bottom: 0.6em; font-size: 0.95em; text-shadow: none;
+}
+.past-performance-page section[id$="-content"] .project-details p strong {
+    display: inline; margin-right: 5px; text-shadow: none;
+}
+.past-performance-page section[id$="-content"] .project-csc {
+     padding: 0; margin: 0; border-radius: 0;
+     position: static; z-index: auto; flex-grow: 0;
+}
+.past-performance-page section[id$="-content"] .project-csc h3 {
+     margin-top: 0; margin-bottom: 15px; font-size: 1.3em; border-bottom-width: 2px; border-bottom-style: solid; padding-bottom: 8px;
+}
+.past-performance-page section[id$="-content"] .project-csc p {
+     margin-bottom: 1.2em;
+}
+.past-performance-page section[id$="-content"] .project-csc ul {
+     list-style: disc; margin-top: 15px; padding-left: 25px;
+}
+.past-performance-page section[id$="-content"] .project-csc ul li {
+     margin-bottom: 8px;
 }
 
-/* Titles within past performance sections */
-.past-performance-page .project-case-study h2 {
-    padding: 25px 30px 0; /* Padding top/left/right */
-    margin: 0 0 20px 0; /* Remove default margins, add bottom margin */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8em;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7), 0 0 5px rgba(0,0,0,0.7); /* Enhanced shadow for visibility */
-    position: relative;
-    z-index: 3; /* Above sub-blocks */
-    color: #ffffff; /* Default title color, override per section */
-    flex-shrink: 0; /* Prevent title from shrinking */
-}
-
-/* Base Project Details Box Styling */
-.past-performance-page .project-details {
-    padding: 15px 25px; /* Adjusted padding */
-    border-radius: 5px;
-    margin: 0 30px 25px 30px; /* Horizontal margin, bottom margin */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
-    position: relative;
-    z-index: 2; /* Above background, below title */
-    flex-shrink: 0; /* Prevent details box from shrinking */
-    /* Background color set per section - This is intentional for the details box ONLY */
-}
-.past-performance-page .project-details p {
-    margin-bottom: 0.6em;
-    font-size: 0.95em; /* Slightly smaller */
-    text-shadow: none; /* Remove shadow, rely on bg contrast */
-    color: #212529; /* Default dark text */
-}
-.past-performance-page .project-details p strong {
-    color: #000000; /* Black for strong emphasis */
-    min-width: 150px; /* Adjust as needed */
-    display: inline-block;
-    text-shadow: none;
-    margin-right: 5px;
-}
-
-/* Base Challenge, Solution, Contribution/Impact Section Styling */
-.past-performance-page .project-csc {
-    padding: 20px 25px; /* Padding inside the block */
-    margin: 0 30px 30px 30px; /* Match details horizontal margin, add bottom margin */
-    border-radius: 5px;
-    position: relative;
-    z-index: 2; /* Above background, below title */
-    flex-grow: 1; /* Allow this block to grow if space allows */
-    /* IMPORTANT: Background is NOT set here, allowing section BG to show through */
-}
-.past-performance-page .project-csc h3 {
-    margin-top: 0; /* Remove top margin */
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    border-bottom: 2px solid; /* Color set per section */
-    padding-bottom: 8px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.8); /* Enhanced shadow for visibility */
-    /* Color set per section */
-}
-.past-performance-page .project-csc p {
-    margin-bottom: 1.2em;
-    color: #f8f9fa; /* Light text color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); /* Enhanced shadow for readability */
-}
-.past-performance-page .project-csc ul {
-    list-style: disc;
-    padding-left: 25px;
-    margin-top: 15px;
-}
-.past-performance-page .project-csc ul li {
-    margin-bottom: 8px;
-    color: #f8f9fa; /* Light text color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); /* Enhanced shadow for readability */
-}
-/* Base style for list item strong tags */
-.past-performance-page .project-csc ul li strong {
-    font-weight: bold;
-    text-shadow: none; /* UPDATED: Ensure no shadow */
-    /* Specific color set per section below */
-}
-/* Base style for paragraph strong tags */
-.past-performance-page .project-csc p strong {
-    font-weight: bold;
-    text-shadow: none; /* UPDATED: Ensure no shadow */
-     /* Specific color set per section below */
-}
-
-
-/* --- Specific Backgrounds and Text Colors for Past Performance Sections --- */
-
-/* Section 1: FENCE (Theme: Yellow/Gold - #FFD700) */
-#past-perf-fence {
+/* --- FENCE Section (Updated Colors) --- */
+.past-performance-page section#past-perf-fence-image-banner {
     background-image: url('images/AetherVision-sublogo-darpa-fence-20.png');
-    border-left-color: #FFD700;
+    border-left-color: #ADA0CF; /* New Lavender */
+    min-height: 450px;
 }
-#past-perf-fence h2 { color: #FFD700; /* Keep */ } /* Keep Shadow */
-#past-perf-fence .project-details { background-color: rgba(255, 253, 240, 0.92); border-color: rgba(255, 215, 0, 0.5); } /* Keep */
-#past-perf-fence .project-details p { color: #3b2e00; /* Keep */ }
-#past-perf-fence .project-details p strong { color: #000000; /* Keep */ }
-#past-perf-fence .project-csc h3 { color: #FFED8A; border-bottom-color: #FFED8A; /* Keep */ } /* Keep Shadow */
-#past-perf-fence .project-csc p { color: #ffffff; /* Keep */ } /* Keep Shadow */
-#past-perf-fence .project-csc ul li { color: #ffffff; /* Keep */ } /* Keep Shadow */
-#past-perf-fence .project-csc ul li strong { color: #FFED8A; /* UPDATED: Was #87CEFA - Match H3 */ } /* No Shadow */
-#past-perf-fence .project-csc p strong { color: #FFD700; /* Keep */ } /* No Shadow */
+.past-performance-page section#past-perf-fence-image-banner h2 { color: #ADA0CF; } /* New Lavender */
+.past-performance-page section#past-perf-fence-content { border-left-color: #ADA0CF; } /* New Lavender */
+#past-perf-fence-content .project-details { background-color: rgba(230, 230, 250, 0.92); border-color: rgba(173, 160, 207, 0.5); }
+#past-perf-fence-content .project-details p { color: #301934; }
+#past-perf-fence-content .project-details p strong { color: #000000; }
+#past-perf-fence-content .project-csc h3 { color: #C8A2C8; border-bottom-color: #C8A2C8; text-shadow: 1px 1px 3px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.8); } /* Harmonized Lilac */
+#past-perf-fence-content .project-csc p { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); }
+#past-perf-fence-content .project-csc ul li { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); }
+#past-perf-fence-content .project-csc ul li strong { color: #C8A2C8; text-shadow: none; } /* Harmonized Lilac */
+#past-perf-fence-content .project-csc p strong { color: #C8A2C8; text-shadow: none; } /* Harmonized Lilac */
 
-/* Section 2: Secure AI (Theme: Light Blue - #87CEFA) */
-#past-perf-secure-ai {
+/* --- Secure AI Section --- */
+.past-performance-page section#past-perf-secure-ai-image-banner {
     background-image: url('images/AetherVision-sublogo-secure-cloud-21.png');
     border-left-color: #87CEFA;
+    min-height: 550px;
 }
-#past-perf-secure-ai h2 { color: #87CEFA; /* Keep */ } /* Keep Shadow */
-#past-perf-secure-ai .project-details { background-color: rgba(235, 248, 255, 0.92); border-color: rgba(135, 206, 250, 0.5); } /* Keep */
-#past-perf-secure-ai .project-details p { color: #002d42; /* Keep */ }
-#past-perf-secure-ai .project-details p strong { color: #000000; /* Keep */ }
-#past-perf-secure-ai .project-csc h3 { color: #AADDFF; border-bottom-color: #AADDFF; /* Keep */ } /* Keep Shadow */
-#past-perf-secure-ai .project-csc p { color: #ffffff; /* Keep */ } /* Keep Shadow */
-#past-perf-secure-ai .project-csc ul li { color: #ffffff; /* Keep */ } /* Keep Shadow */
-#past-perf-secure-ai .project-csc ul li strong { color: #AADDFF; /* UPDATED: Was #FFD700 - Match H3 */ } /* No Shadow */
-#past-perf-secure-ai .project-csc p strong { color: #87CEFA; /* Keep */ } /* No Shadow */
+.past-performance-page section#past-perf-secure-ai-image-banner h2 { color: #87CEFA; text-shadow: none; }
+.past-performance-page section#past-perf-secure-ai-content { border-left-color: #87CEFA; }
+#past-perf-secure-ai-content .project-details { background-color: rgba(235, 248, 255, 0.92); border-color: rgba(135, 206, 250, 0.5); }
+#past-perf-secure-ai-content .project-details p { color: #002d42; text-shadow: none; }
+#past-perf-secure-ai-content .project-details p strong { color: #000000; text-shadow: none; }
+#past-perf-secure-ai-content .project-csc h3 { color: #AADDFF; border-bottom-color: #AADDFF; text-shadow: 1px 1px 3px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.8); }
+#past-perf-secure-ai-content .project-csc p { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); }
+#past-perf-secure-ai-content .project-csc ul li { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); }
+#past-perf-secure-ai-content .project-csc ul li strong { color: #AADDFF; text-shadow: none; }
+#past-perf-secure-ai-content .project-csc p strong { color: #87CEFA; text-shadow: none; }
 
-/* Section 3: NASA (Theme: White/Grey/Blue - #E0E0E0 / #6495ED) */
-#past-perf-nasa {
+/* --- NASA Section --- */
+.past-performance-page section#past-perf-nasa-image-banner {
     background-image: url('images/AetherVision-sublogo-nasa-flight-22.png');
-    border-left-color: #C0C0C0; /* Silver border */
+    border-left-color: #C0C0C0;
+    min-height: 550px;
 }
-#past-perf-nasa h2 { color: #E0E0E0; /* Keep */ } /* Keep Shadow */
-#past-perf-nasa .project-details { background-color: rgba(240, 240, 245, 0.92); border-color: rgba(192, 192, 192, 0.5); } /* Keep */
-#past-perf-nasa .project-details p { color: #111111; /* Keep */ }
-#past-perf-nasa .project-details p strong { color: #000000; /* Keep */ }
-#past-perf-nasa .project-csc h3 { color: #D0D8E8; border-bottom-color: #D0D8E8; /* Keep */ } /* Keep Shadow */
-#past-perf-nasa .project-csc p { color: #ffffff; /* Keep */ } /* Keep Shadow */
-#past-perf-nasa .project-csc ul li { color: #ffffff; /* Keep */ } /* Keep Shadow */
-#past-perf-nasa .project-csc ul li strong { color: #90caff; /* Keep */ } /* No Shadow */
-#past-perf-nasa .project-csc p strong { color: #90caff; /* Keep */ } /* No Shadow */
+.past-performance-page section#past-perf-nasa-image-banner h2 { color: #E0E0E0; text-shadow: none; }
+.past-performance-page section#past-perf-nasa-content { border-left-color: #C0C0C0; }
+#past-perf-nasa-content .project-details { background-color: rgba(240, 240, 245, 0.92); border-color: rgba(192, 192, 192, 0.5); }
+#past-perf-nasa-content .project-details p { color: #111111; text-shadow: none; }
+#past-perf-nasa-content .project-details p strong { color: #000000; text-shadow: none; }
+#past-perf-nasa-content .project-csc h3 { color: #D0D8E8; border-bottom-color: #D0D8E8; text-shadow: 1px 1px 3px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.8); }
+#past-perf-nasa-content .project-csc p { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); }
+#past-perf-nasa-content .project-csc ul li { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); }
+#past-perf-nasa-content .project-csc ul li strong { color: #90caff; text-shadow: none; }
+#past-perf-nasa-content .project-csc p strong { color: #90caff; text-shadow: none; }
 
-/* Section 4: NUS (Theme: Light Green - #90EE90) */
-#past-perf-nus {
+/* --- NUS Section --- */
+.past-performance-page section#past-perf-nus-image-banner {
     background-image: url('images/AetherVision-sublogo-nus-eskin-23.png');
     border-left-color: #90EE90;
+    min-height: 650px;
 }
-#past-perf-nus h2 { color: #90EE90; /* Keep */ } /* Keep Shadow */
-#past-perf-nus .project-details { background-color: rgba(240, 255, 240, 0.92); border-color: rgba(144, 238, 144, 0.5); } /* Keep */
-#past-perf-nus .project-details p { color: #003b00; /* Keep */ }
-#past-perf-nus .project-details p strong { color: #000000; /* Keep */ }
-#past-perf-nus .project-csc h3 { color: #B0FFB0; border-bottom-color: #B0FFB0; /* Keep */ } /* Keep Shadow */
-#past-perf-nus .project-csc p { color: #ffffff; /* Keep */ } /* Keep Shadow */
-#past-perf-nus .project-csc ul li { color: #ffffff; /* Keep */ } /* Keep Shadow */
-#past-perf-nus .project-csc ul li strong { color: #B0FFB0; /* UPDATED: Was #FFD700 - Match H3 */ } /* No Shadow */
-#past-perf-nus .project-csc p strong { color: #90EE90; /* Keep */ } /* No Shadow */
+.past-performance-page section#past-perf-nus-image-banner h2 { color: #90EE90; text-shadow: none; }
+.past-performance-page section#past-perf-nus-content { border-left-color: #90EE90; }
+#past-perf-nus-content .project-details { background-color: rgba(240, 255, 240, 0.92); border-color: rgba(144, 238, 144, 0.5); }
+#past-perf-nus-content .project-details p { color: #003b00; text-shadow: none; }
+#past-perf-nus-content .project-details p strong { color: #000000; text-shadow: none; }
+#past-perf-nus-content .project-csc h3 { color: #B0FFB0; border-bottom-color: #B0FFB0; text-shadow: 1px 1px 3px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.8); }
+#past-perf-nus-content .project-csc p { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); }
+#past-perf-nus-content .project-csc ul li { color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.8); }
+#past-perf-nus-content .project-csc ul li strong { color: #B0FFB0; text-shadow: none; }
+#past-perf-nus-content .project-csc p strong { color: #90EE90; text-shadow: none; }
 
+/* === STYLES SPECIFIC TO PITCH DECK PAGE === */
+
+/* --- Pitch Problem Section --- */
+.pitch-deck-page section#pitch-problem-image-banner {
+    background-image: url('images/pitch-problem-banner.png');
+    border-left: 5px solid #FF6347; /* Tomato Red */
+    min-height: 450px;
+}
+.pitch-deck-page section#pitch-problem-image-banner h2 { color: #FF6347; }
+.pitch-deck-page section#pitch-problem-content { border-left-color: #FF6347; }
+.pitch-deck-page section#pitch-problem-content ul { list-style-type: '❗ '; }
+.pitch-deck-page section#pitch-problem-content strong { color: #FF6347; }
+
+/* --- Pitch Solution Section --- */
+.pitch-deck-page section#pitch-solution-image-banner {
+    background-image: url('images/pitch-solution-banner.png');
+    border-left: 5px solid #32CD32; /* Lime Green */
+    min-height: 450px;
+}
+.pitch-deck-page section#pitch-solution-image-banner h2 { color: #32CD32; }
+.pitch-deck-page section#pitch-solution-content { border-left-color: #32CD32; }
+.pitch-deck-page section#pitch-solution-content ul { list-style-type: '💡 '; }
+.pitch-deck-page section#pitch-solution-content strong { color: #90EE90; }
+.pitch-deck-page section#pitch-solution-content p > strong { color: #ADFF2F; }
+
+/* --- Pitch Capabilities Section --- */
+.pitch-deck-page section#pitch-capabilities-image-banner {
+    background-image: url('images/pitch-capabilities-banner.png');
+    border-left: 5px solid #1E90FF; /* Dodger Blue */
+    min-height: 450px;
+}
+.pitch-deck-page section#pitch-capabilities-image-banner h2 { color: #1E90FF; }
+.pitch-deck-page section#pitch-capabilities-content { border-left-color: #1E90FF; }
+.pitch-deck-page section#pitch-capabilities-content ul { list-style-type: '⚙️ '; }
+.pitch-deck-page section#pitch-capabilities-content strong { color: #87CEFA; }
+.pitch-deck-page section#pitch-capabilities-content a { color: #87CEFA; }
+
+/* --- Pitch Differentiators Section --- */
+.pitch-deck-page section#pitch-differentiators-image-banner {
+    background-image: url('images/pitch-differentiators-banner.png');
+    border-left: 5px solid #FFD700; /* Gold */
+    min-height: 450px;
+}
+.pitch-deck-page section#pitch-differentiators-image-banner h2 { color: #FFD700; }
+.pitch-deck-page section#pitch-differentiators-content { border-left-color: #FFD700; }
+.pitch-deck-page section#pitch-differentiators-content ul { list-style-type: '⭐ '; }
+.pitch-deck-page section#pitch-differentiators-content strong { color: #F0E68C; }
+.pitch-deck-page section#pitch-differentiators-content a { color: #F0E68C; }
+
+/* --- Pitch Experience Section --- */
+.pitch-deck-page section#pitch-experience-image-banner {
+    background-image: url('images/pitch-experience-banner.png');
+    border-left: 5px solid #C0C0C0; /* Silver */
+    min-height: 450px;
+}
+.pitch-deck-page section#pitch-experience-image-banner h2 { color: #C0C0C0; }
+.pitch-deck-page section#pitch-experience-content { border-left-color: #C0C0C0; }
+.pitch-deck-page section#pitch-experience-content ul { list-style-type: '🏆 '; }
+.pitch-deck-page section#pitch-experience-content strong { color: #DCDCDC; }
+.pitch-deck-page section#pitch-experience-content a { color: #DCDCDC; }
+
+/* --- Pitch Contact Section --- */
+.pitch-deck-page section#pitch-contact-image-banner {
+    background-image: url('images/pitch-contact-banner.png');
+    border-left: 5px solid #4682B4; /* Steel Blue */
+    min-height: 450px;
+}
+/* *** UPDATED H2 Color *** */
+.pitch-deck-page section#pitch-contact-image-banner h2 { color: #ADD8E6; } /* Light Blue */
+.pitch-deck-page section#pitch-contact-content { border-left-color: #4682B4; }
+.pitch-deck-page section#pitch-contact-content p { margin-bottom: 1em; }
+.pitch-deck-page section#pitch-contact-content .contact-details { margin-top: 1em; }
+.pitch-deck-page section#pitch-contact-content .contact-details p strong { color: #ADD8E6; }
+.pitch-deck-page section#pitch-contact-content .contact-details a { color: #B0E0E6; }
+.pitch-deck-page section#pitch-contact-content .contact-details a:hover { color: #ffffff; }
+.pitch-deck-page section#pitch-contact-content p:last-of-type a { color: #ADD8E6; }
 
 /* Concluding paragraph on Past Performance page */
 .past-performance-page p.page-conclusion {
