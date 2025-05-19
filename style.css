@@ -617,7 +617,7 @@ section:not(#hero-section):not([id$="-content"]) p { /* Added :not(#hero-section
 /* Differentiators Section (Two-Part) on Capabilities Page */
 .capabilities-page section#differentiators-image-banner {
     background-image: url('images/AetherVision-sublogo-12.png');
-    min-height: 280px; border-left: 5px solid #F5E36B;
+    min-height: 580px; border-left: 5px solid #F5E36B;
 }
 .capabilities-page section#differentiators-image-banner h2 {
     color: #F5E36B;
