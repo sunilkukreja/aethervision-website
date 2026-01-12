@@ -1,0 +1,37 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color:#020a16;">
+<defs>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="5" result="blur"/>
+        <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+    <linearGradient id="flowGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+        <stop offset="0%" stop-color="#4dd0e1"/>
+        <stop offset="50%" stop-color="#81d4fa"/>
+        <stop offset="100%" stop-color="#ce93d8"/>
+    </linearGradient>
+    <mask id="fadeMask">
+        <rect width="1920" height="1080" fill="url(#flowGradient)"/>
+    </mask>
+</defs>
+<g filter="url(#softGlow)" opacity="0.8">
+    <!-- Left side: Algorithm -->
+    <g transform="translate(200, 290)">
+        <path d="M0,0 H150 M50,50 H200 M0,100 H150 M50,150 H200 M0,200 H150 M50,250 H200 M0,300 H150 M50,350 H200 M0,400 H150 M50,450 H200" stroke="#b2fefc" stroke-width="2"/>
+    </g>
+    <!-- Right side: Crystal and Neural Net -->
+    <g transform="translate(1200, 240)" stroke-width="2" stroke="#fce2ff">
+        <path d="M0,150 L100,0 L200,150 L100,300 Z M150,225 L250,75 L350,225 L250,375 Z M50,375 L150,225 L250,375 L150,525 Z"/>
+        <circle cx="250" cy="75" r="8" fill="#fce2ff"/>
+        <circle cx="350" cy="225" r="8" fill="#fce2ff"/>
+        <circle cx="150" cy="525" r="8" fill="#fce2ff"/>
+        <circle cx="450" cy="450" r="8" fill="#fce2ff"/>
+        <path d="M350,225 C400,250 420,400 450,450" fill="none"/>
+    </g>
+    <!-- Flowing lines -->
+    <path d="M400,340 C700,200 850,800 1200,390" stroke="url(#flowGradient)" stroke-width="2.5" fill="none"/>
+    <path d="M400,740 C700,900 850,300 1350,465" stroke="url(#flowGradient)" stroke-width="2.5" fill="none"/>
+</g>
+</svg>

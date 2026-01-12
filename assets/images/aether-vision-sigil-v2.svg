@@ -1,0 +1,20 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- AetherVision Sigil Logo v2 -->
+    <!-- Based on a minimalist interpretation of the Sri Yantra's central geometry. -->
+    <!-- Symbolizes unity of opposites (upward and downward triangles), cosmic order, and a central point of origin (Bindu). -->
+    <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="color: #0A305A;">
+        
+        <!-- Outer circle representing wholeness/cosmos -->
+        <circle cx="50" cy="50" r="45" stroke="currentColor" opacity="0.5"/>
+
+        <!-- Downward triangle (Shakti, physical, creative power) -->
+        <path d="M 50 85 L 15 25 L 85 25 Z" stroke="currentColor"/>
+
+        <!-- Upward triangle (Shiva, consciousness, the logical) -->
+        <path d="M 50 15 L 15 75 L 85 75 Z" stroke="currentColor"/>
+
+        <!-- Central point (Bindu, the origin/observer) -->
+        <circle cx="50" cy="50" r="4" fill="currentColor"/>
+
+    </g>
+</svg>

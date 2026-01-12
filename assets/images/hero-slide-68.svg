@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#111111"/>
+  
+  <!-- Noise Field (Abstracted as dots) -->
+  <pattern id="static" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+    <rect width="2" height="2" fill="#333333"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#static)"/>
+  
+  <!-- The Clear Channel (Mask) -->
+  <defs>
+    <mask id="cutout">
+      <rect width="100%" height="100%" fill="white"/>
+      <rect x="860" y="0" width="200" height="1080" fill="black"/>
+    </mask>
+  </defs>
+  
+  <!-- Overlay Dark -->
+  <rect width="100%" height="100%" fill="#000000" opacity="0.8" mask="url(#cutout)"/>
+  
+  <!-- The Signal Line -->
+  <line x1="960" y1="1080" x2="960" y2="0" stroke="#00A8E8" stroke-width="2">
+     <animate attributeName="stroke-dasharray" values="0,20; 20,0" dur="0.5s" repeatCount="indefinite"/>
+  </line>
+  
+  <text x="970" y="1000" fill="#00A8E8" font-family="monospace" font-size="20" letter-spacing="5" opacity="0.8" transform="rotate(-90 970 1000)">UNSEEN_CHANNEL</text>
+</svg>

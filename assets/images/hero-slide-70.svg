@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#000000"/>
+  
+  <g transform="translate(960, 200)" stroke="#00A8E8" stroke-width="2" fill="none">
+    <!-- Top Cube -->
+    <path d="M0,0 L100,50 L0,100 L-100,50 Z" opacity="0.8"/>
+    
+    <!-- Structure below -->
+    <g transform="translate(0, 100)">
+       <path d="M0,0 L100,50 L100,150 L0,100 Z" fill="#0A305A" opacity="0.4"/>
+       <path d="M0,0 L-100,50 L-100,150 L0,100 Z" fill="#051a30" opacity="0.6"/>
+       <path d="M0,100 L100,150 L0,200 L-100,150 Z" stroke="#F5F5F5"/>
+    </g>
+    
+    <!-- Blueprint Lines -->
+    <line x1="0" y1="300" x2="0" y2="800" stroke="#444444" stroke-dasharray="10,10"/>
+    <ellipse cx="0" cy="800" rx="300" ry="100" stroke="#444444" opacity="0.5"/>
+  </g>
+  
+  <!-- Particles Rising -->
+  <circle cx="960" cy="900" r="2" fill="#FFFFFF">
+    <animate attributeName="cy" from="900" to="300" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#051a30"/>
+  <pattern id="hex" x="0" y="0" width="50" height="86.6" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+    <path d="M25 0 L50 14.4 L50 43.3 L25 57.7 L0 43.3 L0 14.4 Z" fill="none" stroke="#0A305A" stroke-width="1"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#hex)"/>
+  <path d="M0,1080 L1920,0" stroke="#C00000" stroke-width="3" opacity="0.8">
+     <animate attributeName="stroke-dasharray" from="0,3000" to="3000,0" dur="3s" repeatCount="indefinite" />
+  </path>
+  <circle cx="960" cy="540" r="200" fill="none" stroke="#F5F5F5" stroke-width="4" stroke-dasharray="20,10" opacity="0.5">
+     <animateTransform attributeName="transform" type="rotate" from="0 960 540" to="360 960 540" dur="20s" repeatCount="indefinite"/>
+  </circle>
+</svg>

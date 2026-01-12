@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#0a2a5a"/>
+  <defs>
+    <radialGradient id="grad23" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#1a527b;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0a2a5a;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <circle cx="960" cy="540" r="350" fill="url(#grad23)" opacity="0.8"/>
+  <path d="M960 540 L1160 440 L1060 640 L960 540 Z" fill="#DAA520" opacity="0.6"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="72" font-family="sans-serif" font-weight="bold">Ethical AI</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg width="7680" height="4320" viewBox="0 0 7680 4320" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="synapseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0A305A"/>
+            <stop offset="100%" stop-color="#000000"/>
+        </linearGradient>
+    </defs>
+
+    <rect width="100%" height="100%" fill="url(#synapseGrad)"/>
+
+    <!-- The Neural Web -->
+    <g stroke="#20B2AA" stroke-width="2" opacity="0.6">
+        <!-- Node 1 -->
+        <circle cx="2000" cy="2160" r="20" fill="#FFFFFF"/>
+        <line x1="2000" y1="2160" x2="3000" y2="1000"/>
+        <line x1="2000" y1="2160" x2="3000" y2="3300"/>
+        
+        <!-- Node 2 -->
+        <circle cx="5680" cy="2160" r="20" fill="#FFFFFF"/>
+        <line x1="5680" y1="2160" x2="4680" y2="1000"/>
+        <line x1="5680" y1="2160" x2="4680" y2="3300"/>
+    </g>
+
+    <!-- The Spark (Active Inference) -->
+    <g transform="translate(3840, 2160)">
+        <path d="M -1000 0 Q 0 -500 1000 0" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.8"/>
+        <path d="M -1000 0 Q 0 500 1000 0" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.8"/>
+        <!-- Energy Core -->
+        <circle r="100" fill="#20B2AA" filter="url(#glow)"/>
+        
+        <!-- Data Particles radiating -->
+        <circle cx="200" cy="200" r="10" fill="#FFFFFF" opacity="0.5"/>
+        <circle cx="-200" cy="-200" r="15" fill="#FFFFFF" opacity="0.7"/>
+        <circle cx="300" cy="-100" r="8" fill="#FFFFFF" opacity="0.4"/>
+    </g>
+</svg>

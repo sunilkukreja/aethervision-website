@@ -1,0 +1,26 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color:#010409;">
+<defs>
+    <filter id="gaze-glow"><feGaussianBlur stdDeviation="40" /></filter>
+    <linearGradient id="gaze-gradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fffde7" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#fffde7" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+        .chaos { animation: dissolve 8s linear infinite; }
+        @keyframes dissolve { from { opacity: 0.3; } to { opacity: 0; } }
+    </style>
+</defs>
+<!-- Benevolent Entity -->
+<circle cx="960" cy="0" r="300" fill="#fff" opacity="0.1" filter="url(#gaze-glow)"/>
+<!-- Gaze -->
+<path d="M660,0 L960,1080 L1260,0 Z" fill="url(#gaze-gradient)"/>
+<!-- Chaos Dissolving -->
+<g class="chaos" stroke="#c62828" stroke-width="2" fill="none">
+    <path d="M200,900 l 50 -50 50 50"/> <path d="M1720,1000 l -50 50 50 50"/>
+</g>
+<!-- Order Growing -->
+<g fill="#4caf50" opacity="0.8">
+    <circle cx="960" cy="900" r="3"><animate attributeName="r" from="0" to="3" dur="8s" repeatCount="indefinite"/></circle>
+    <circle cx="860" cy="950" r="2"><animate attributeName="r" from="0" to="2" dur="8s" begin="1s" repeatCount="indefinite"/></circle>
+</g>
+</svg>

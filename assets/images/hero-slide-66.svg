@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#080808"/>
+  
+  <g transform="translate(960, 540)">
+    <!-- Outer Ring -->
+    <circle r="400" fill="none" stroke="#1a4d85" stroke-width="1" stroke-dasharray="20,10" opacity="0.5">
+       <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="60s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Middle Ring -->
+    <circle r="250" fill="none" stroke="#444444" stroke-width="40" opacity="0.3"/>
+    <circle r="250" fill="none" stroke="#F5F5F5" stroke-width="2" stroke-dasharray="2,50"/>
+
+    <!-- The Iris -->
+    <circle r="100" fill="none" stroke="#C00000" stroke-width="2" opacity="0.8"/>
+    <path d="M-80,0 L80,0 M0,-80 L0,80" stroke="#C00000" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Glint -->
+    <circle cx="40" cy="-40" r="10" fill="#FFFFFF" opacity="0.8" filter="url(#blurFilter)">
+       <filter id="blurFilter"><feGaussianBlur stdDeviation="3"/></filter>
+    </circle>
+  </g>
+</svg>

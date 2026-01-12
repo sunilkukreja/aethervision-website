@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <rect width="100%" height="100%" fill="#0a2a5a"/>
+  <defs>
+    <radialGradient id="k218bGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#50a0e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:0.6" />
+    </radialGradient>
+    <filter id="planetGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- K2-18b Planet representation with atmospheric glow -->
+  <circle cx="960" cy="540" r="350" fill="url(#k218bGradient)" filter="url(#planetGlow)" opacity="0.8">
+    <animate attributeName="r" from="350" to="360" dur="6s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+    <animate attributeName="opacity" from="0.8" to="0.9" dur="6s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+
+  <!-- Subtle atmospheric layers / ripples -->
+  <circle cx="960" cy="540" r="380" stroke="#50a0e0" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" from="380" to="390" dur="8s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+    <animate attributeName="opacity" from="0.4" to="0.5" dur="8s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+  <circle cx="960" cy="540" r="410" stroke="#DAA520" stroke-width="1" opacity="0.2">
+    <animate attributeName="r" from="410" to="420" dur="10s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+
+  <!-- JWST abstract representation scanning -->
+  <polygon points="100,100 200,50 300,100 200,150" fill="white" opacity="0.6" transform="translate(0 0)">
+    <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="1600 800" dur="15s" begin="0s" repeatCount="indefinite" additive="sum"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 200 100" to="360 200 100" dur="10s" begin="0s" repeatCount="indefinite" additive="sum"/>
+  </polygon>
+  <line x1="200" y1="100" x2="960" y2="540" stroke="#ffffff" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0.3; 0.7; 0.3" dur="5s" begin="0s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Text overlay -->
+  <text x="50%" y="100" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="48" font-family="sans-serif" font-weight="bold" opacity="0.8">
+    K2-18b: BIOSIGNATURES FROM 120 LIGHT-YEARS
+  </text>
+  <text x="50%" y="980" dominant-baseline="middle" text-anchor="middle" fill="#DAA520" font-size="36" font-family="sans-serif" opacity="0.7">
+    Unveiling Hycean Worlds &amp; Advanced Sensing
+  </text>
+</svg>

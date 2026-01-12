@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#0A305A"/>
+  <g opacity="0.4" stroke="#444444" stroke-width="1">
+    <path d="M0,540 Q480,200 960,540 T1920,540" fill="none"/>
+    <path d="M0,800 Q480,400 960,800 T1920,800" fill="none"/>
+  </g>
+  <circle cx="960" cy="540" r="300" fill="none" stroke="#F5F5F5" stroke-width="2" opacity="0.1"/>
+  <circle cx="960" cy="540" r="450" fill="none" stroke="#F5F5F5" stroke-width="1" opacity="0.05"/>
+  <!-- Nodes -->
+  <circle cx="400" cy="300" r="4" fill="#C00000">
+    <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1500" cy="800" r="4" fill="#C00000">
+    <animate attributeName="opacity" values="0;1;0" dur="4s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M400,300 L960,540 L1500,800" stroke="#F5F5F5" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+</svg>

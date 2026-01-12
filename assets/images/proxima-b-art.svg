@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <rect width="100%" height="100%" fill="#0a2a5a"/>
+  <defs>
+    <linearGradient id="proximaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="flareGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#FFD700" flood-opacity="0.7" result="glowColor"/>
+      <feComposite in="glowColor" in2="blur" operator="in" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Proxima Centauri Star (red dwarf) with flare -->
+  <circle cx="400" cy="540" r="250" fill="#B22222" filter="url(#flareGlow)" opacity="0.9">
+    <animate attributeName="r" from="250" to="260" dur="4s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+    <animate attributeName="opacity" from="0.9" to="1" dur="4s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+  <circle cx="400" cy="540" r="150" fill="#FF4500" opacity="0.9"/>
+
+  <!-- Stellar Flare animation -->
+  <path d="M400 290 Q450 340, 500 290 T600 290" fill="url(#proximaGradient)" filter="url(#flareGlow)" opacity="0.8">
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 400 540" to="360 400 540" dur="8s" begin="0s" repeatCount="indefinite" additive="sum"/>
+    <animate attributeName="opacity" values="0.8; 0.2; 0.8" dur="3s" begin="0s" repeatCount="indefinite"/>
+  </path>
+  <path d="M400 790 Q450 740, 500 790 T600 790" fill="url(#proximaGradient)" filter="url(#flareGlow)" opacity="0.8">
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 400 540" to="-360 400 540" dur="8s" begin="0s" repeatCount="indefinite" additive="sum"/>
+    <animate attributeName="opacity" values="0.8; 0.2; 0.8" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Proxima b Planet in foreground, partially obscured by stellar activity -->
+  <circle cx="1400" cy="540" r="180" fill="#1a527b" opacity="0.7">
+    <animate attributeName="cx" from="1400" to="1380" dur="12s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+    <animate attributeName="cy" from="540" to="560" dur="12s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+
+  <!-- Atmospheric erosion / radiation lines -->
+  <path d="M1200 400 L1300 300 L1400 200 M1200 680 L1300 780 L1400 880" stroke="#FFD700" stroke-width="3" opacity="0.4">
+    <animate attributeName="stroke-dasharray" values="10 10; 20 20; 10 10" dur="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Text overlay -->
+  <text x="50%" y="100" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="48" font-family="sans-serif" font-weight="bold" opacity="0.8">
+    PROXIMA CENTAURI B: HOSTILE HABITABILITY
+  </text>
+  <text x="50%" y="980" dominant-baseline="middle" text-anchor="middle" fill="#DAA520" font-size="36" font-family="sans-serif" opacity="0.7">
+    Strategic Reassessment &amp; Remote Sensing for Security
+  </text>
+</svg>

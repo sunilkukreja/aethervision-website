@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8F8F8"/>
+  
+  <!-- Abstract Brain Structure -->
+  <path d="M150 100 Q200 50 250 100 T350 150 T250 250 T150 250 T50 150 T150 100" stroke="#0A305A" stroke-width="2" fill="none" opacity="0.8"/>
+  
+  <!-- Internal Processing Geometry -->
+  <polygon points="200,100 280,150 200,200 120,150" stroke="#20B2AA" stroke-width="2" fill="none"/>
+  
+  <!-- Core Intelligence -->
+  <circle cx="200" cy="150" r="20" fill="#0A305A"/>
+  
+  <!-- Radiating Insight -->
+  <line x1="200" y1="150" x2="200" y2="80" stroke="#20B2AA" stroke-width="2" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" values="10;0" dur="1s" repeatCount="indefinite"/>
+  </line>
+  <line x1="200" y1="150" x2="280" y2="200" stroke="#20B2AA" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="200" y1="150" x2="120" y2="200" stroke="#20B2AA" stroke-width="2" stroke-dasharray="5,5"/>
+</svg>

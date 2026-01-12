@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8F8F8"/>
+  
+  <!-- Sensing Aperture -->
+  <circle cx="200" cy="150" r="80" stroke="#0A305A" stroke-width="2" stroke-dasharray="10,5" opacity="0.3"/>
+  <circle cx="200" cy="150" r="60" stroke="#20B2AA" stroke-width="4"/>
+  
+  <!-- Incoming Data Rays -->
+  <path d="M100 50 L170 120" stroke="#0A305A" stroke-width="2"/>
+  <path d="M300 50 L230 120" stroke="#0A305A" stroke-width="2"/>
+  <path d="M100 250 L170 180" stroke="#0A305A" stroke-width="2"/>
+  <path d="M300 250 L230 180" stroke="#0A305A" stroke-width="2"/>
+  <path d="M50 150 L140 150" stroke="#0A305A" stroke-width="2"/>
+  <path d="M350 150 L260 150" stroke="#0A305A" stroke-width="2"/>
+
+  <!-- Central Pupil/Sensor -->
+  <circle cx="200" cy="150" r="20" fill="#0A305A">
+    <animate attributeName="r" values="20;25;20" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Active Sensing Pulse -->
+  <circle cx="200" cy="150" r="20" stroke="#20B2AA" stroke-width="2" fill="none">
+    <animate attributeName="r" values="20;90" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

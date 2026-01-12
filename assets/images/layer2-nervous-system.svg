@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8F8F8"/>
+  
+  <!-- Network Links -->
+  <path d="M100 150 L200 80 L300 150 L200 220 Z" stroke="#0A305A" stroke-width="1" opacity="0.5"/>
+  <path d="M100 150 L200 220" stroke="#0A305A" stroke-width="1" opacity="0.5"/>
+  <path d="M200 80 L200 220" stroke="#0A305A" stroke-width="1" opacity="0.5"/>
+  <path d="M200 80 L300 150" stroke="#0A305A" stroke-width="1" opacity="0.5"/>
+
+  <!-- Nodes -->
+  <circle cx="100" cy="150" r="10" fill="#0A305A"/>
+  <circle cx="300" cy="150" r="10" fill="#0A305A"/>
+  <circle cx="200" cy="80" r="10" fill="#0A305A"/>
+  <circle cx="200" cy="220" r="10" fill="#0A305A"/>
+  
+  <!-- Central Hub (Secure) -->
+  <circle cx="200" cy="150" r="15" fill="#20B2AA"/>
+  
+  <!-- Data Flow Animation -->
+  <circle cx="100" cy="150" r="4" fill="#20B2AA">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M0 0 L 100 -70 L 100 70 L 0 140 Z" />
+  </circle>
+</svg>

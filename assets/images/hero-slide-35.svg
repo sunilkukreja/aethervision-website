@@ -1,0 +1,35 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color:#020a16;">
+<defs>
+    <filter id="distortionFilter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.04" numOctaves="2" result="turbulence"/>
+        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="coreGlow">
+        <feGaussianBlur stdDeviation="25" result="blur"/>
+        <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+    <radialGradient id="coreGradient" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#FFFDE7"/>
+        <stop offset="60%" stop-color="#FFECB3"/>
+        <stop offset="100%" stop-color="#FFCA28" stop-opacity="0.8"/>
+    </radialGradient>
+    <mask id="shieldMask">
+        <circle cx="960" cy="540" r="300" fill="white"/>
+    </mask>
+</defs>
+<!-- Background Grid -->
+<g stroke="#1a237e" stroke-width="1">
+    <path d="M0,180 H1920 M0,360 H1920 M0,540 H1920 M0,720 H1920 M0,900 H1920"/>
+    <path d="M320,0 V1080 M640,0 V1080 M960,0 V1080 M1280,0 V1080 M1600,0 V1080"/>
+</g>
+<!-- Distorted Grid for Shield Effect -->
+<g stroke="#4fc3f7" stroke-width="1.5" mask="url(#shieldMask)" filter="url(#distortionFilter)">
+    <path d="M0,180 H1920 M0,360 H1920 M0,540 H1920 M0,720 H1920 M0,900 H1920"/>
+    <path d="M320,0 V1080 M640,0 V1080 M960,0 V1080 M1280,0 V1080 M1600,0 V1080"/>
+</g>
+<!-- Luminous Core -->
+<circle cx="960" cy="540" r="150" fill="url(#coreGradient)" filter="url(#coreGlow)"/>
+</svg>

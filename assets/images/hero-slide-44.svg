@@ -1,0 +1,26 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color:#010409;">
+<defs>
+    <style>
+        .node, .link { opacity: 0; animation: trigger 5s ease-out infinite; }
+        @keyframes trigger { 20%, 80% { opacity: 1; } 0%, 100% { opacity: 0; } }
+        .ripple { stroke: #81d4fa; fill: none; transform-origin: center; animation: ripple-out 5s ease-out infinite; }
+        @keyframes ripple-out { from { r:0; opacity:1; } to { r:100; opacity:0; } }
+    </style>
+</defs>
+<!-- Terrain -->
+<path d="M0 800 Q 480 700, 960 850 T 1920 750 V 1080 H 0 Z" fill="#0d1117"/>
+<!-- Event Ripple -->
+<circle class="ripple" cx="600" cy="820" r="0" stroke-width="2"/>
+<!-- Nodes & Links -->
+<g fill="#e1f5fe">
+    <circle class="node" style="animation-delay: 0.2s" cx="600" cy="820" r="5"/>
+    <circle class="node" style="animation-delay: 0.5s" cx="800" cy="780" r="5"/>
+    <circle class="node" style="animation-delay: 0.7s" cx="1100" cy="880" r="5"/>
+    <circle class="node" style="animation-delay: 0.9s" cx="1400" cy="810" r="5"/>
+</g>
+<g stroke="#e1f5fe" stroke-width="1">
+    <line class="link" style="animation-delay: 0.5s" x1="600" y1="820" x2="800" y2="780"/>
+    <line class="link" style="animation-delay: 0.7s" x1="800" y1="780" x2="1100" y2="880"/>
+    <line class="link" style="animation-delay: 0.9s" x1="1100" y1="880" x2="1400" y2="810"/>
+</g>
+</svg>

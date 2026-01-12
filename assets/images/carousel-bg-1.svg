@@ -1,0 +1,14 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <!-- Carousel Background 1: Interlocking Fields -->
+    <!-- Based on the Sri Yantra geometry from the v2 sigil -->
+    <defs>
+        <pattern id="trianglePattern" patternUnits="userSpaceOnUse" width="200" height="173.2" patternTransform="scale(1.5)">
+            <g fill="none" stroke="#0A305A" stroke-width="1">
+                <path d="M 100 0 L 0 173.2 L 200 173.2 Z" />
+                <path d="M 100 173.2 L 0 0 L 200 0 Z" />
+            </g>
+        </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="#FFFFFF"/>
+    <rect width="100%" height="100%" fill="url(#trianglePattern)" opacity="0.07"/>
+</svg>

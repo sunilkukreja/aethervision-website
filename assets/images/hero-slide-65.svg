@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#0A305A"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#skyGrad)"/>
+
+  <!-- Planet Curve -->
+  <path d="M-200,1080 Q960,800 2120,1080" fill="#000000"/>
+  <path d="M-200,1080 Q960,800 2120,1080" fill="none" stroke="#00A8E8" stroke-width="2" opacity="0.6"/>
+
+  <!-- Digital Sun -->
+  <g transform="translate(960, 850)">
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#C00000" stroke-width="1" opacity="0.3"/>
+    <!-- Dots forming the sun -->
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#FFFFFF" opacity="0.5"/>
+    </pattern>
+    <circle cx="0" cy="0" r="140" fill="url(#dots)"/>
+  </g>
+  
+  <!-- Rays -->
+  <line x1="960" y1="850" x2="960" y2="400" stroke="#FFFFFF" stroke-width="1" opacity="0.1"/>
+  <line x1="960" y1="850" x2="1200" y2="500" stroke="#FFFFFF" stroke-width="1" opacity="0.1"/>
+  <line x1="960" y1="850" x2="720" y2="500" stroke="#FFFFFF" stroke-width="1" opacity="0.1"/>
+</svg>

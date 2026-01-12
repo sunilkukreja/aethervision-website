@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Planet Curve -->
+  <path d="M10 80 Q50 60 90 80" stroke="#0A305A" stroke-width="1"/>
+  
+  <!-- Nodes -->
+  <rect x="20" y="65" width="6" height="6" fill="#0A305A"/>
+  <rect x="74" y="65" width="6" height="6" fill="#0A305A"/>
+  
+  <!-- Optical Link (Main) -->
+  <path d="M23 65 Q50 30 77 65" stroke="#20B2AA" stroke-width="1.5" fill="none"/>
+  
+  <!-- Data Packet Animation -->
+  <circle r="2" fill="#20B2AA">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M23 65 Q50 30 77 65"/>
+  </circle>
+  
+  <!-- Scattering/Resilience Lines -->
+  <path d="M23 65 Q50 40 77 65" stroke="#20B2AA" stroke-width="0.5" stroke-dasharray="3,2" opacity="0.5"/>
+  <path d="M23 65 Q50 20 77 65" stroke="#20B2AA" stroke-width="0.5" stroke-dasharray="3,2" opacity="0.5"/>
+</svg>

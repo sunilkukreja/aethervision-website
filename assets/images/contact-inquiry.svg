@@ -1,0 +1,50 @@
+<svg width="7680" height="4320" viewBox="0 0 7680 4320" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="dishGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="70%" stop-color="#F0F0F0"/>
+            <stop offset="100%" stop-color="#E0E0E0"/>
+        </radialGradient>
+        <linearGradient id="signalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#20B2AA" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#20B2AA" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#0A305A" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="softGlow">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="15"/>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#FBFBFB"/>
+
+    <!-- The Receiver Array (Abstracted) -->
+    <g transform="translate(3840, 2500)">
+        <!-- Dish structure made of segmented plates -->
+        <path d="M -1500 -500 Q 0 1000 1500 -500" fill="none" stroke="#E0E0E0" stroke-width="2"/>
+        
+        <!-- Concentric Receptor Rings -->
+        <g stroke="#0A305A" fill="none" stroke-width="3" opacity="0.1">
+            <ellipse cx="0" cy="0" rx="1200" ry="400"/>
+            <ellipse cx="0" cy="0" rx="900" ry="300"/>
+            <ellipse cx="0" cy="0" rx="600" ry="200"/>
+            <ellipse cx="0" cy="0" rx="300" ry="100"/>
+        </g>
+
+        <!-- The Focal Point (The Active Element) -->
+        <g transform="translate(0, -800)">
+            <circle r="100" fill="#0A305A"/>
+            <circle r="120" fill="none" stroke="#20B2AA" stroke-width="4"/>
+            <!-- Signal beams converging -->
+            <path d="M -200 1200 L 0 0 L 200 1200" fill="url(#signalGrad)" opacity="0.6"/>
+            <path d="M -800 1000 L 0 0 L 800 1000" fill="url(#signalGrad)" opacity="0.3"/>
+        </g>
+
+        <!-- Floating Data Particles (Incoming) -->
+        <g fill="#20B2AA">
+            <circle cx="-500" cy="-1200" r="10" opacity="0.8"/>
+            <circle cx="600" cy="-1500" r="15" opacity="0.6"/>
+            <circle cx="0" cy="-2000" r="8" opacity="0.4"/>
+        </g>
+    </g>
+</svg>

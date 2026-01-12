@@ -1,0 +1,39 @@
+<svg width="7680" height="4320" viewBox="0 0 7680 4320" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0A305A" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#20B2AA"/>
+            <stop offset="100%" stop-color="#FFFFFF"/>
+        </linearGradient>
+    </defs>
+
+    <rect width="100%" height="100%" fill="#051020"/> <!-- Darker background for high contrast -->
+
+    <!-- The Disordered Field (Left) -->
+    <g opacity="0.3" fill="#20B2AA">
+        <circle cx="500" cy="1000" r="5"/>
+        <circle cx="800" cy="3000" r="8"/>
+        <circle cx="1200" cy="2160" r="6"/>
+        <!-- Random lines representing noise -->
+        <line x1="0" y1="0" x2="2000" y2="4320" stroke="#0A305A" stroke-width="2"/>
+        <line x1="0" y1="4320" x2="2000" y2="0" stroke="#0A305A" stroke-width="2"/>
+    </g>
+
+    <!-- The Focusing Mechanism (Center) -->
+    <g transform="translate(3000, 0)">
+        <path d="M 0 0 Q 500 2160 0 4320" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.2"/>
+        <path d="M 200 0 Q 700 2160 200 4320" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.4"/>
+        <path d="M 400 0 Q 900 2160 400 4320" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.6"/>
+    </g>
+
+    <!-- The Foundational Truth (Right - Coherent Beam) -->
+    <rect x="3500" y="2155" width="4180" height="10" fill="url(#beamGrad)"/>
+    
+    <!-- Measurement/Grid overlay indicating scientific rigor -->
+    <line x1="3500" y1="2160" x2="7680" y2="2160" stroke="#20B2AA" stroke-width="2" stroke-dasharray="100 50"/>
+    <g stroke="#20B2AA" stroke-width="1" opacity="0.3">
+        <line x1="4000" y1="2000" x2="4000" y2="2320"/>
+        <line x1="5000" y1="2000" x2="5000" y2="2320"/>
+        <line x1="6000" y1="2000" x2="6000" y2="2320"/>
+    </g>
+</svg>

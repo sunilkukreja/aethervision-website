@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <rect width="100%" height="100%" fill="#0a2a5a"/>
+  <defs>
+    <linearGradient id="humanInterfaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#50a0e0;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="soulGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Central Human-AI connection motif -->
+  <circle cx="960" cy="540" r="280" stroke="url(#humanInterfaceGradient)" stroke-width="8" filter="url(#soulGlow)" opacity="0.8" />
+  <path d="M960 540 A 150 150 0 1 1 960 541 Z" fill="#1a527b" opacity="0.7">
+    <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="1.1" dur="3s" begin="0s" repeatCount="indefinite" additive="sum" restart="always"/>
+  </path>
+  <path d="M960 540 A 100 100 0 1 1 960 541 Z" fill="#DAA520" opacity="0.9"/>
+
+  <!-- Ethical Governance / Shield elements (abstract) -->
+  <path d="M400 400 L960 100 L1520 400 L1520 680 L960 980 L400 680 Z" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3">
+    <animate attributeName="stroke-dasharray" values="100 100; 20 20; 100 100" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M450 450 L960 150 L1470 450 L1470 630 L960 930 L450 630 Z" stroke="#DAA520" stroke-width="1" fill="none" opacity="0.2"/>
+
+  <!-- Human figure outline (abstract) -->
+  <path d="M960 300 V400 C900 400, 850 450, 850 500 C850 550, 900 600, 960 600 C1020 600, 1070 550, 1070 500 C1070 450, 1020 400, 960 400 Z" fill="#e0e0e0" opacity="0.4"/>
+
+  <!-- Text overlay -->
+  <text x="50%" y="100" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="48" font-family="sans-serif" font-weight="bold" opacity="0.8">
+    LAYER 4: THE SOUL (HUMAN INTERFACE &amp; GOVERNANCE)
+  </text>
+  <text x="50%" y="980" dominant-baseline="middle" text-anchor="middle" fill="#DAA520" font-size="36" font-family="sans-serif" opacity="0.7">
+    Ethical AI, Cognitive Security &amp; Symbiosis
+  </text>
+</svg>

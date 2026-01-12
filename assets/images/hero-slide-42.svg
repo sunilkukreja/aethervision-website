@@ -1,0 +1,24 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color:#010409;">
+<defs>
+    <filter id="worldGlow"><feGaussianBlur stdDeviation="15"/></filter>
+    <filter id="blueprint-core"><feGaussianBlur stdDeviation="25"/></filter>
+    <!-- World 1: Bio -->
+    <radialGradient id="grad-bio"><stop offset="0%" stop-color="#a5d6a7"/><stop offset="100%" stop-color="#1b5e20"/></radialGradient>
+    <!-- World 2: Tech -->
+    <radialGradient id="grad-tech"><stop offset="0%" stop-color="#81d4fa"/><stop offset="100%" stop-color="#01579b"/></radialGradient>
+    <!-- World 3: Cosmic -->
+    <radialGradient id="grad-cosmic"><stop offset="0%" stop-color="#ce93d8"/><stop offset="100%" stop-color="#4a148c"/></radialGradient>
+</defs>
+<!-- Connections -->
+<path d="M960,540 C 400,300 300,800 450,900" stroke="#fff" stroke-width="1" fill="none" opacity="0.3"/>
+<path d="M960,540 C 1520,800 1620,300 1470,180" stroke="#fff" stroke-width="1" fill="none" opacity="0.3"/>
+<path d="M960,540 C 400,700 300,200 450,180" stroke="#fff" stroke-width="1" fill="none" opacity="0.3"/>
+<!-- Blueprint Core -->
+<circle cx="960" cy="540" r="80" fill="#fff" filter="url(#blueprint-core)"/>
+<!-- Worlds -->
+<g filter="url(#worldGlow)">
+    <circle cx="450" cy="180" r="120" fill="url(#grad-cosmic)"/>
+    <circle cx="1470" cy="180" r="120" fill="url(#grad-tech)"/>
+    <circle cx="450" cy="900" r="120" fill="url(#grad-bio)"/>
+</g>
+</svg>

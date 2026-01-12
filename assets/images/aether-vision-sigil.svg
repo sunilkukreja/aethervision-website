@@ -1,0 +1,67 @@
+<svg width="400" height="400" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- AetherBlue Gradient -->
+    <linearGradient id="aetherBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="rgb(10, 48, 90)" />
+        <stop offset="100%" stop-color="rgb(20, 68, 110)" />
+    </linearGradient>
+
+    <!-- Radiant Gold Gradient -->
+    <radialGradient id="radiantGold" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFD700" /> <!-- Bright core -->
+      <stop offset="50%" stop-color="#DAA520" /> <!-- Standard Gold -->
+      <stop offset="100%" stop-color="#B8860B" /> <!-- Darker Gold edge -->
+    </radialGradient>
+
+    <!-- Subtle Blue Glow Filter -->
+    <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="rgb(150, 190, 230)" flood-opacity="0.5" result="glowColor" />
+      <feComposite in="glowColor" in2="blur" operator="in" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gold Glow Filter -->
+    <filter id="goldGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur" />
+      <feFlood flood-color="#FFD700" flood-opacity="0.7" result="glowColor" />
+      <feComposite in="glowColor" in2="blur" operator="in" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Layer: Abstract Lotus Petals / Aetheric Field (Blue) -->
+  <g fill="url(#aetherBlueGradient)" stroke="rgb(10, 48, 90)" stroke-width="0.3" filter="url(#blueGlow)">
+    <!-- This creates a more abstract, overlapping petal effect -->
+    <path d="M50 8 C60 20, 80 30, 92 50 C80 70, 60 80, 50 92 C40 80, 20 70, 8 50 C20 30, 40 20, 50 8 Z" opacity="0.6"/>
+    <path d="M50 12 C58 22, 72 32, 88 50 C72 68, 58 78, 50 88 C42 78, 28 68, 12 50 C28 32, 42 22, 50 12 Z" opacity="0.5"/>
+  </g>
+
+  <!-- Inner Layer: Radiating Dharma Paths / Energy Flows (Gold) -->
+  <g fill="url(#radiantGold)" filter="url(#goldGlow)">
+    <!-- Central Bindu / Source of Creation -->
+    <circle cx="50" cy="50" r="10"/>
+
+    <!-- 8 primary radiating beams, hinting at Dharma Chakra -->
+    <!-- Each path represents a direction of progress/law -->
+    <g transform-origin="50 50">
+      <rect x="47" y="15" width="6" height="30" rx="2" ry="2"/>
+      <rect x="47" y="15" width="6" height="30" rx="2" ry="2" transform="rotate(45 50 50)"/>
+      <rect x="47" y="15" width="6" height="30" rx="2" ry="2" transform="rotate(90 50 50)"/>
+      <rect x="47" y="15" width="6" height="30" rx="2" ry="2" transform="rotate(135 50 50)"/>
+      <rect x="47" y="15" width="6" height="30" rx="2" ry="2" transform="rotate(180 50 50)"/>
+      <rect x="47" y="15" width="6" height="30" rx="2" ry="2" transform="rotate(225 50 50)"/>
+      <rect x="47" y="15" width="6" height="30" rx="2" ry="2" transform="rotate(270 50 50)"/>
+      <rect x="47" y="15" width="6" height="30" rx="2" ry="2" transform="rotate(315 50 50)"/>
+    </g>
+
+    <!-- Inner small core for extra radiant effect -->
+    <circle cx="50" cy="50" r="5" fill="white" opacity="0.8"/>
+  </g>
+</svg>

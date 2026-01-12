@@ -1,0 +1,31 @@
+<svg width="7680" height="4320" viewBox="0 0 7680 4320" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="gridPattern" width="200" height="200" patternUnits="userSpaceOnUse">
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#0A305A" stroke-width="2" opacity="0.2"/>
+        </pattern>
+        <radialGradient id="warp" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FBFBFB"/>
+            <stop offset="100%" stop-color="#E0E0E0"/>
+        </radialGradient>
+    </defs>
+
+    <rect width="100%" height="100%" fill="#FBFBFB"/>
+    <rect width="100%" height="100%" fill="url(#gridPattern)"/>
+
+    <!-- The Manifold Warp (Gravity/Information) -->
+    <g transform="translate(3840, 2160)">
+        <circle r="1500" fill="url(#warp)" opacity="0.8"/>
+        
+        <!-- Distorted Grid Lines -->
+        <path d="M -1500 -500 Q 0 500 1500 -500" fill="none" stroke="#0A305A" stroke-width="3"/>
+        <path d="M -1500 0 Q 0 1000 1500 0" fill="none" stroke="#0A305A" stroke-width="3"/>
+        <path d="M -1500 500 Q 0 1500 1500 500" fill="none" stroke="#0A305A" stroke-width="3"/>
+        
+        <path d="M -500 -1500 Q 500 0 -500 1500" fill="none" stroke="#0A305A" stroke-width="3"/>
+        <path d="M 0 -1500 Q 1000 0 0 1500" fill="none" stroke="#0A305A" stroke-width="3"/>
+        <path d="M 500 -1500 Q 1500 0 500 1500" fill="none" stroke="#0A305A" stroke-width="3"/>
+
+        <!-- The Singularity / Monolith -->
+        <rect x="-100" y="-100" width="200" height="200" fill="#0A305A" transform="rotate(45)"/>
+    </g>
+</svg>

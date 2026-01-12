@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <rect width="100%" height="100%" fill="#0a2a5a"/>
+  <defs>
+    <linearGradient id="praetorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#50a0e0;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Quantum field effect background -->
+  <circle cx="960" cy="540" r="400" stroke="url(#praetorGradient)" stroke-width="5" opacity="0.3">
+    <animate attributeName="r" from="400" to="450" dur="5s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+    <animate attributeName="opacity" from="0.3" to="0.5" dur="5s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+  <circle cx="960" cy="540" r="350" stroke="#DAA520" stroke-width="3" opacity="0.2">
+    <animate attributeName="r" from="350" to="400" dur="7s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+    <animate attributeName="opacity" from="0.2" to="0.4" dur="7s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+
+  <!-- Central UAP-like anomaly -->
+  <path d="M960 340 L1060 540 L960 740 L860 540 Z" fill="url(#praetorGradient)" filter="url(#glow)" opacity="0.9">
+    <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="0 -20" dur="4s" begin="0s" repeatCount="indefinite" additive="sum"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 960 540" to="360 960 540" dur="10s" begin="0s" repeatCount="indefinite" additive="sum"/>
+  </path>
+
+  <!-- Subtle sensor array elements -->
+  <circle cx="700" cy="250" r="20" fill="#50a0e0" opacity="0.6">
+    <animate attributeName="opacity" from="0.6" to="0.3" dur="3s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+  <circle cx="1200" cy="800" r="25" fill="#DAA520" opacity="0.5">
+    <animate attributeName="opacity" from="0.5" to="0.2" dur="4s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
+  </circle>
+
+  <!-- Epistemological text overlay -->
+  <text x="50%" y="150" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="48" font-family="sans-serif" font-weight="bold" opacity="0.8">
+    DOMINANCE IN THE EPISTEMOLOGICAL BATTLESPACE
+  </text>
+  <text x="50%" y="950" dominant-baseline="middle" text-anchor="middle" fill="#DAA520" font-size="36" font-family="sans-serif" opacity="0.7">
+    Unveiling the Quantum Fabric of Reality
+  </text>
+</svg>

@@ -1,0 +1,39 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color:#010409;">
+<defs>
+    <filter id="loomGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="20" result="blur"/>
+        <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+    <linearGradient id="threadGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+        <stop offset="0%" stop-color="#f48fb1"/>
+        <stop offset="50%" stop-color="#fff176"/>
+        <stop offset="100%" stop-color="#90caf9"/>
+    </linearGradient>
+    <style>
+        .weave { animation: weave 10s linear infinite; }
+        @keyframes weave {
+            from { stroke-dashoffset: 2000; }
+            to { stroke-dashoffset: 0; }
+        }
+    </style>
+</defs>
+<!-- Background cosmic texture -->
+<filter id="cosmicFabric">
+    <feTurbulence type="fractalNoise" baseFrequency="0.003" numOctaves="4" seed="10"/>
+    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 -1.2 1.1"/>
+</filter>
+<rect width="1920" height="1080" fill="#0d47a1" opacity="0.2" filter="url(#cosmicFabric)"/>
+<!-- Central Loom -->
+<circle cx="960" cy="540" r="25" fill="white" filter="url(#loomGlow)"/>
+<!-- Weaving Threads -->
+<g fill="none" stroke-width="2">
+    <path class="weave" stroke-dasharray="100 1900" d="M200,540 C 600,200 800,900 960,540" stroke="url(#threadGradient)"/>
+    <path class="weave" style="animation-delay: -2s;" stroke-dasharray="100 1900" d="M1720,540 C 1320,900 1120,200 960,540" stroke="url(#threadGradient)"/>
+    <path class="weave" style="animation-delay: -4s;" stroke-dasharray="100 1900" d="M960,100 C 400,400 1520,700 960,540" stroke="url(#threadGradient)"/>
+    <path class="weave" style="animation-delay: -6s;" stroke-dasharray="100 1900" d="M960,980 C 1520,700 400,400 960,540" stroke="url(#threadGradient)"/>
+    <path class="weave" style="animation-delay: -8s;" stroke-dasharray="100 1900" d="M200,100 C 700,540 1220,540 1720,980" stroke="url(#threadGradient)"/>
+</g>
+</svg>

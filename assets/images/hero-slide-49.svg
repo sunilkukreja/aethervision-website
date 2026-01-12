@@ -1,0 +1,21 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color:#010409;">
+<defs>
+    <filter id="core-sun-glow"><feGaussianBlur stdDeviation="25"/></filter>
+    <style>
+        .neuron { stroke: #fff; stroke-width: 1; opacity: 0; animation: grow 5s ease-out forwards; }
+        @keyframes grow { to { opacity: 0.5; } }
+    </style>
+</defs>
+<!-- Crystal Monolith -->
+<path d="M960,100 L1560,540 L960,980 L360,540 Z" fill="#0d1117" stroke="#1a237e" stroke-width="3"/>
+<!-- Neurons -->
+<g>
+    <path class="neuron" style="animation-delay: 1s" d="M960,540 C 800,400 700,500 650,540"/>
+    <path class="neuron" style="animation-delay: 1.5s" d="M960,540 C 1100,450 1200,520 1270,540"/>
+    <path class="neuron" style="animation-delay: 2s" d="M960,540 C 850,700 900,800 960,850"/>
+</g>
+<!-- Core -->
+<circle cx="960" cy="540" r="50" fill="#FFECB3" filter="url(#core-sun-glow)">
+    <animate attributeName="r" from="0" to="50" dur="5s" fill="freeze" begin="1s"/>
+</circle>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#444444"/>
+  <rect x="760" y="340" width="400" height="400" rx="20" fill="#0A305A" stroke="#F5F5F5" stroke-width="2"/>
+  <!-- Circuitry -->
+  <path d="M760,440 L600,440 M1160,440 L1320,440 M960,340 L960,180 M960,740 L960,900" stroke="#F5F5F5" stroke-width="3" opacity="0.5"/>
+  <circle cx="960" cy="540" r="100" fill="#051a30" stroke="#C00000" stroke-width="2"/>
+  <circle cx="960" cy="540" r="40" fill="#F5F5F5" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>

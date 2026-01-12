@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#111111"/>
+  
+  <defs>
+    <linearGradient id="monolithGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="50%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#0A305A"/>
+    </linearGradient>
+    <filter id="edgeGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- The Monolith -->
+  <g transform="translate(960, 540) rotate(15)">
+    <rect x="-150" y="-250" width="300" height="500" fill="url(#monolithGrad)" stroke="#333" stroke-width="1"/>
+    <!-- Glowing Edge -->
+    <line x1="-150" y1="-250" x2="-150" y2="250" stroke="#00A8E8" stroke-width="4" filter="url(#edgeGlow)" opacity="0.8"/>
+  </g>
+
+  <!-- Data Streams in Background -->
+  <g opacity="0.1">
+    <rect x="0" y="0" width="1920" height="1080" fill="none"/>
+    <text x="100" y="100" font-family="monospace" fill="#FFFFFF" font-size="14">10100101010101001</text>
+    <text x="100" y="1000" font-family="monospace" fill="#FFFFFF" font-size="14">00101110101000101</text>
+    <text x="1700" y="500" font-family="monospace" fill="#FFFFFF" font-size="14">SECURE_STATE_LOCKED</text>
+  </g>
+</svg>

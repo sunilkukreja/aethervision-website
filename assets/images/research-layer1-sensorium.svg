@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <rect width="100%" height="100%" fill="#0a2a5a"/>
+  <defs>
+    <linearGradient id="sensesGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#50a0e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="sensesGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Central Eye/Sensor Motif (generic, abstract) -->
+  <circle cx="960" cy="540" r="250" stroke="url(#sensesGradient)" stroke-width="6" filter="url(#sensesGlow)" opacity="0.9"/>
+  <circle cx="960" cy="540" r="150" fill="#1a527b" opacity="0.7"/>
+  <circle cx="960" cy="540" r="50" fill="#DAA520" opacity="0.9"/>
+
+  <!-- Multi-modal sensing waves (abstract) -->
+  <path d="M100 540 Q 300 340, 500 540 T 960 540 T 1420 540 T 1620 340 T 1820 540" stroke="#DAA520" stroke-width="3" opacity="0.6">
+    <animate attributeName="d" dur="10s" repeatCount="indefinite" begin="0s"
+      values="M100 540 Q 300 340, 500 540 T 960 540 T 1420 540 T 1620 340 T 1820 540;
+              M100 540 Q 350 300, 550 540 T 960 540 T 1370 540 T 1570 300 T 1820 540;
+              M100 540 Q 300 340, 500 540 T 960 540 T 1420 540 T 1620 340 T 1820 540"/>
+  </path>
+
+  <!-- Abstract representations of different sensor types -->
+  <rect x="100" y="100" width="80" height="80" fill="#DAA520" opacity="0.5" transform="rotate(15 140 140)"/>
+  <polygon points="1820,100 1740,50 1660,100 1740,150" fill="#50a0e0" opacity="0.5" transform="rotate(-15 1740 100)"/>
+  <circle cx="960" cy="880" r="40" fill="white" opacity="0.4"/>
+
+  <!-- Text overlay -->
+  <text x="50%" y="100" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="48" font-family="sans-serif" font-weight="bold" opacity="0.8">
+    LAYER 1: THE SENSES (THE SENSORIUM)
+  </text>
+  <text x="50%" y="980" dominant-baseline="middle" text-anchor="middle" fill="#DAA520" font-size="36" font-family="sans-serif" opacity="0.7">
+    Advanced Perception &amp; Unveiling Unknowns
+  </text>
+</svg>

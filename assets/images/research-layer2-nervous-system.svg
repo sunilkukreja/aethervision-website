@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <rect width="100%" height="100%" fill="#0a2a5a"/>
+  <defs>
+    <linearGradient id="nervousSystemGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="netGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Central Network Core / Hub -->
+  <circle cx="960" cy="540" r="200" fill="url(#nervousSystemGradient)" filter="url(#netGlow)" opacity="0.7"/>
+  <circle cx="960" cy="540" r="100" fill="#1a527b" opacity="0.8"/>
+
+  <!-- Interconnecting Lines / Fabric, symbolizing global communication and integrity -->
+  <path d="M100 100 L960 540 L1820 100 L960 540 L1820 980 L960 540 L100 980 Z" stroke="#50a0e0" stroke-width="2" opacity="0.4">
+    <animate attributeName="stroke-dasharray" values="100 100; 20 20; 100 100" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M400 200 L960 540 L1520 200 L960 540 L1520 880 L960 540 L400 880 Z" stroke="#DAA520" stroke-width="1" opacity="0.3">
+    <animate attributeName="stroke-width" values="1; 3; 1" dur="4s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Secure Communication Nodes (abstracted) -->
+  <circle cx="100" cy="100" r="30" fill="#DAA520" opacity="0.9"/>
+  <circle cx="1820" cy="100" r="30" fill="#DAA520" opacity="0.9"/>
+  <circle cx="1820" cy="980" r="30" fill="#DAA520" opacity="0.9"/>
+  <circle cx="100" cy="980" r="30" fill="#DAA520" opacity="0.9"/>
+  <circle cx="960" cy="100" r="30" fill="#DAA520" opacity="0.9"/>
+  <circle cx="960" cy="980" r="30" fill="#DAA520" opacity="0.9"/>
+  <circle cx="100" cy="540" r="30" fill="#DAA520" opacity="0.9"/>
+  <circle cx="1820" cy="540" r="30" fill="#DAA520" opacity="0.9"/>
+
+  <!-- Text overlay -->
+  <text x="50%" y="100" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="48" font-family="sans-serif" font-weight="bold" opacity="0.8">
+    LAYER 2: THE NERVOUS SYSTEM (THE FABRIC)
+  </text>
+  <text x="50%" y="980" dominant-baseline="middle" text-anchor="middle" fill="#DAA520" font-size="36" font-family="sans-serif" opacity="0.7">
+    Planetary-Scale Trust &amp; Information Integrity
+  </text>
+</svg>

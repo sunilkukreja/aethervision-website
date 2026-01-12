@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#03080e"/>
+  
+  <defs>
+    <filter id="synapseGlow">
+       <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Left Dendrite -->
+  <path d="M-100,540 C400,540 600,200 850,500" fill="none" stroke="#0A305A" stroke-width="15" stroke-linecap="round" opacity="0.5"/>
+  <path d="M-100,540 C400,540 600,200 850,500" fill="none" stroke="#00A8E8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Right Dendrite -->
+  <path d="M2020,540 C1520,540 1320,880 1070,580" fill="none" stroke="#444444" stroke-width="15" stroke-linecap="round" opacity="0.5"/>
+  <path d="M2020,540 C1520,540 1320,880 1070,580" fill="none" stroke="#F5F5F5" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- The Spark Gap -->
+  <circle cx="960" cy="540" r="20" fill="#FFFFFF" filter="url(#synapseGlow)">
+    <animate attributeName="opacity" values="0;1;0" dur="0.1s" repeatCount="indefinite" begin="2s"/>
+    <animate attributeName="r" values="10;60;10" dur="0.5s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+</svg>

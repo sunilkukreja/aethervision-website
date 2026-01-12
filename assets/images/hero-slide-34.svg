@@ -1,0 +1,30 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color:#020a16;">
+<defs>
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+    </filter>
+    <radialGradient id="earthShine" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stop-color="#4fc3f7" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#01579b" stop-opacity="0"/>
+    </radialGradient>
+</defs>
+<!-- Earth -->
+<circle cx="960" cy="540" r="400" fill="#01579b"/>
+<circle cx="960" cy="540" r="400" fill="url(#earthShine)"/>
+<!-- Neural Network -->
+<g stroke-width="1.5" stroke-opacity="0.7">
+    <path d="M960,140 C700,240 700,840 960,940" stroke="#e1f5fe" fill="none"/>
+    <path d="M960,140 C1220,240 1220,840 960,940" stroke="#e1f5fe" fill="none"/>
+    <path d="M660,340 C860,190 1060,190 1260,340" stroke="#b3e5fc" fill="none"/>
+    <path d="M660,740 C860,890 1060,890 1260,740" stroke="#b3e5fc" fill="none"/>
+    <path d="M600,540 C960,340 1320,540" stroke="#81d4fa" fill="none" transform="rotate(45 960 540)"/>
+    <path d="M600,540 C960,740 1320,540" stroke="#81d4fa" fill="none" transform="rotate(45 960 540)"/>
+</g>
+<!-- Nodes -->
+<g fill="#ffffff" filter="url(#nodeGlow)">
+    <circle cx="960" cy="140" r="4"/> <circle cx="960" cy="940" r="4"/>
+    <circle cx="660" cy="340" r="4"/> <circle cx="1260" cy="340" r="4"/>
+    <circle cx="660" cy="740" r="4"/> <circle cx="1260" cy="740" r="4"/>
+    <circle cx="710" cy="540" r="4"/> <circle cx="1210" cy="540" r="4"/>
+</g>
+</svg>

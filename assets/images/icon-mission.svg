@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <!-- Background Grid (The Old World) -->
+  <path d="M20 120 L180 120" stroke="#0A305A" stroke-width="1" opacity="0.2"/>
+  <path d="M40 120 L160 20" stroke="#0A305A" stroke-width="1" opacity="0.1"/>
+  <path d="M160 120 L40 20" stroke="#0A305A" stroke-width="1" opacity="0.1"/>
+  
+  <!-- The Transformation Pillar (The Mission) -->
+  <defs>
+    <linearGradient id="missionGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0A305A"/>
+      <stop offset="100%" stop-color="#20B2AA"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Base Blocks -->
+  <rect x="70" y="110" width="60" height="10" fill="#0A305A"/>
+  <rect x="75" y="95" width="50" height="10" fill="#0A305A" opacity="0.8"/>
+  <rect x="80" y="80" width="40" height="10" fill="#0A305A" opacity="0.6"/>
+  
+  <!-- Rising Structure -->
+  <path d="M90 75 L90 30" stroke="url(#missionGrad)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="90" cy="25" r="8" fill="#20B2AA">
+    <animate attributeName="r" values="8;12;8" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Radiating Impact Rings -->
+  <circle cx="90" cy="25" r="20" stroke="#20B2AA" stroke-width="1" stroke-dasharray="2,4" opacity="0.5"/>
+  <circle cx="90" cy="25" r="40" stroke="#0A305A" stroke-width="0.5" opacity="0.3"/>
+</svg>

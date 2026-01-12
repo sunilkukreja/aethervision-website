@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <rect width="100%" height="100%" fill="#0a2a5a"/>
+  <defs>
+    <linearGradient id="creationLegacyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="legacyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Central Scroll/Book Motif (Scribe of Life) -->
+  <rect x="760" y="340" width="400" height="400" fill="url(#creationLegacyGradient)" rx="20" ry="20" filter="url(#legacyGlow)" opacity="0.8"/>
+  <text x="960" y="540" dominant-baseline="middle" text-anchor="middle" fill="#1a527b" font-size="150" font-family="serif" font-weight="bold" opacity="0.9">
+    &#x0950;
+  </text>
+
+  <!-- Architect/Framework elements (abstract) -->
+  <path d="M960 100 L1160 300 L960 500 L760 300 Z" stroke="#DAA520" stroke-width="4" fill="#DAA520" opacity="0.5">
+    <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="0 20" dur="3s" begin="0s" repeatCount="indefinite" additive="sum"/>
+  </path>
+  <path d="M960 980 L1160 780 L960 580 L760 780 Z" stroke="#50a0e0" stroke-width="4" fill="#50a0e0" opacity="0.5">
+    <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="0 -20" dur="3s" begin="0s" repeatCount="indefinite" additive="sum"/>
+  </path>
+
+  <!-- Abstract representation of data/knowledge preservation -->
+  <line x1="300" y1="200" x2="700" y2="500" stroke="#DAA520" stroke-width="2" opacity="0.4"/>
+  <line x1="1620" y1="200" x2="1220" y2="500" stroke="#DAA520" stroke-width="2" opacity="0.4"/>
+  <line x1="300" y1="880" x2="700" y2="580" stroke="#DAA520" stroke-width="2" opacity="0.4"/>
+  <line x1="1620" y1="880" x2="1220" y2="580" stroke="#DAA520" stroke-width="2" opacity="0.4"/>
+
+  <!-- Text overlay -->
+  <text x="50%" y="100" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="48" font-family="sans-serif" font-weight="bold" opacity="0.8">
+    LAYER 5: THE SCRIBE &amp; THE ARCHITECT (CREATION &amp; LEGACY)
+  </text>
+  <text x="50%" y="980" dominant-baseline="middle" text-anchor="middle" fill="#DAA520" font-size="36" font-family="sans-serif" opacity="0.7">
+    Perpetuating Knowledge &amp; Architecting New Forms
+  </text>
+</svg>

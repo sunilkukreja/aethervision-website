@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+    <!-- Abstract Background for AetherVision Website -->
+    <!-- Represents the 'Akasha Protocol' - a global, interconnected data fabric. -->
+    <!-- The design is minimalist, high-impact, and uses the AetherBlue color palette. -->
+    <defs>
+        <radialGradient id="VoidGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:rgb(5, 24, 45); stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(0, 5, 10); stop-opacity:1" />
+        </radialGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1600" height="900" fill="url(#VoidGradient)" />
+
+    <!-- Planetary Arc -->
+    <path d="M -400 900 A 1300 1300 0 0 1 2000 900 L -400 900 Z" fill="rgb(10, 48, 90)" opacity="0.3" />
+
+    <!-- Grid Lines -->
+    <g stroke="rgb(20, 68, 110)" stroke-width="0.5" stroke-opacity="0.5">
+        <!-- Latitude Lines -->
+        <path d="M -400,600 A 1100 1100 0 0 1 2000,600" fill="none" />
+        <path d="M -400,700 A 1200 1200 0 0 1 2000,700" fill="none" />
+        <path d="M -400,800 A 1300 1300 0 0 1 2000,800" fill="none" />
+        <path d="M -400,850 A 1350 1350 0 0 1 2000,850" fill="none" />
+
+        <!-- Longitude Lines -->
+        <path d="M 800,250 L 800,900" opacity="0.5" />
+        <path d="M 600,350 L 450,900" opacity="0.3" />
+        <path d="M 1000,350 L 1150,900" opacity="0.3" />
+        <path d="M 400,450 L 150,900" opacity="0.2" />
+        <path d="M 1200,450 L 1450,900" opacity="0.2" />
+    </g>
+
+    <!-- Glowing Network Nodes -->
+    <g fill="rgb(150, 200, 255)" filter="url(#glow)">
+        <circle cx="800" cy="550" r="3" opacity="0.8" />
+        <circle cx="650" cy="710" r="2" opacity="0.7" />
+        <circle cx="980" cy="680" r="2" opacity="0.6" />
+        <circle cx="1150" cy="810" r="3" opacity="0.9" />
+        <circle cx="450" cy="805" r="2" opacity="0.5" />
+        <circle cx="810" cy="850" r="2" opacity="0.8" />
+        <circle cx="1300" cy="720" r="1.5" opacity="0.4" />
+        <circle cx="300" cy="650" r="1.5" opacity="0.6" />
+    </g>
+</svg>

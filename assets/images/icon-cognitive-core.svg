@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <clipPath id="hex-clip">
+      <path d="M50 10 L85 30 L85 70 L50 90 L15 70 L15 30 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer Hexagon -->
+  <path d="M50 10 L85 30 L85 70 L50 90 L15 70 L15 30 Z" stroke="#0A305A" stroke-width="2" fill="none"/>
+  
+  <!-- Inner Circuitry -->
+  <g clip-path="url(#hex-clip)" stroke="#20B2AA" stroke-width="1" opacity="0.6">
+    <path d="M15 50 H85"/>
+    <path d="M32 20 V80"/>
+    <path d="M68 20 V80"/>
+    <path d="M15 30 L85 70"/>
+    <path d="M15 70 L85 30"/>
+  </g>
+
+  <!-- Synaptic Nodes -->
+  <circle cx="50" cy="50" r="5" fill="#0A305A"/>
+  <circle cx="32" cy="40" r="3" fill="#20B2AA"/>
+  <circle cx="68" cy="60" r="3" fill="#20B2AA"/>
+  <circle cx="32" cy="60" r="3" fill="#20B2AA"/>
+  <circle cx="68" cy="40" r="3" fill="#20B2AA"/>
+
+  <!-- Pulse Animation -->
+  <circle cx="50" cy="50" r="5" stroke="#20B2AA" stroke-width="1" fill="none">
+    <animate attributeName="r" values="5;20" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

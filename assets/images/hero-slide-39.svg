@@ -1,0 +1,35 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color:#010409;">
+<defs>
+    <filter id="engineGlow">
+        <feGaussianBlur stdDeviation="12" />
+    </filter>
+    <filter id="nebula">
+        <feTurbulence type="fractalNoise" baseFrequency="0.005 .008" numOctaves="4" seed="20"/>
+        <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 -1.4 1.2" />
+    </filter>
+    <style>
+        .probe { stroke-dasharray: 5 15; animation: probing 6s linear infinite; }
+        @keyframes probing {
+            to { stroke-dashoffset: -20; }
+        }
+        .core { transform-origin: center; animation: rotate 30s linear infinite; }
+        @keyframes rotate {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</defs>
+<!-- Cosmic Structure -->
+<rect width="1920" height="1080" fill="#4a148c" opacity="0.3" filter="url(#nebula)" />
+<!-- AI Core -->
+<g class="core" transform="translate(400, 540)">
+    <circle r="60" fill="none" stroke="white" stroke-width="2" filter="url(#engineGlow)"/>
+    <circle r="45" fill="none" stroke="#e1f5fe" stroke-width="3"/>
+    <circle r="55" fill="none" stroke="#e1f5fe" stroke-width="1"/>
+</g>
+<!-- Probes -->
+<g fill="none" stroke-width="2.5" stroke="#ffff8d">
+    <path class="probe" d="M400,540 Q 800,200 1300,350 T 1700,800"/>
+    <path class="probe" style="animation-direction:reverse; animation-delay:-2s" d="M400,540 Q 700,800 1200,750 T 1600,200"/>
+    <path class="probe" style="animation-delay:-4s" d="M400,540 C 900,540 1000,200 1500,540"/>
+</g>
+</svg>

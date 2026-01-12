@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <circle cx="960" cy="540" r="300" fill="#0A305A"/>
+  <circle cx="960" cy="540" r="280" fill="none" stroke="#C00000" stroke-width="2"/>
+  <text x="960" y="550" text-anchor="middle" font-family="serif" font-size="60" fill="#F5F5F5" letter-spacing="5">ADVAITA</text>
+  <text x="960" y="600" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#C00000" letter-spacing="2">THE UNDISPUTED EPOCH</text>
+</svg>

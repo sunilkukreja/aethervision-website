@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8F8F8"/>
+  
+  <!-- The Biological Side (Left) -->
+  <path d="M50 150 Q100 100 150 150 T200 150" stroke="#0A305A" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- The Digital Side (Right) -->
+  <path d="M350 150 Q300 200 250 150 T200 150" stroke="#20B2AA" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- The Interface Point (Gap) -->
+  <circle cx="200" cy="150" r="10" fill="none" stroke="#0A305A" stroke-width="2"/>
+  
+  <!-- Spark of Connection -->
+  <circle cx="200" cy="150" r="5" fill="#20B2AA">
+    <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="5;15" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Harmony Rings -->
+  <circle cx="200" cy="150" r="40" stroke="#0A305A" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="150" r="60" stroke="#20B2AA" stroke-width="1" opacity="0.3"/>
+</svg>

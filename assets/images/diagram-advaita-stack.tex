@@ -1,0 +1,130 @@
+\documentclass[tikz, border=10pt]{standalone}
+\usepackage{newtxtext}
+\usepackage[T1]{fontenc}
+
+% --- TikZ Libraries ---
+\usetikzlibrary{
+    arrows.meta,
+    positioning,
+    shapes.geometric,
+    shadows,
+    chains
+}
+
+% --- Color Definitions ---
+\definecolor{AetherBlue}{RGB}{10, 48, 90}
+\definecolor{Graphite}{RGB}{68, 68, 68}
+\definecolor{LightGrey}{RGB}{245, 245, 245}
+\definecolor{Layer1Color}{RGB}{56, 133, 187}
+\definecolor{Layer2Color}{RGB}{64, 153, 168}
+\definecolor{Layer3Color}{RGB}{79, 172, 142}
+\definecolor{Layer4Color}{RGB}{108, 188, 114}
+\definecolor{Layer5Color}{RGB}{146, 204, 89}
+
+\begin{document}
+
+% Diagram of The Advaita Stack
+% This diagram visualizes the 5-layer architecture described in the source material.
+% It uses a clean, modern, and minimalist style aligned with the project's aesthetic.
+
+\begin{tikzpicture}[
+    font=\sffamily,
+    node distance=0.7cm and 1cm,
+    % Chain configuration
+    start chain=main high going below,
+    % Main node style for layers
+    layer/.style={
+        on chain=main,
+        minimum height=1.5cm,
+        minimum width=8cm,
+        align=center,
+        font=\bfseries\large,
+        text=white,
+        drop shadow={opacity=0.4, shadow xshift=2pt, shadow yshift=-2pt},
+        rounded corners=2pt
+    },
+    % Sub-item style for patent names
+    subitem/.style={
+        anchor=west,
+        font=\sffamily\small,
+        text=Graphite
+    }
+]
+
+% --- NODES FOR THE 5 LAYERS ---
+
+% Layer 1: The Senses (The Sensorium)
+\node[layer, fill=Layer1Color] (l1) {Layer 1: The Senses \ \small\normalfont (The Sensorium)};
+
+% Layer 2: The Nervous System (The Fabric)
+\node[layer, fill=Layer2Color] (l2) {Layer 2: The Nervous System \ \small\normalfont (The Fabric)};
+
+% Layer 3: The Mind (The Cognitive Core)
+\node[layer, fill=Layer3Color] (l3) {Layer 3: The Mind \ \small\normalfont (The Cognitive Core)};
+
+% Layer 4: The Soul (The Human Interface & Governance)
+\node[layer, fill=Layer4Color] (l4) {Layer 4: The Soul \ \small\normalfont (The Human Interface \& Governance)};
+
+% Layer 5: The Scribe & The Architect
+\node[layer, fill=Layer5Color] (l5) {Layer 5: The Scribe \& The Architect};
+
+% --- NODES FOR THE CORE DOCTRINE ---
+\node[
+    draw=AetherBlue, 
+    text=AetherBlue, 
+    font=\bfseries, 
+    above=1cm of l1,
+    minimum width=8cm,
+    align=center,
+    rounded corners=2pt
+] (doctrine) {The Core Doctrine \ \small\normalfont(The Philosophical Foundation)};
+
+% --- ARROWS CONNECTING THE LAYERS ---
+\begin{scope}[-Triangle, line width=1pt, draw=Graphite!80]
+    \draw (doctrine.south) -- (l1.north);
+    \draw (l1.south) -- (l2.north);
+    \draw (l2.south) -- (l3.north);
+    \draw (l3.south) -- (l4.north);
+    \draw (l4.south) -- (l5.north);
+\end{scope}
+
+% --- SUB-ITEMS FOR EACH LAYER (PATENT EXAMPLES) ---
+% Positioned to the right of the main stack
+\begin{scope}[node distance=0.2cm]
+    % Layer 1 Sub-items
+    \node[subitem, right=of l1.east] (s1a) {PHANTOM SENTINEL};
+    \node[subitem, below=of s1a]       (s1b) {Project SPECTRUM};
+    \node[subitem, below=of s1b]       (s1c) {Piercing the Veil of M\=ay\=a};
+
+    % Layer 2 Sub-items
+    \node[subitem, right=of l2.east] (s2a) {The Akasha Protocol};
+    \node[subitem, below=of s2a]       (s2b) {PulseWeaver};
+    \node[subitem, below=of s2b]       (s2c) {The Quantum Doppelgänger};
+
+    % Layer 3 Sub-items
+    \node[subitem, right=of l3.east] (s3a) {Quantum Yoga};
+    \node[subitem, below=of s3a]       (s3b) {The Brahman Cognitive Engine};
+    \node[subitem, below=of s3b]       (s3c) {Pram\=a\d{n}a};
+
+    % Layer 4 Sub-items
+    \node[subitem, right=of l4.east] (s4a) {The {\=A}tman Interface};
+    \node[subitem, below=of s4a]       (s4b) {The Dharma Kavacha};
+    \node[subitem, below=of s4b]       (s4c) {Sa\d{n}kalpa};
+
+    % Layer 5 Sub-items
+    \node[subitem, right=of l5.east] (s5a) {The Sm{\d r}ti Manifold};
+    \node[subitem, below=of s5a]       (s5b) {The Vi\'{\i}svakarman Framework};
+\end{scope}
+
+% --- Dotted lines connecting layers to sub-items ---
+\begin{scope}[draw=Graphite!40, dotted]
+    \draw (l1.east) -- (l1.east -| s1a.west);
+    \draw (l2.east) -- (l2.east -| s2a.west);
+    \draw (l3.east) -- (l3.east -| s3a.west);
+    \draw (l4.east) -- (l4.east -| s4a.west);
+    \draw (l5.east) -- (l5.east -| s5a.west);
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}
